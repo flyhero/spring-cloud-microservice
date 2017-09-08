@@ -8,6 +8,8 @@
         <option value="$PROJECT_DIR$/gateway-service/pom.xml" />
         <option value="$PROJECT_DIR$/ribbon-service/pom.xml" />
         <option value="$PROJECT_DIR$/ucenter-service/pom.xml" />
+        <option value="$PROJECT_DIR$/order-service/pom.xml" />
+        <option value="$PROJECT_DIR$/dashboard-service/pom.xml" />
       </list>
     </option>
   </component>
