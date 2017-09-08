@@ -18,7 +18,7 @@ import org.springframework.web.client.RestTemplate;
 public class LoadBalanceService {
     @Autowired
     RestTemplate restTemplate;
-    
+
     /*
      *通过注解HystrixCommand引入熔断器机制
      *fallbackMethod指定回调函数
