@@ -6,6 +6,7 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.Claim;
 import com.auth0.jwt.interfaces.DecodedJWT;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,7 +14,7 @@ public class JwtUtils {
 
     private static long expiredTime = 60 * 60 * 24 * 30; //一个月
 
-    public static String createToken() throws Exception{
+    public static String createToken(Map<String,Object> claims) throws Exception{
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("alg", "HS256");
         map.put("typ", "JWT");
@@ -21,10 +22,9 @@ public class JwtUtils {
         long exp=iat+expiredTime;
         String token = JWT.create()
                 .withHeader(map)//header
-                .withClaim("name", "wang")//payload
-                .withClaim("age", "18")
-                .withClaim("iat",String.valueOf(iat))
-                .withClaim("exp",String.valueOf(exp))
+                .withIssuedAt(new Date(iat))
+                .withExpiresAt(new Date(exp))
+                .withClaim("username", "wang")//payload
                 .sign(Algorithm.HMAC256("secret"));//加密
 
         return token;
