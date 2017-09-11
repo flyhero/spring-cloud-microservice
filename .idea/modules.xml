@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/dashboard-service/dashboard-service.iml" filepath="$PROJECT_DIR$/dashboard-service/dashboard-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-service/eureka-service.iml" filepath="$PROJECT_DIR$/eureka-service/eureka-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/gateway-service/gateway-service.iml" filepath="$PROJECT_DIR$/gateway-service/gateway-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/monitoring-service/monitoring-service.iml" filepath="$PROJECT_DIR$/monitoring-service/monitoring-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/order-service/order-service.iml" filepath="$PROJECT_DIR$/order-service/order-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/ribbon-service/ribbon-service.iml" filepath="$PROJECT_DIR$/ribbon-service/ribbon-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-microservice.iml" filepath="$PROJECT_DIR$/spring-cloud-microservice.iml" />

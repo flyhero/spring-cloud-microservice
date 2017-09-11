@@ -9,6 +9,7 @@
         <module name="dashboard-service" />
         <module name="eureka-service" />
         <module name="gateway-service" />
+        <module name="monitoring-service" />
         <module name="order-service" />
         <module name="ribbon-service" />
         <module name="spring-cloud-microservice" />
@@ -19,6 +20,7 @@
       <module name="dashboard-service" target="1.8" />
       <module name="eureka-service" target="1.8" />
       <module name="gateway-service" target="1.8" />
+      <module name="monitoring-service" target="1.8" />
       <module name="order-service" target="1.8" />
       <module name="ribbon-service" target="1.8" />
       <module name="spring-cloud-microservice" target="1.5" />
