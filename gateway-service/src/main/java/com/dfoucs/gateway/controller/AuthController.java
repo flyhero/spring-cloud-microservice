@@ -29,12 +29,25 @@ public class AuthController {
         Map<String,Object> map =new HashMap<>();
         String username=request.getParameter("username");
         String password=request.getParameter("password");
-        User user=userService.login(username,password);
+        //User user=userService.login(username,password);
+        User user=new User();
+        user.setUsername(username);
+        user.setPassword(password);
         if (user == null) {
             map.put("msg","用户不存在");
             return map;
         }
-        String token =ucenterAuth.getToken(map);
-        return null;
+        String token ="";
+        try{
+            Map<String,Object> mapUser =new HashMap<>();
+            mapUser.put("username",user.getUsername());
+           token = ucenterAuth.getToken(mapUser);
+        }catch (Exception e){
+            map.put("msg","获取token异常");
+            return map;
+        }
+        map.put("msg","ok");
+        map.put("data",token);
+        return map;
     }
 }

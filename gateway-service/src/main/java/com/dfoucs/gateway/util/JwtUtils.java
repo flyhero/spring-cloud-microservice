@@ -14,6 +14,8 @@ public class JwtUtils {
 
     private static long expiredTime = 60 * 60 * 24 * 30; //一个月
 
+    private static String key = "secret";
+
     public static String createToken(Map<String,Object> claims) throws Exception{
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("alg", "HS256");
@@ -25,11 +27,11 @@ public class JwtUtils {
                 .withIssuedAt(new Date(iat))
                 .withExpiresAt(new Date(exp))
                 .withClaim("username", "wang")//payload
-                .sign(Algorithm.HMAC256("secret"));//加密
+                .sign(Algorithm.HMAC256(key));//加密
 
         return token;
     }
-    public static void verifyToken(String token,String key) throws Exception{
+    public static void verifyToken(String token) throws Exception{
         JWTVerifier verifier = JWT.require(Algorithm.HMAC256(key))
                 .build();
         DecodedJWT jwt = verifier.verify(token);
