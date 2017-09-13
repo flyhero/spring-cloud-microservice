@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6362a4ad-8fbb-41d6-9b06-17a2a22548b2" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config-repo/order-service-dev.properties" afterPath="$PROJECT_DIR$/config-repo/order-service-dev.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config-service/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/config-service/src/main/resources/application.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -88,7 +89,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="true">
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config-service/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
@@ -98,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order-service-dev.properties" pinned="false" current-in-tab="false">
+      <file leaf-file-name="order-service-dev.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config-repo/order-service-dev.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="10" lean-forward="true" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+            <state relative-caret-position="30">
+              <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -193,8 +194,8 @@
         <option value="$PROJECT_DIR$/order-service/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/config-repo/dev.properties" />
         <option value="$PROJECT_DIR$/config-service/src/main/java/com/dfoucs/config/ConfigServiceApplication.java" />
-        <option value="$PROJECT_DIR$/config-repo/order-service-dev.properties" />
         <option value="$PROJECT_DIR$/config-service/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/config-repo/order-service-dev.properties" />
       </list>
     </option>
   </component>
@@ -743,7 +744,7 @@
       <workItem from="1504834493622" duration="18618000" />
       <workItem from="1505092613017" duration="16576000" />
       <workItem from="1505179245553" duration="25195000" />
-      <workItem from="1505265800131" duration="6330000" />
+      <workItem from="1505265800131" duration="7173000" />
     </task>
     <servers />
   </component>
@@ -780,7 +781,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66719000" />
+    <option name="totallyTimeSpent" value="67562000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="25" y="47" width="1382" height="754" extended-state="0" />
@@ -1196,18 +1197,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config-repo/order-service-dev.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="10" lean-forward="true" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config-service/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config-repo/order-service-dev.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
           <folding />
         </state>
       </provider>
