@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/ribbon-service/ribbon-service.iml" filepath="$PROJECT_DIR$/ribbon-service/ribbon-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-microservice.iml" filepath="$PROJECT_DIR$/spring-cloud-microservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/ucenter-service/ucenter-service.iml" filepath="$PROJECT_DIR$/ucenter-service/ucenter-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zipkin-service/zipkin-service.iml" filepath="$PROJECT_DIR$/zipkin-service/zipkin-service.iml" />
     </modules>
   </component>
 </project>

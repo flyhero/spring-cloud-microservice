@@ -14,6 +14,7 @@
         <module name="ribbon-service" />
         <module name="spring-cloud-microservice" />
         <module name="ucenter-service" />
+        <module name="zipkin-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -25,6 +26,7 @@
       <module name="ribbon-service" target="1.8" />
       <module name="spring-cloud-microservice" target="1.5" />
       <module name="ucenter-service" target="1.8" />
+      <module name="zipkin-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
