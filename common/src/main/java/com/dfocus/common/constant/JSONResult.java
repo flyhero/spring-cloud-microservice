@@ -1,7 +1,10 @@
 package com.dfocus.common.constant;
 
 /**
- * qfwang
+ * Description:
+ * User: qfwang
+ * Date: 2017-09-14
+ * Time: 上午09:50
  */
 public class JSONResult {
     protected int code;
