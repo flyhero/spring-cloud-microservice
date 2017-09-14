@@ -19,6 +19,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="admin-service" target="1.8" />
       <module name="config-service" target="1.8" />
       <module name="dashboard-service" target="1.8" />
       <module name="eureka-service" target="1.8" />
