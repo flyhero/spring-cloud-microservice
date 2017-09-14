@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="common" />
         <module name="config-service" />
         <module name="dashboard-service" />
         <module name="eureka-service" />
@@ -13,13 +14,14 @@
         <module name="monitoring-service" />
         <module name="order-service" />
         <module name="ribbon-service" />
-        <module name="spring-cloud-microservice" />
         <module name="ucenter-service" />
         <module name="zipkin-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="admin-service" target="1.8" />
+      <module name="common" target="1.5" />
+      <module name="common-service" target="1.5" />
       <module name="config-service" target="1.8" />
       <module name="dashboard-service" target="1.8" />
       <module name="eureka-service" target="1.8" />
