@@ -5,6 +5,8 @@ import com.dfoucs.gateway.auth.UcenterAuth;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
@@ -22,6 +24,7 @@ import static org.springframework.cloud.netflix.zuul.filters.support.FilterConst
 @Component
 public class AuthPreFilter extends ZuulFilter{
 
+    private Logger logger = LoggerFactory.getLogger(AuthPreFilter.class);
     @Autowired
     private UcenterAuth ucenterAuth;
     @Override
@@ -49,6 +52,7 @@ public class AuthPreFilter extends ZuulFilter{
             ctx.setResponseStatusCode(401);
             try {
                 ctx.getResponse().getWriter().write("token can not null");
+                logger.info("token can not null");
                 return null;
             }catch (Exception e){
 

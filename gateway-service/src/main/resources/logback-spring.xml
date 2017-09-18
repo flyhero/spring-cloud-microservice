@@ -13,7 +13,7 @@
 </appender>
 <!--<include resource="org/springframework/boot/logging/logback/base.xml"/>-->
 <contextName>RestAPI</contextName>
-<property name="LOG_PATH" value=".logs"/>
+<property name="LOG_PATH" value="/logs"/>
 <!--设置系统日志目录-->
 <property name="APPDIR" value="app"/>
 <!--

@@ -8,10 +8,12 @@ package com.dfoucs.ribbon.controller;
 
 import com.dfoucs.ribbon.service.LoadBalanceService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
+import javax.servlet.http.HttpServletRequest;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.logging.Logger;
 
 /**
@@ -32,7 +34,57 @@ public class LoadBalanceController {
     
     @Autowired
     LoadBalanceService lbService;
-    
+    @Autowired
+    RestTemplate restTemplate;
+
+    @GetMapping("test")
+    public String test(HttpServletRequest request){
+        System.out.println("request.getContextPath():"+request.getContextPath());
+        System.out.println("request.getPathInfo():"+request.getPathInfo());
+
+        String query=request.getQueryString();
+
+        String uri =null;
+        try {
+            System.out.println(URLDecoder.decode(query,"UTF-8"));
+            String s[]=URLDecoder.decode(query,"UTF-8").split("&");
+            String name=null;
+            String api=null;
+
+            name = s[0].split("=")[1];
+            api = s[1].split("=")[1];
+            uri = String.format("http://%s/%s", name,api);
+        }catch (UnsupportedEncodingException e){
+
+        }
+
+            return restTemplate.getForObject(uri, String.class);
+
+    }
+    @PostMapping("test")
+    public String post(HttpServletRequest request){
+        System.out.println("request.getContextPath():"+request.getContextPath());
+        System.out.println("request.getPathInfo():"+request.getPathInfo());
+
+        String query=request.getQueryString();
+
+        String uri =null;
+        try {
+            System.out.println(URLDecoder.decode(query,"UTF-8"));
+            String s[]=URLDecoder.decode(query,"UTF-8").split("&");
+            String name=null;
+            String api=null;
+
+            name = s[0].split("=")[1];
+            api = s[1].split("=")[1];
+            uri = String.format("http://%s/%s", name,api);
+        }catch (UnsupportedEncodingException e){
+
+        }
+
+        return restTemplate.getForObject(uri, String.class);
+
+    }
     /*
     * 测试负载均衡之微服务的端口
     * http://.../v1/lb/testport?name={microserviceName}

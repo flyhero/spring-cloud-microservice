@@ -7,6 +7,15 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>common</module>
+    <module>eureka-service</module>
+    <module>gateway-service</module>
+    <module>config-service</module>
+    <module>ribbon-service</module>
+    <module>monitoring-service</module>
+    <module>ucenter-service</module>
+    <module>dashboard-service</module>
+    <module>zipkin-service</module>
+    <module>order-service</module>
   </modules>
   <packaging>pom</packaging>
 
