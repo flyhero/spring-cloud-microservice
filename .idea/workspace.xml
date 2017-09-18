@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6362a4ad-8fbb-41d6-9b06-17a2a22548b2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ribbon-service/src/main/resources/logback-spring.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/dfoucs/gateway/filter/AuthPreFilter.java" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/dfoucs/gateway/filter/AuthPreFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/logback-spring.xml" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/logback-spring.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ribbon-service/src/main/java/com/dfoucs/ribbon/controller/LoadBalanceController.java" afterPath="$PROJECT_DIR$/ribbon-service/src/main/java/com/dfoucs/ribbon/controller/LoadBalanceController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,26 +31,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gateway-service/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthPreFilter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfoucs/gateway/filter/AuthPreFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-261">
-              <caret line="34" column="13" lean-forward="false" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LoadBalanceController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ribbon-service/src/main/java/com/dfoucs/ribbon/controller/LoadBalanceController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -92,11 +71,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="224">
-              <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+              <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin-service/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="750">
+              <caret line="50" column="52" lean-forward="true" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminServiceApplication.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin-service/src/main/java/com/dfocus/admin/AdminServiceApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="10" column="2" lean-forward="false" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/eureka-service/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -108,22 +117,6 @@
             <state relative-caret-position="145">
               <caret line="39" column="25" lean-forward="false" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfoucs/gateway/service/impl/UserServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-              <folding>
-                <marker date="1505123822000" expanded="true" signature="498:538" ph="insert into USER... " />
-                <marker date="1505123822000" expanded="true" signature="646:677" ph="delete from " />
-                <marker date="1505123822000" expanded="true" signature="786:811" ph="select count... USER" />
-                <marker date="1505123822000" expanded="true" signature="914:930" ph="delete from " />
-                <marker date="1505123822000" expanded="true" signature="1057:1110" ph="select * fro... user" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -188,9 +181,7 @@
         <option value="$PROJECT_DIR$/config-repo/order-service-dev.properties" />
         <option value="$PROJECT_DIR$/ucenter-service/src/main/resources/bootstrap.properties" />
         <option value="$PROJECT_DIR$/order-service/pom.xml" />
-        <option value="$PROJECT_DIR$/admin-service/src/main/java/com/dfocus/admin/AdminServiceApplication.java" />
         <option value="$PROJECT_DIR$/admin-service/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/admin-service/pom.xml" />
         <option value="$PROJECT_DIR$/order-service/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/common-service/pom.xml" />
         <option value="$PROJECT_DIR$/common/pom.xml" />
@@ -207,6 +198,8 @@
         <option value="$PROJECT_DIR$/ribbon-service/src/main/java/com/dfoucs/ribbon/controller/LoadBalanceController.java" />
         <option value="$PROJECT_DIR$/ucenter-service/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/admin-service/pom.xml" />
+        <option value="$PROJECT_DIR$/admin-service/src/main/java/com/dfocus/admin/AdminServiceApplication.java" />
       </list>
     </option>
   </component>
@@ -394,6 +387,41 @@
               <item name="spring-cloud-microservice" type="b2602c69:ProjectViewProjectNode" />
               <item name="spring-cloud-microservice" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="spring-cloud-microservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-microservice" type="462c0819:PsiDirectoryNode" />
+              <item name="admin-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-microservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-microservice" type="462c0819:PsiDirectoryNode" />
+              <item name="admin-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-microservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-microservice" type="462c0819:PsiDirectoryNode" />
+              <item name="admin-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-microservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-microservice" type="462c0819:PsiDirectoryNode" />
+              <item name="admin-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-microservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-microservice" type="462c0819:PsiDirectoryNode" />
+              <item name="admin-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -443,6 +471,13 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.UcenterServiceApplication">
+    <configuration name="AdminServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dfocus.admin.AdminServiceApplication" />
+      <option name="SHOW_IN_DASHBOARD" value="true" />
+      <module name="admin-service" />
+      <envs />
+    </configuration>
     <configuration name="ConfigServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.dfoucs.config.ConfigServiceApplication" />
@@ -668,7 +703,7 @@
       <properties />
       <listeners />
     </configuration>
-    <list size="12">
+    <list size="13">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.EurekaServiceApplication" />
       <item index="1" class="java.lang.String" itemvalue="Spring Boot.GatewayServiceApplication" />
       <item index="2" class="java.lang.String" itemvalue="Spring Boot.RibbonServiceApplication" />
@@ -681,6 +716,7 @@
       <item index="9" class="java.lang.String" itemvalue="JUnit.UserServiceTest.testGetAllUsers" />
       <item index="10" class="java.lang.String" itemvalue="JUnit.UcenterAuthTest.testGetToken" />
       <item index="11" class="java.lang.String" itemvalue="JUnit.UcenterAuthTest.testverifyToken" />
+      <item index="12" class="java.lang.String" itemvalue="Spring Boot.AdminServiceApplication" />
     </list>
     <recent_temporary>
       <list size="3">
@@ -705,7 +741,7 @@
       <workItem from="1505179245553" duration="25195000" />
       <workItem from="1505265800131" duration="10133000" />
       <workItem from="1505351858717" duration="15786000" />
-      <workItem from="1505698667309" duration="10886000" />
+      <workItem from="1505698667309" duration="12255000" />
     </task>
     <servers />
   </component>
@@ -742,7 +778,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97194000" />
+    <option name="totallyTimeSpent" value="98563000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="25" y="47" width="1382" height="754" extended-state="0" />
@@ -788,13 +824,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ucenter-service/src/main/java/com/dfoucs/ucenter/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfoucs/gateway/auth/Auth.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -942,8 +971,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin-service/src/main/resources/application.properties" />
-    <entry file="file://$PROJECT_DIR$/admin-service/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/admin-service/src/main/java/com/dfocus/admin/AdminServiceApplication.java" />
     <entry file="file://$PROJECT_DIR$/ucenter-service/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-389">
@@ -1157,10 +1184,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/eureka-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
-          <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+          <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="50" column="52" lean-forward="true" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-service/src/main/java/com/dfocus/admin/AdminServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="2" lean-forward="false" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
           <folding />
         </state>
       </provider>

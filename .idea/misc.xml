@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/monitoring-service/pom.xml" />
         <option value="$PROJECT_DIR$/zipkin-service/pom.xml" />
         <option value="$PROJECT_DIR$/config-service/pom.xml" />
+        <option value="$PROJECT_DIR$/admin-service/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
