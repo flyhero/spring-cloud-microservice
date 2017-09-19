@@ -5,7 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/admin-service/admin-service.iml" filepath="$PROJECT_DIR$/admin-service/admin-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/config-client-service/config-client-service.iml" filepath="$PROJECT_DIR$/config-client-service/config-client-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/config-service/config-service.iml" filepath="$PROJECT_DIR$/config-service/config-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-server/config-server.iml" filepath="$PROJECT_DIR$/config-server/config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-service/eureka-service.iml" filepath="$PROJECT_DIR$/eureka-service/eureka-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/gateway-service/gateway-service.iml" filepath="$PROJECT_DIR$/gateway-service/gateway-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/monitoring-service/monitoring-service.iml" filepath="$PROJECT_DIR$/monitoring-service/monitoring-service.iml" />
@@ -13,7 +13,8 @@
       <module fileurl="file://$PROJECT_DIR$/ribbon-service/ribbon-service.iml" filepath="$PROJECT_DIR$/ribbon-service/ribbon-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-microservice.iml" filepath="$PROJECT_DIR$/spring-cloud-microservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/ucenter-service/ucenter-service.iml" filepath="$PROJECT_DIR$/ucenter-service/ucenter-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/zipkin-service/zipkin-service.iml" filepath="$PROJECT_DIR$/zipkin-service/zipkin-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zipkin-client/zipkin-client.iml" filepath="$PROJECT_DIR$/zipkin-client/zipkin-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zipkin-server/zipkin-server.iml" filepath="$PROJECT_DIR$/zipkin-server/zipkin-server.iml" />
     </modules>
   </component>
 </project>

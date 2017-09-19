@@ -7,10 +7,10 @@
 |eureka-service|ureka-service|8081|        |服务注册与发现
 |gateway-service| gateway-service | 8082 |        |API网关
 |ribbon-service| ribbon-service| 8083    |        |负载均衡
-|config-service|config-service| 8881     |        |配置服务端
+|config-server|config-server| 8881     |        |配置服务端
 |config-client| config-client-service |8882 |        | 配置客户端
 |monitoring-service|monitoring-service|8001||熔断监控服务
-|zipkin-service|zipkin-service|9411||追踪
+|zipkin-server|zipkin-server|9411||调用链追踪
 
 
 
@@ -28,5 +28,27 @@ spring-cloud-microservice
 ├── ribbon-service -- 负载均衡[端口:1000]
 ├── ucenter-service -- 用户模块[端口:1001]
 └── zipkin-service -- 追踪
+
+```
+
+zipkin client 依赖
+```
+	<!--日志追踪依赖 -->
+	<dependency>
+		<groupId>org.springframework.cloud</groupId>
+		<artifactId>spring-cloud-sleuth-zipkin-stream</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework.cloud</groupId>
+		<artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+	</dependency>
+
+```
+config client 依赖
+```
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
 
 ```

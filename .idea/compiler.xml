@@ -16,6 +16,8 @@
         <module name="order-service" />
         <module name="ribbon-service" />
         <module name="ucenter-service" />
+        <module name="zipkin-client" />
+        <module name="zipkin-server" />
         <module name="zipkin-service" />
       </profile>
     </annotationProcessing>
@@ -33,6 +35,8 @@
       <module name="ribbon-service" target="1.8" />
       <module name="spring-cloud-microservice" target="1.5" />
       <module name="ucenter-service" target="1.8" />
+      <module name="zipkin-client" target="1.8" />
+      <module name="zipkin-server" target="1.8" />
       <module name="zipkin-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>

@@ -13,7 +13,7 @@
     <module>ribbon-service</module>
     <module>monitoring-service</module>
     <module>ucenter-service</module>
-    <module>zipkin-service</module>
+    <module>zipkin-server</module>
     <module>order-service</module>
   </modules>
   <packaging>pom</packaging>
