@@ -1,4 +1,4 @@
-package com.dfoucs.dashboard;
+package com.dfocus.config.client;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class DashboardServiceApplicationTests {
+public class ConfigClientServiceApplicationTests {
 
 	@Test
 	public void contextLoads() {

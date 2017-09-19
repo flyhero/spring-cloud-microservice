@@ -8,8 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="admin-service" />
         <module name="common" />
+        <module name="config-client-service" />
         <module name="config-service" />
-        <module name="dashboard-service" />
         <module name="eureka-service" />
         <module name="gateway-service" />
         <module name="monitoring-service" />
@@ -23,6 +23,7 @@
       <module name="admin-service" target="1.8" />
       <module name="common" target="1.5" />
       <module name="common-service" target="1.5" />
+      <module name="config-client-service" target="1.8" />
       <module name="config-service" target="1.8" />
       <module name="dashboard-service" target="1.8" />
       <module name="eureka-service" target="1.8" />
