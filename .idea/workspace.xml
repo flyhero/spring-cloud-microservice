@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6362a4ad-8fbb-41d6-9b06-17a2a22548b2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/rabbitmq.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/zipkin.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zipkin-client/src/main/java/com/dfocus/zipkinclient/controller/DemoController.java" afterPath="$PROJECT_DIR$/zipkin-client/src/main/java/com/dfocus/zipkinclient/controller/DemoController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zipkin-server/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/zipkin-server/src/main/resources/application.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -50,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/zipkin-client/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+              <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -221,8 +221,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="25" />
-    <option name="y" value="46" />
+    <option name="x" value="7" />
+    <option name="y" value="41" />
     <option name="width" value="1382" />
     <option name="height" value="754" />
   </component>
@@ -377,6 +377,11 @@
               <item name="spring-cloud-microservice" type="b2602c69:ProjectViewProjectNode" />
               <item name="spring-cloud-microservice" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="spring-cloud-microservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-microservice" type="462c0819:PsiDirectoryNode" />
+              <item name="doc" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -408,11 +413,11 @@
       <recent name="com.dfoucs.ribbon.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/doc" />
       <recent name="$PROJECT_DIR$/ribbon-service/src/main/resources" />
       <recent name="$PROJECT_DIR$/gateway-service/src/main/resources" />
       <recent name="$PROJECT_DIR$/zipkin-service/src/main/resources" />
       <recent name="$PROJECT_DIR$/order-service/src/main/resources" />
-      <recent name="$PROJECT_DIR$/monitoring-service/src/main/resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -698,7 +703,7 @@
       <workItem from="1505265800131" duration="10133000" />
       <workItem from="1505351858717" duration="15786000" />
       <workItem from="1505698667309" duration="12470000" />
-      <workItem from="1505784525337" duration="14012000" />
+      <workItem from="1505784525337" duration="14247000" />
     </task>
     <servers />
   </component>
@@ -735,10 +740,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112790000" />
+    <option name="totallyTimeSpent" value="113025000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="25" y="46" width="1382" height="754" extended-state="0" />
+    <frame x="7" y="41" width="1382" height="754" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -781,7 +786,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/dfocus/common/enum/TipEnum.kt" />
     <entry file="file://$PROJECT_DIR$/common/src/main/java/com/dfocus/common/constant/TipEnum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1173,10 +1177,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/doc/docker-images-start">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/zipkin-client/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
           <folding />
         </state>
       </provider>
