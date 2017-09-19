@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6362a4ad-8fbb-41d6-9b06-17a2a22548b2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zipkin-client/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/zipkin-client/src/main/resources/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zipkin-client/src/main/java/com/dfocus/zipkinclient/controller/DemoController.java" afterPath="$PROJECT_DIR$/zipkin-client/src/main/java/com/dfocus/zipkinclient/controller/DemoController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zipkin-server/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/zipkin-server/src/main/resources/application.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,8 +35,8 @@
       <file leaf-file-name="DemoController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zipkin-client/src/main/java/com/dfocus/zipkinclient/controller/DemoController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+            <state relative-caret-position="262">
+              <caret line="28" column="21" lean-forward="false" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#605#606#0" expanded="true" />
@@ -54,11 +56,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ZipkinServiceApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zipkin-server/src/main/java/com/dfoucs/zipkin/zipkin/ZipkinServiceApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zipkin-client/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ZipkinClientApplication.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zipkin-client/src/main/java/com/dfocus/zipkinclient/ZipkinClientApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="75">
+              <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -114,7 +136,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/dashboard-service/src/main/java/com/dfoucs/dashboard/controller/ConsumerController.java" />
         <option value="$PROJECT_DIR$/monitoring-service/src/main/java/com/dfoucs/monitoring/MonitoringServiceApplication.java" />
         <option value="$PROJECT_DIR$/dashboard-service/src/main/java/com/dfoucs/dashboard/DashboardServiceApplication.java" />
         <option value="$PROJECT_DIR$/dashboard-service/src/main/java/com/dfoucs/dashboard/remote/HelloRemote.java" />
@@ -159,12 +180,13 @@
         <option value="$PROJECT_DIR$/zipkin-service/pom.xml" />
         <option value="$PROJECT_DIR$/order-service/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/zipkin-server/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/zipkin-client/pom.xml" />
         <option value="$PROJECT_DIR$/config-server/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/zipkin-client/src/main/java/com/dfocus/zipkinclient/controller/DemoController.java" />
         <option value="$PROJECT_DIR$/zipkin-client/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/zipkin-client/src/main/java/com/dfocus/zipkinclient/ZipkinClientApplication.java" />
+        <option value="$PROJECT_DIR$/zipkin-server/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/zipkin-client/src/main/java/com/dfocus/zipkinclient/controller/DemoController.java" />
       </list>
     </option>
   </component>
@@ -200,7 +222,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="25" />
-    <option name="y" value="47" />
+    <option name="y" value="46" />
     <option name="width" value="1382" />
     <option name="height" value="754" />
   </component>
@@ -355,32 +377,6 @@
               <item name="spring-cloud-microservice" type="b2602c69:ProjectViewProjectNode" />
               <item name="spring-cloud-microservice" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="spring-cloud-microservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-microservice" type="462c0819:PsiDirectoryNode" />
-              <item name="zipkin-client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-microservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-microservice" type="462c0819:PsiDirectoryNode" />
-              <item name="zipkin-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-microservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-microservice" type="462c0819:PsiDirectoryNode" />
-              <item name="zipkin-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-microservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-microservice" type="462c0819:PsiDirectoryNode" />
-              <item name="zipkin-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -431,7 +427,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ConfigServiceApplication">
+  <component name="RunManager" selected="Spring Boot.ZipkinClientApplication">
     <configuration name="AdminServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.dfocus.admin.AdminServiceApplication" />
@@ -550,30 +546,29 @@
       <module name="ucenter-service" />
       <envs />
     </configuration>
-    <configuration name="UserServiceTest.testGetAllUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ZipkinClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.dfoucs.gateway.service.*" />
+          <option name="PATTERN" value="com.dfocus.zipkinclient.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <module name="gateway-service" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.dfoucs.gateway.service" />
-      <option name="MAIN_CLASS_NAME" value="com.dfoucs.gateway.service.UserServiceTest" />
-      <option name="METHOD_NAME" value="testGetAllUsers" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dfocus.zipkinclient.ZipkinClientApplication" />
+      <option name="SHOW_IN_DASHBOARD" value="true" />
+      <module name="zipkin-client" />
       <envs />
-      <patterns />
+    </configuration>
+    <configuration name="ZipkinServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.dfoucs.zipkin.zipkin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dfoucs.zipkin.zipkin.ZipkinServiceApplication" />
+      <option name="SHOW_IN_DASHBOARD" value="true" />
+      <module name="zipkin-server" />
+      <envs />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
@@ -662,7 +657,7 @@
       <properties />
       <listeners />
     </configuration>
-    <list size="12">
+    <list size="13">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.EurekaServiceApplication" />
       <item index="1" class="java.lang.String" itemvalue="Spring Boot.GatewayServiceApplication" />
       <item index="2" class="java.lang.String" itemvalue="Spring Boot.RibbonServiceApplication" />
@@ -670,18 +665,20 @@
       <item index="4" class="java.lang.String" itemvalue="Spring Boot.OrderServiceApplication" />
       <item index="5" class="java.lang.String" itemvalue="Spring Boot.MonitoringServiceApplication" />
       <item index="6" class="java.lang.String" itemvalue="Spring Boot.AdminServiceApplication" />
-      <item index="7" class="java.lang.String" itemvalue="JUnit.UserServiceTest.testGetAllUsers" />
-      <item index="8" class="java.lang.String" itemvalue="JUnit.UcenterAuthTest.testGetToken" />
-      <item index="9" class="java.lang.String" itemvalue="JUnit.UcenterAuthTest.testverifyToken" />
-      <item index="10" class="java.lang.String" itemvalue="Spring Boot.ConfigClientServiceApplication" />
-      <item index="11" class="java.lang.String" itemvalue="Spring Boot.ConfigServiceApplication" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.UcenterAuthTest.testGetToken" />
+      <item index="8" class="java.lang.String" itemvalue="JUnit.UcenterAuthTest.testverifyToken" />
+      <item index="9" class="java.lang.String" itemvalue="Spring Boot.ConfigClientServiceApplication" />
+      <item index="10" class="java.lang.String" itemvalue="Spring Boot.ConfigServiceApplication" />
+      <item index="11" class="java.lang.String" itemvalue="Spring Boot.ZipkinServiceApplication" />
+      <item index="12" class="java.lang.String" itemvalue="Spring Boot.ZipkinClientApplication" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Spring Boot.ConfigServiceApplication" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.UcenterAuthTest.testverifyToken" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.UcenterAuthTest.testGetToken" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.UserServiceTest.testGetAllUsers" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Spring Boot.ZipkinClientApplication" />
+        <item index="1" class="java.lang.String" itemvalue="Spring Boot.ZipkinServiceApplication" />
+        <item index="2" class="java.lang.String" itemvalue="Spring Boot.ConfigServiceApplication" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.UcenterAuthTest.testverifyToken" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.UcenterAuthTest.testGetToken" />
       </list>
     </recent_temporary>
   </component>
@@ -701,7 +698,7 @@
       <workItem from="1505265800131" duration="10133000" />
       <workItem from="1505351858717" duration="15786000" />
       <workItem from="1505698667309" duration="12470000" />
-      <workItem from="1505784525337" duration="11610000" />
+      <workItem from="1505784525337" duration="14012000" />
     </task>
     <servers />
   </component>
@@ -738,10 +735,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110388000" />
+    <option name="totallyTimeSpent" value="112790000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="25" y="47" width="1382" height="754" extended-state="0" />
+    <frame x="25" y="46" width="1382" height="754" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -784,13 +781,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/dfocus/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/java/com/dfocus/common/enum/TipEnum.kt" />
     <entry file="file://$PROJECT_DIR$/common/src/main/java/com/dfocus/common/constant/TipEnum.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -924,14 +914,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config-repo/order-service-dev.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -996,22 +978,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zipkin-server/src/main/resources/zipkin.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zipkin-server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="62" column="8" lean-forward="false" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zipkin-server/mvnw">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1052,16 +1018,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zipkin-client/src/main/java/com/dfocus/zipkinclient/ZipkinClientApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1085,14 +1041,6 @@
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zipkin-server/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1139,14 +1087,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zipkin-client/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="36" column="21" lean-forward="true" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/order-service/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1163,10 +1103,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/zipkin-server/src/main/resources/zipkin.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="23" lean-forward="true" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zipkin-server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zipkin-server/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="67" lean-forward="true" selection-start-line="3" selection-start-column="67" selection-end-line="3" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zipkin-server/src/main/java/com/dfoucs/zipkin/zipkin/ZipkinServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zipkin-client/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zipkin-client/src/main/java/com/dfocus/zipkinclient/ZipkinClientApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/zipkin-client/src/main/java/com/dfocus/zipkinclient/controller/DemoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+        <state relative-caret-position="262">
+          <caret line="28" column="21" lean-forward="false" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#605#606#0" expanded="true" />

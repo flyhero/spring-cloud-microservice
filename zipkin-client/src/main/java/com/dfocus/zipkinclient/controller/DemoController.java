@@ -23,9 +23,9 @@ public class DemoController {
         return new RestTemplate();
     }
 
-    @RequestMapping("/call")
-    public String callHome(){
+    @RequestMapping("/call/ucenter")
+    public String callUcenter(){
         String result= this.restTemplate.getForObject("http://localhost:8084/user/hello", String.class);
-        return result+" world";
+        return result;
     }
 }
