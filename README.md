@@ -7,7 +7,6 @@
 ### 开发工具
 - MySql: 数据库
 - Git: 版本管理
-- Nginx: 反向代理服务器
 - IntelliJ IDEA: 开发IDE
 - Navicat for MySQL: 数据库客户端
 
