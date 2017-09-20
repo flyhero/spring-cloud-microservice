@@ -39,7 +39,7 @@ spring-cloud-microservice
 ```
 
 ## 微服务架构图
-
+![架构图](doc/spring-cloud-architecture.png)
 
 ## 部署说明
 
