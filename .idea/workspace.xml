@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6362a4ad-8fbb-41d6-9b06-17a2a22548b2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zipkin-server/src/main/java/com/dfoucs/zipkin/zipkin/ZipkinServiceApplication.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/config-server/src/main/java/com/dfoucs/config/ConfigServiceApplication.java" afterPath="$PROJECT_DIR$/config-server/src/main/java/com/dfocus/config/ConfigServerApplication.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/config-server/src/test/java/com/dfoucs/config/ConfigServiceApplicationTests.java" afterPath="$PROJECT_DIR$/config-server/src/test/java/com/dfocus/config/ConfigServiceApplicationTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/zipkin-server/src/test/java/com/dfoucs/zipkin/zipkin/ZipkinServiceApplicationTests.java" afterPath="$PROJECT_DIR$/zipkin-server/src/test/java/com/dfocus/zipkin/zipkin/ZipkinServiceApplicationTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config-server/pom.xml" afterPath="$PROJECT_DIR$/config-server/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/order-service/pom.xml" afterPath="$PROJECT_DIR$/order-service/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zipkin-server/pom.xml" afterPath="$PROJECT_DIR$/zipkin-server/pom.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/doc/spring cloud 架构图.png" afterPath="$PROJECT_DIR$/doc/spring cloud architecture.png" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -125,8 +115,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="344">
-                <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <first_editor relative-caret-position="279">
+                <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -720,7 +710,7 @@
       <workItem from="1505351858717" duration="15786000" />
       <workItem from="1505698667309" duration="12470000" />
       <workItem from="1505784525337" duration="17861000" />
-      <workItem from="1505870524050" duration="638000" />
+      <workItem from="1505870524050" duration="854000" />
     </task>
     <servers />
   </component>
@@ -757,7 +747,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117277000" />
+    <option name="totallyTimeSpent" value="117493000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="7" y="41" width="1382" height="754" extended-state="0" />
@@ -1127,8 +1117,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="344">
-            <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <first_editor relative-caret-position="279">
+            <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
