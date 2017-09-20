@@ -67,7 +67,6 @@
 		<artifactId>spring-cloud-starter-stream-rabbit</artifactId>
 	</dependency>
 
-
 </dependencies>
 
 <dependencyManagement>

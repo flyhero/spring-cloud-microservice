@@ -9,7 +9,7 @@
     <module>common</module>
     <module>eureka-service</module>
     <module>gateway-service</module>
-    <module>config-service</module>
+    <module>config-server</module>
     <module>ribbon-service</module>
     <module>monitoring-service</module>
     <module>ucenter-service</module>

@@ -1,5 +1,12 @@
 # spring-cloud-microservice
-使用spring cloud eureka,zuul,ribbon搭建的微服务
+
+## 功能描述
+使用spring cloud eureka,zuul,ribbon搭建的微服务框架
+
+## 开发环境
+
+
+## 项目结构
 
 
 | 服务名称 | 模块名称 | 服务端口 | 管理端口 | 作用
@@ -31,6 +38,11 @@ spring-cloud-microservice
 
 ```
 
+## 微服务架构图
+
+
+## 部署说明
+
 zipkin client 依赖
 ```
 	<!--日志追踪依赖 -->
@@ -52,3 +64,5 @@ config client 依赖
 		</dependency>
 
 ```
+
+

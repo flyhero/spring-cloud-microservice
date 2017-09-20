@@ -9,6 +9,7 @@
         <module name="admin-service" />
         <module name="common" />
         <module name="config-client-service" />
+        <module name="config-server" />
         <module name="config-service" />
         <module name="eureka-service" />
         <module name="gateway-service" />
@@ -26,6 +27,7 @@
       <module name="common" target="1.5" />
       <module name="common-service" target="1.5" />
       <module name="config-client-service" target="1.8" />
+      <module name="config-server" target="1.8" />
       <module name="config-service" target="1.8" />
       <module name="dashboard-service" target="1.8" />
       <module name="eureka-service" target="1.8" />
