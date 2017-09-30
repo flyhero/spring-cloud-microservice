@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Maven: com.dfocus:common:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar:///usr/local/maven-repository/com/dfocus/common/1.0-SNAPSHOT/common-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/common/common-1.0-SNAPSHOT-javadoc.jar!/" />
+      <root url="jar:///usr/local/maven-repository/com/dfocus/common/1.0-SNAPSHOT/common-1.0-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/common/common-1.0-SNAPSHOT-sources.jar!/" />
+      <root url="jar:///usr/local/maven-repository/com/dfocus/common/1.0-SNAPSHOT/common-1.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

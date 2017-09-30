@@ -15,6 +15,7 @@
         <option value="$PROJECT_DIR$/admin-service/pom.xml" />
         <option value="$PROJECT_DIR$/config-client-service/pom.xml" />
         <option value="$PROJECT_DIR$/zipkin-client/pom.xml" />
+        <option value="$PROJECT_DIR$/qrcode-service/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
