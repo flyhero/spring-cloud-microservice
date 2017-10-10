@@ -78,11 +78,12 @@ public class TestController {
 
         System.out.println(client.toString());
         String token = request.getHeader("Authorization");
+        logger.info("token:"+token);
         if (token == null || token.equals("")) {
             return QRcodeResult.error(QRcodeEnum.INVALID_TOKEN);
         }
 
-        if(DateUtils.isExpired(client.getCreateTime(),60)){
+        if(DateUtils.isExpired(client.getCreateTime(),600000)){
             return QRcodeResult.error(QRcodeEnum.EXPIRED);
         }
         try {
