@@ -3,11 +3,13 @@ package com.dfocus.qrcode.controller;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONException;
 import com.dfocus.common.base.JSONResult;
+import com.dfocus.common.util.Base64Utils;
 import com.dfocus.common.util.DateUtils;
 import com.dfocus.qrcode.base.QRcodeEnum;
 import com.dfocus.qrcode.base.QRcodeResult;
 import com.dfocus.qrcode.mq.Recv;
 import com.dfocus.qrcode.mq.Send;
+import com.dfocus.qrcode.util.JwtUtils;
 import com.dfocus.qrcode.vo.Info;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
@@ -17,6 +19,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
@@ -34,6 +37,23 @@ public class TestController {
     @Autowired
     private Send sender;
 
+    @ApiOperation(value = "健康监测")
+    @GetMapping("health")
+    public Map test(){
+        logger.info("================qrcode health=================");
+        Map<String,Object> map =new HashMap<>();
+        map.put("status","UP");
+        return map;
+    }
+
+    @ApiOperation(value = "api信息")
+    @GetMapping("info")
+    public Map info(){
+        Map<String,Object> map =new HashMap<>();
+        return map;
+    }
+
+
     /**
      * 扫码登录
      * @param info
@@ -45,11 +65,13 @@ public class TestController {
     @ApiResponse(code = 200, message = "成功",response = JSONResult.class)
     @GetMapping("user/login/{info}")
     public JSONResult obj(@PathVariable String info, HttpServletRequest request){
+        logger.info("==================qrcode login=====================");
 
         Info client = null;
         try{
-            client =JSON.parseObject(info, Info.class);
-        }catch (JSONException e){
+            logger.debug("info:"+Base64Utils.decoder(info));
+            client =JSON.parseObject(Base64Utils.decoder(info), Info.class);
+        }catch (Exception e){
             logger.error(e.toString());
             return QRcodeResult.error(QRcodeEnum.PL_UPDATE_QR);
         }
@@ -128,4 +150,21 @@ public class TestController {
         map.put("type","login");
         return JSONResult.ok(map);
     }
+
+    /**
+     * 获取token
+     * @return
+     */
+    @ApiOperation(value = "获取token")
+    @GetMapping("user/auth")
+    public String auth(){
+        String token =null;
+        try{
+            token = JwtUtils.createToken();
+        }catch (Exception e){
+            System.out.println(e.toString());
+        }
+        return token;
+    }
+
 }

@@ -1,4 +1,4 @@
-package com.dfoucs.ucenter;
+package com.dfocus.ucenter;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

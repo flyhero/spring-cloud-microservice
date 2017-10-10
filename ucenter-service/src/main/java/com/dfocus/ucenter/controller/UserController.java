@@ -1,4 +1,4 @@
-package com.dfoucs.ucenter.controller;
+package com.dfocus.ucenter.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

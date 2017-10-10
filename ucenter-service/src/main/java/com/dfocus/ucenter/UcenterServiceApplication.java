@@ -1,4 +1,4 @@
-package com.dfoucs.ucenter;
+package com.dfocus.ucenter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
