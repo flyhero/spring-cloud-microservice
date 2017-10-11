@@ -101,3 +101,7 @@ config client 依赖
 
 - 调用链追踪
 ![调用链追踪](doc/zipkin.png)
+
+## TODO
+1.动态路由
+2.流量限制

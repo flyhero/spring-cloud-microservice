@@ -1,5 +1,6 @@
 package com.dfocus.qrcode;
 
+import com.dfocus.common.base.IdWorker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.core.RabbitManagementTemplate;
@@ -16,6 +17,14 @@ public class QrcodeServiceApplication {
 		logger.debug("=======初始化rabbit管理========");
 		return new RabbitManagementTemplate("http://localhost:15672/api/queues");
 	}
+
+	@Bean
+	IdWorker idWorker(){
+		return new IdWorker(0,0);
+	}
+
+
+
 	public static void main(String[] args) {
 		SpringApplication.run(QrcodeServiceApplication.class, args);
 	}

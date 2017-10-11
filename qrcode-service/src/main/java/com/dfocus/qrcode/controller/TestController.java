@@ -1,7 +1,7 @@
 package com.dfocus.qrcode.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONException;
+import com.dfocus.common.base.IdWorker;
 import com.dfocus.common.base.JSONResult;
 import com.dfocus.common.util.Base64Utils;
 import com.dfocus.common.util.DateUtils;
@@ -17,10 +17,8 @@ import io.swagger.annotations.ApiResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
@@ -37,6 +35,8 @@ public class TestController {
     private final Logger logger = LoggerFactory.getLogger(TestController.class);
     @Autowired
     private Send sender;
+    @Autowired
+    private IdWorker idWorker;
 
     @ApiOperation(value = "健康监测")
     @GetMapping("health")
@@ -143,7 +143,7 @@ public class TestController {
         Map<String,Object> map =new HashMap<>();
         String uuid = "";
         try{
-            uuid = createUUID();
+            uuid = String.valueOf(idWorker.nextId());
             sender.createQueue(uuid);
         }catch (Exception e){
             System.out.println(e.toString());

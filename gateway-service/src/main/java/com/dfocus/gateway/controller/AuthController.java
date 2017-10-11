@@ -3,7 +3,9 @@ package com.dfocus.gateway.controller;
 import com.dfocus.gateway.auth.UcenterAuth;
 import com.dfocus.gateway.service.impl.UserServiceImpl;
 import com.dfocus.gateway.vo.User;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,7 +23,8 @@ public class AuthController {
     @Autowired
     private UcenterAuth ucenterAuth;
 
-    @RequestMapping("/jwt")
+    @ApiOperation(value = "登录授权")
+    @GetMapping("/jwt")
     public Map<String,Object> authorize(HttpServletRequest request){
         Map<String,Object> map =new HashMap<>();
         String username=request.getParameter("username");
