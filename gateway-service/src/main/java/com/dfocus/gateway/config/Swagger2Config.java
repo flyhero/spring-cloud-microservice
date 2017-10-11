@@ -30,7 +30,7 @@ public class Swagger2Config {
     }
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Spring Boot中使用Swagger2构建RESTful APIs")
+                .title("Gateway-service RESTful APIs")
                 .description("此服务提供网关服务")
                 .termsOfServiceUrl("http://www.xxx.com/")
                 .contact("flyhero")

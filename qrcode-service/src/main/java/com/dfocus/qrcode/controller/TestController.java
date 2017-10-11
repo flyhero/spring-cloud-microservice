@@ -105,38 +105,18 @@ public class TestController {
         return JSONResult.ok();
     }
 
-    @GetMapping("send")
-    public String send() throws Exception{
-/*        new Queue("hello", false);
-        sender.send("hello");*/
-        sender.sendMsg("hello","测试");
-        return "send";
-    }
-    @GetMapping("recv")
-    public String recv() throws Exception{
-        Recv.recvMsg();
-        return "send";
+
+    @ApiOperation(value = "创建唯一id")
+    @GetMapping("id")
+    public String createID(){
+        return String.valueOf(idWorker.nextId());
     }
 
-    @GetMapping("uuid")
-    public String createUUID(){
-        return UUID.randomUUID().toString().replace("-","");
-    }
-    @GetMapping("json")
-    public JSONResult json(){
-        Map<String,Object> map =new HashMap<>();
-        map.put("uuid",UUID.randomUUID().toString().replace("-",""));
-        map.put("isCreated",true);
-        List<String> list = new ArrayList<>();
-        list.add("wang");
-        list.add("qing");
-        list.add("fei");
-        return JSONResult.ok(list);
-    }
     /**
      * 根据UUID创建消息队列，并返回UUID
      * @return
      */
+    @ApiOperation(value = "获取扫码登录客户端id")
     @GetMapping("qrcode/uuid")
     public JSONResult qrcodeUUID(){
         logger.info("=============执行获取uuid============");
@@ -147,6 +127,7 @@ public class TestController {
             sender.createQueue(uuid);
         }catch (Exception e){
             System.out.println(e.toString());
+            logger.error("创建队列时出错{}",e);
         }
         map.put("uuid",uuid);
         map.put("type","login");

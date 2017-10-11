@@ -12,7 +12,6 @@
         <option value="$PROJECT_DIR$/monitoring-service/pom.xml" />
         <option value="$PROJECT_DIR$/zipkin-service/pom.xml" />
         <option value="$PROJECT_DIR$/config-service/pom.xml" />
-        <option value="$PROJECT_DIR$/admin-service/pom.xml" />
         <option value="$PROJECT_DIR$/config-client-service/pom.xml" />
         <option value="$PROJECT_DIR$/zipkin-client/pom.xml" />
         <option value="$PROJECT_DIR$/qrcode-service/pom.xml" />

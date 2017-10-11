@@ -23,6 +23,9 @@ public class JSONResult {
     public static JSONResult ok(Object data) {
         return new JSONResult(200,"success",data);
     }
+    public static JSONResult error() {
+        return error(null);
+    }
     public static JSONResult error(Object data) {
         return new JSONResult(500,"error",data);
     }

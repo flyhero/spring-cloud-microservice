@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- *
+ * 从数据库中加载路由信息
  */
 public class CustomRouteLocator extends SimpleRouteLocator implements RefreshableRouteLocator {
 
