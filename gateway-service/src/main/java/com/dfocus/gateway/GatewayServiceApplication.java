@@ -15,7 +15,6 @@ public class GatewayServiceApplication {
 	private static final Logger logger = LoggerFactory.getLogger(GatewayServiceApplication.class);
 	public static void main(String[] args) {
 		logger.info("======================正在启动网关服务=======================");
-		logger.debug("======================正在启动网关服务=======================");
 		SpringApplication.run(GatewayServiceApplication.class, args);
 		//logger.info("======================网关服务启动完毕=======================");
 	}
