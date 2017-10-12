@@ -131,7 +131,7 @@ public class CustomRouteLocator extends SimpleRouteLocator implements Refreshabl
 
         private String apiName;
 
-        private Boolean enabled;
+        private Boolean enabled = false;
 
         private Date createdTime;
 
@@ -215,6 +215,22 @@ public class CustomRouteLocator extends SimpleRouteLocator implements Refreshabl
 
         public void setModifiedTime(Date modifiedTime) {
             this.modifiedTime = modifiedTime;
+        }
+
+        @Override
+        public String toString() {
+            return "ZuulRouteVO{" +
+                    "id='" + id + '\'' +
+                    ", path='" + path + '\'' +
+                    ", serviceId='" + serviceId + '\'' +
+                    ", url='" + url + '\'' +
+                    ", stripPrefix=" + stripPrefix +
+                    ", retryable=" + retryable +
+                    ", apiName='" + apiName + '\'' +
+                    ", enabled=" + enabled +
+                    ", createdTime=" + createdTime +
+                    ", modifiedTime=" + modifiedTime +
+                    '}';
         }
     }
 }

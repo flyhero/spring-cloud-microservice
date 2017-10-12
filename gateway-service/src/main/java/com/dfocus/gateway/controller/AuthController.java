@@ -23,9 +23,18 @@ public class AuthController {
     @Autowired
     private UcenterAuth ucenterAuth;
 
+    /**
+     *
+     * @title: authorize
+     * @author qfwang
+     * @params [request]
+     * @return java.util.Map<java.lang.String,java.lang.Object>
+     * @date 2017/10/12 上午10:10
+     */
     @ApiOperation(value = "登录授权")
     @GetMapping("/jwt")
     public Map<String,Object> authorize(HttpServletRequest request){
+
         Map<String,Object> map =new HashMap<>();
         String username=request.getParameter("username");
         String password=request.getParameter("password");

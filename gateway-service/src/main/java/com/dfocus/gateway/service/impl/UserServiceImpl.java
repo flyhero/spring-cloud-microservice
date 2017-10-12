@@ -11,6 +11,7 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
+
     @Override
     public void create(String name, Integer age) {
         jdbcTemplate.update("insert into USER(NAME, AGE) values(?, ?)", name, age);
