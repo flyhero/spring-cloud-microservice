@@ -25,7 +25,7 @@ public class Send {
         factory.setHost("localhost");
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
-        channel.queueDeclare(queueName, true, false, false, null);
+        channel.queueDeclare(queueName, false, false, false, null);
         channel.close();
         connection.close();
     }

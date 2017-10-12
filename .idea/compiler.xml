@@ -24,7 +24,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="admin-service" target="1.8" />
-      <module name="common" target="1.6" />
+      <module name="common" target="1.8" />
       <module name="common-service" target="1.5" />
       <module name="config-client-service" target="1.8" />
       <module name="config-server" target="1.8" />

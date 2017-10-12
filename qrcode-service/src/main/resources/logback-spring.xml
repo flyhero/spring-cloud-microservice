@@ -31,7 +31,7 @@
         </triggeringPolicy>
     </appender>
 
-    <root level="INFO,ERROR">
+    <root level="INFO">
         <appender-ref ref="fileLog" />
         <appender-ref ref="stdout"  />
     </root>

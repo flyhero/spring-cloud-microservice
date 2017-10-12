@@ -13,13 +13,13 @@ public class Recv {
 
     private final static String QUEUE_NAME = "hello";
 
-    public static void recvMsg() throws Exception {
+    public static void recvMsg(String queueName) throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost("localhost");
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
 
-        channel.queueDeclare(QUEUE_NAME, false, false, false, null);
+        channel.queueDeclare(queueName, false, false, false, null);
         System.out.println(" [*] Waiting for messages. To exit press CTRL+C");
 
         Consumer consumer = new DefaultConsumer(channel) {
@@ -30,8 +30,9 @@ public class Recv {
                 System.out.println(" [x] Received '" + message + "'");
             }
         };
-        channel.basicConsume(QUEUE_NAME, false, consumer);
-        //channel.queueDelete(QUEUE_NAME);
+        String a=channel.basicConsume(queueName, false, consumer);
+        System.out.println("================"+a);
+        //channel.queueDelete(queueName);
         channel.close();
         connection.close();
     }

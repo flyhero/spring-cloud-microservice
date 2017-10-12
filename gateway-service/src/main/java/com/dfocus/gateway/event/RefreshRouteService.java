@@ -11,9 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
- * Created by xujingfeng on 2017/4/1.
- */
+
 @Service
 public class RefreshRouteService {
 
@@ -33,6 +31,9 @@ public class RefreshRouteService {
 
     public int addRoute(CustomRouteLocator.ZuulRouteVO zuulRouteVO){
         return jdbcTemplate.update("INSERT INTO api_route(path,service_id,url,enabled,api_name,created_time) VALUES (?,?,?,?,?,now())",new Object[]{zuulRouteVO.getPath(),zuulRouteVO.getServiceId(),zuulRouteVO.getUrl(),zuulRouteVO.getEnabled(),zuulRouteVO.getApiName()});
+    }
+    public int updateRoute(CustomRouteLocator.ZuulRouteVO zuulRouteVO){
+        return jdbcTemplate.update("UPDATE api_route SET path = ?,service_id = ?,url = ?,enabled = ?,api_name = ?) WHERE id=?",new Object[]{zuulRouteVO.getPath(),zuulRouteVO.getServiceId(),zuulRouteVO.getUrl(),zuulRouteVO.getEnabled(),zuulRouteVO.getApiName(),zuulRouteVO.getId()});
     }
     public List findRouteList(){
         List<CustomRouteLocator.ZuulRouteVO> results = jdbcTemplate.query("select * from api_route",new BeanPropertyRowMapper<>(CustomRouteLocator.ZuulRouteVO.class));

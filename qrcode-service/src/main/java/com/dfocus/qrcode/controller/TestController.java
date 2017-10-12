@@ -54,6 +54,25 @@ public class TestController {
         return map;
     }
 
+    @GetMapping("recv")
+    public String recv(){
+        try {
+            Recv.recvMsg("qfwang");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "ok";
+    }
+    @GetMapping("send")
+    public String send(){
+        try {
+            sender.createQueue("qfwang");
+            sender.sendMsg("qfwang","this ia a test");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "ok";
+    }
 
     /**
      * 扫码登录

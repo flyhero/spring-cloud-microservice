@@ -1,8 +1,10 @@
 package com.dfocus.gateway.controller;
 
 import com.dfocus.common.base.JSONResult;
+import com.dfocus.common.controller.BaseController;
 import com.dfocus.gateway.event.RefreshRouteService;
 import com.dfocus.gateway.route.CustomRouteLocator;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
@@ -18,14 +20,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.List;
 import java.util.Map;
 
 /**
  * 路由操作
  */
+@Api(value = "服务api管理")
 @Controller
 @RequestMapping("route")
-public class RouteController {
+public class RouteController extends BaseController{
 
     private Logger logger= LoggerFactory.getLogger(RouteController.class);
 
@@ -73,11 +77,19 @@ public class RouteController {
     @PostMapping("addRoute")
     public ModelAndView addRoute(CustomRouteLocator.ZuulRouteVO zuulRouteVO){
         logger.info(zuulRouteVO.toString());
-        ModelAndView mv = new ModelAndView();
-/*        if (refreshRouteService.addRoute(zuulRouteVO) != 0) {
-            return JSONResult.ok();
-        }*/
-        mv.setViewName("/route");
+        List<CustomRouteLocator.ZuulRouteVO> list = null;
+        try {
+            if (refreshRouteService.addRoute(zuulRouteVO) != 0) {
+                mv.addObject("msg","ok");
+            }else {
+                mv.addObject("msg","error");
+            }
+            list = refreshRouteService.findRouteList();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        mv.addObject("apiRoute",list);
+        mv.setViewName("/list");
         return mv;
 
     }
