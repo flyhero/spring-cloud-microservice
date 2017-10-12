@@ -29,6 +29,12 @@ public class RouteController {
 
     private Logger logger= LoggerFactory.getLogger(RouteController.class);
 
+    @RequestMapping("test")
+    public String test(){
+        return "test";
+    }
+
+
     @Autowired
     RefreshRouteService refreshRouteService;
 
@@ -65,14 +71,14 @@ public class RouteController {
      */
     @ApiOperation(value = "添加路由信息")
     @PostMapping("addRoute")
-    public String addRoute(CustomRouteLocator.ZuulRouteVO zuulRouteVO){
+    public ModelAndView addRoute(CustomRouteLocator.ZuulRouteVO zuulRouteVO){
         logger.info(zuulRouteVO.toString());
         ModelAndView mv = new ModelAndView();
 /*        if (refreshRouteService.addRoute(zuulRouteVO) != 0) {
             return JSONResult.ok();
         }*/
         mv.setViewName("/route");
-        return "index";
+        return mv;
 
     }
 
