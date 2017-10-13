@@ -17,6 +17,7 @@ import io.swagger.annotations.ApiResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -151,6 +152,24 @@ public class TestController {
         map.put("uuid",uuid);
         map.put("type","login");
         return JSONResult.ok(map);
+    }
+
+    /**
+     *  web接收到客户端id后删除某个队列
+     * @title: delQueue
+     * @author qfwang
+     * @params [clientId]
+     * @return com.dfocus.common.base.JSONResult
+     * @date 2017/10/13 上午10:23
+     */
+    @DeleteMapping("delQueue/{clientId}")
+    public JSONResult delQueue(@PathVariable String clientId){
+        try {
+            sender.delQueue(clientId);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return JSONResult.ok();
     }
 
     /**

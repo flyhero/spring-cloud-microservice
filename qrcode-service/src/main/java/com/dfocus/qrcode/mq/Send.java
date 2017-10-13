@@ -1,12 +1,12 @@
 package com.dfocus.qrcode.mq;
 
-import com.rabbitmq.client.Channel;
-import com.rabbitmq.client.Connection;
-import com.rabbitmq.client.ConnectionFactory;
+import com.rabbitmq.client.*;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.core.RabbitManagementTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import java.io.IOException;
 
 /**
  * User: qfwang
@@ -29,7 +29,27 @@ public class Send {
         channel.close();
         connection.close();
     }
+    /**
+     * 删除某个队列
+     * @title: delQueue
+     * @author qfwang
+     * @params [queueName]
+     * @return void
+     * @date 2017/10/13 上午10:18
+     */
+    public void delQueue(String queueName) throws Exception {
+        ConnectionFactory factory = new ConnectionFactory();
+        factory.setHost("localhost");
+        Connection connection = factory.newConnection();
+        Channel channel = connection.createChannel();
 
+        if(isExistsClient(queueName)){
+            channel.queueDelete(queueName);
+        }
+
+        channel.close();
+        connection.close();
+    }
     /**
      * 是否存在这个队列
      * @param queueName

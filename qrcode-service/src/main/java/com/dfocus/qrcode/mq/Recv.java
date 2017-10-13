@@ -1,6 +1,7 @@
 package com.dfocus.qrcode.mq;
 
 import com.rabbitmq.client.*;
+import org.springframework.amqp.rabbit.support.Delivery;
 
 import java.io.IOException;
 
@@ -32,6 +33,8 @@ public class Recv {
         };
         String a=channel.basicConsume(queueName, false, consumer);
         System.out.println("================"+a);
+
+
         //channel.queueDelete(queueName);
         channel.close();
         connection.close();
