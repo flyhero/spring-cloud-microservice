@@ -1,0 +1,30 @@
+version: '3'
+services:
+  gateway-service:
+    build:
+      context: ./gateway-service
+      dockerfile: Dockerfile
+    container_name: gateway-service
+    ports:
+      - "8082:8082"
+    depends_on:
+      - db
+    networks:
+      - micro-back
+
+  db:
+    image: mysql
+    container_name: mysql001
+    volumes:
+      - /docker/mysql/data:/var/lib/mysql
+    environment:
+      TZ: 'Asia/Shanghai'
+      MYSQL_ROOT_PASSWORD: 123456
+    ports:
+      - "3306:3306"
+    networks:
+      - micro-back
+
+networks:
+  micro-back:
+    driver: bridge

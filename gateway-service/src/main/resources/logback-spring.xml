@@ -173,16 +173,16 @@
 <!--</contextListener>-->
 
 
-<springProfile name="production">
+<!--<springProfile name="production">
     <root level="DEBUG">
-        <!--<appender-ref ref="FILEERROR"/>-->
-        <!--<appender-ref ref="FILEWARN"/>-->
-        <!--<appender-ref ref="FILEINFO"/>-->
-        <!--<appender-ref ref="DBAPPENDER"/>-->
+        &lt;!&ndash;<appender-ref ref="FILEERROR"/>&ndash;&gt;
+        &lt;!&ndash;<appender-ref ref="FILEWARN"/>&ndash;&gt;
+        &lt;!&ndash;<appender-ref ref="FILEINFO"/>&ndash;&gt;
+        &lt;!&ndash;<appender-ref ref="DBAPPENDER"/>&ndash;&gt;
         <appender-ref ref="STDOUT"/>
 
     </root>
-</springProfile>
+</springProfile>-->
 
 
 <springProfile name="dev">

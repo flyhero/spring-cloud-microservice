@@ -1,3 +1,7 @@
+com/dfocus/common/base/JSONResult.class
+com/dfocus/common/util/DateUtils.class
+com/dfocus/common/util/Base64Utils.class
+com/dfocus/common/base/IdWorker.class
+com/dfocus/common/controller/BaseController.class
 com/dfocus/App.class
-com/dfocus/common/constant/JSONResult.class
-com/dfocus/common/constant/TipEnum.class
+com/dfocus/common/base/TipEnum.class
