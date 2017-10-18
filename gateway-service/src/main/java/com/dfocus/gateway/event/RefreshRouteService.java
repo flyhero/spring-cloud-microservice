@@ -30,11 +30,15 @@ public class RefreshRouteService {
     }
 
     public int addRoute(CustomRouteLocator.ZuulRouteVO zuulRouteVO){
-        return jdbcTemplate.update("INSERT INTO api_route(path,service_id,url,enabled,api_name,created_time) VALUES (?,?,?,?,?,now())",new Object[]{zuulRouteVO.getPath(),zuulRouteVO.getServiceId(),zuulRouteVO.getUrl(),zuulRouteVO.getEnabled(),zuulRouteVO.getApiName()});
+        int num=jdbcTemplate.update("INSERT INTO api_route(id,path,service_id,url,enabled,api_name,created_time) VALUES (?,?,?,?,?,?,now())",new Object[]{zuulRouteVO.getServiceId(),zuulRouteVO.getPath(),zuulRouteVO.getServiceId(),zuulRouteVO.getUrl(),zuulRouteVO.getEnabled(),zuulRouteVO.getApiName()});
+        refreshRoute();
+        return num;
     }
-    public int updateRoute(CustomRouteLocator.ZuulRouteVO zuulRouteVO){
-        return jdbcTemplate.update("UPDATE api_route SET path = ?,service_id = ?,url = ?,enabled = ?,api_name = ?) WHERE id=?",new Object[]{zuulRouteVO.getPath(),zuulRouteVO.getServiceId(),zuulRouteVO.getUrl(),zuulRouteVO.getEnabled(),zuulRouteVO.getApiName(),zuulRouteVO.getId()});
-    }
+/*    public int updateRoute(CustomRouteLocator.ZuulRouteVO zuulRouteVO){
+        int num= jdbcTemplate.update("UPDATE api_route SET id = ?,path = ?,service_id = ?,url = ?,enabled = ?,api_name = ?) WHERE id=?",new Object[]{zuulRouteVO.getPath(),zuulRouteVO.getServiceId(),zuulRouteVO.getUrl(),zuulRouteVO.getEnabled(),zuulRouteVO.getApiName(),zuulRouteVO.getId()});
+        refreshRoute();
+        return num;
+    }*/
     public List findRouteList(){
         List<CustomRouteLocator.ZuulRouteVO> results = jdbcTemplate.query("select * from api_route",new BeanPropertyRowMapper<>(CustomRouteLocator.ZuulRouteVO.class));
         return results;

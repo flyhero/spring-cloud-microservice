@@ -29,7 +29,7 @@ public class AuthPreFilter extends ZuulFilter{
     public String filterType() {
         return PRE_TYPE;
     }
-
+    //优先级为0，数字越大，优先级越低
     @Override
     public int filterOrder() {
         return DEBUG_FILTER_ORDER;
@@ -37,12 +37,13 @@ public class AuthPreFilter extends ZuulFilter{
 
     @Override
     public boolean shouldFilter() {
-        return false;
+        return true;
     }
 
     @Override
     public Object run() {
-        RequestContext ctx = RequestContext.getCurrentContext();
+        System.out.println("=============AuthPreFilter==============");
+/*        RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
         String token = request.getHeader("Authorization");
         if (token == null || token.equals("")) {
@@ -65,7 +66,7 @@ public class AuthPreFilter extends ZuulFilter{
 
         }catch (Exception e){
 
-        }
+        }*/
 
         return null;
     }

@@ -11,13 +11,11 @@ import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.netflix.zuul.filters.ZuulProperties;
 import org.springframework.cloud.netflix.zuul.web.ZuulHandlerMapping;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -43,6 +41,7 @@ public class RouteController extends BaseController{
     RefreshRouteService refreshRouteService;
 
     @GetMapping("/refreshRoute")
+    @ResponseBody
     public String refreshRoute(){
         refreshRouteService.refreshRoute();
         return "refreshRoute";
@@ -60,9 +59,17 @@ public class RouteController extends BaseController{
      * @date 2017/10/12 上午9:42
      */
     @GetMapping("/watchNowRoute")
+    @ResponseBody
     public String watchNowRoute(){
         //可以用debug模式看里面具体是什么
         Map<String, Object> handlerMap = zuulHandlerMapping.getHandlerMap();
+        for (String key:handlerMap.keySet()){
+            System.out.println("key:"+key);
+            System.out.println(handlerMap.get(key).toString());
+            System.out.println(handlerMap.get(key).getClass());
+           // ZuulProperties.ZuulRoute route = (ZuulProperties.ZuulRoute)handlerMap.get(key);
+            //System.out.println("路由信息："+route.getId()+"--"+route.getServiceId());
+        }
         return "watchNowRoute";
     }
     /**

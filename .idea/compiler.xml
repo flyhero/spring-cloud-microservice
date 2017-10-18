@@ -15,6 +15,7 @@
         <module name="monitoring-service" />
         <module name="order-service" />
         <module name="qrcode-service" />
+        <module name="ratelimit" />
         <module name="ribbon-service" />
         <module name="ucenter-service" />
         <module name="zipkin-client" />
@@ -35,6 +36,7 @@
       <module name="monitoring-service" target="1.8" />
       <module name="order-service" target="1.8" />
       <module name="qrcode-service" target="1.8" />
+      <module name="ratelimit" target="1.8" />
       <module name="ribbon-service" target="1.8" />
       <module name="spring-cloud-microservice" target="1.6" />
       <module name="ucenter-service" target="1.8" />

@@ -27,6 +27,7 @@ public class RefreshRouteServiceTest {
     @Test
     public void testAddRoute() {
         CustomRouteLocator.ZuulRouteVO zuulRouteVO = new CustomRouteLocator.ZuulRouteVO();
+        zuulRouteVO.setId("test-service");
         zuulRouteVO.setPath("/testapi/**");
         zuulRouteVO.setServiceId("test-service");
         zuulRouteVO.setUrl("http://localhost:8070/");
