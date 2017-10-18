@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.dfocus.AppTest" time="0" tests="1" errors="0" skipped="0" failures="0">
+<testsuite name="com.dfocus.AppTest" time="0.001" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="idea.version" value="2017.2.2"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -61,5 +61,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="testApp" classname="com.dfocus.AppTest" time="0"/>
+  <testcase name="testApp" classname="com.dfocus.AppTest" time="0.001"/>
 </testsuite>

@@ -5,10 +5,12 @@ services:
       context: ./gateway-service
       dockerfile: Dockerfile
     container_name: gateway-service
+    image: gateway-service
     ports:
       - "8082:8082"
     depends_on:
       - db
+      - redis
     networks:
       - micro-back
 
@@ -22,6 +24,14 @@ services:
       MYSQL_ROOT_PASSWORD: 123456
     ports:
       - "3306:3306"
+    networks:
+      - micro-back
+
+  redis:
+    image: redis
+    container_name: redis001
+    ports:
+      - "6379:6379"
     networks:
       - micro-back
 

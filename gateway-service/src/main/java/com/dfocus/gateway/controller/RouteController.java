@@ -72,6 +72,12 @@ public class RouteController extends BaseController{
         }
         return "watchNowRoute";
     }
+
+    @RequestMapping("view")
+    public ModelAndView goRouteView(){
+        mv.setViewName("route");
+        return mv;
+    }
     /**
      *
      * @title: addRoute
