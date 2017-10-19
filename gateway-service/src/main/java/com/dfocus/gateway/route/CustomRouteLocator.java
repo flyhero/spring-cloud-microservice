@@ -95,6 +95,8 @@ public class CustomRouteLocator extends SimpleRouteLocator implements Refreshabl
 
     public static class ZuulRouteVO {
 
+        private int routeId;
+
         /**
          * The ID of the route (the same as its map key by default).
          */
@@ -131,11 +133,19 @@ public class CustomRouteLocator extends SimpleRouteLocator implements Refreshabl
 
         private String apiName;
 
-        private Boolean enabled = false;
+        private Boolean enabled = true;
 
         private Date createdTime;
 
         private Date modifiedTime;
+
+        public int getRouteId() {
+            return routeId;
+        }
+
+        public void setRouteId(int routeId) {
+            this.routeId = routeId;
+        }
 
         public String getId() {
             return id;
