@@ -41,14 +41,14 @@ public class GatewayServiceApplication {
 		return client;
 	}*/
 
-	@Bean(name = "zuulProperties")
+/*	@Bean(name = "zuulProperties")
 	@RefreshScope
 	@ConfigurationProperties("zuul")
 	@Primary
 	public ZuulProperties zuulProperties() {
 		ZuulProperties zuulProperties = new ZuulProperties();
 		return zuulProperties;
-	}
+	}*/
 	public static void main(String[] args) {
 		logger.info("======================正在启动网关服务=======================");
 
@@ -74,6 +74,47 @@ RUN sh -c 'touch /app.jar'
 ENV JAVA_OPTS=""
 ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar" ]
 EXPOSE 8082
+
+
+
+zuul.routes.serviceC.path: /serviceC
+zuul.routes.serviceC.url: forward:/
+
+zuul.routes.serviceD.strip-prefix: false
+zuul.routes.serviceD.path: /serviceD/**
+zuul.routes.serviceD.url: forward:/
+
+zuul.routes.serviceE.path: /serviceE
+zuul.routes.serviceE.url: forward:/
+zuul.routes.serviceE.id=wang
+
+
+zuul.ratelimit.enabled=true
+zuul.ratelimit.repository=REDIS
+
+#zuul.ratelimit.policies.serviceA.limit= 3
+#zuul.ratelimit.policies.serviceA.refresh-interval=60
+#zuul.ratelimit.policies.serviceA.type=origin
+
+zuul.ratelimit.policies.serviceB.limit= 2
+zuul.ratelimit.policies.serviceB.refresh-interval=2
+zuul.ratelimit.policies.serviceB.type=origin
+
+zuul.ratelimit.policies.serviceC.limit= 2
+zuul.ratelimit.policies.serviceC.refresh-interval=60
+zuul.ratelimit.policies.serviceC.type=origin
+
+zuul.ratelimit.policies.serviceD.limit= 2
+zuul.ratelimit.policies.serviceD.refresh-interval=60
+zuul.ratelimit.policies.serviceD.type=url
+
+zuul.ratelimit.policies.wang.quota= 1
+zuul.ratelimit.policies.wang.refresh-interval=60
+zuul.ratelimit.policies.wang.type=origin
+
+#zuul.ratelimit.policies.qrcode.limit= 2
+#zuul.ratelimit.policies.qrcode.refresh-interval=60
+#zuul.ratelimit.policies.qrcode.type=url
 
 			*/
 
