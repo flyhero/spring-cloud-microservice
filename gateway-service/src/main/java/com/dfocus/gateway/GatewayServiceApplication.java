@@ -10,8 +10,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
+import org.springframework.cloud.netflix.zuul.filters.ZuulProperties;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
 
 
 import javax.servlet.http.HttpServletRequest;
@@ -37,7 +41,14 @@ public class GatewayServiceApplication {
 		return client;
 	}*/
 
-
+	@Bean(name = "zuulProperties")
+	@RefreshScope
+	@ConfigurationProperties("zuul")
+	@Primary
+	public ZuulProperties zuulProperties() {
+		ZuulProperties zuulProperties = new ZuulProperties();
+		return zuulProperties;
+	}
 	public static void main(String[] args) {
 		logger.info("======================正在启动网关服务=======================");
 

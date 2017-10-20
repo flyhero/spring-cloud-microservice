@@ -27,18 +27,12 @@ public class CustomZuulConfig {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
-    @Bean
-    @RefreshScope
-    @ConfigurationProperties("zuul")
-    @Primary
-    public ZuulProperties zuulProperties() {
-        return new ZuulProperties();
-    }
+
 
 
     @Bean
     public CustomRouteLocator routeLocator() {
-        CustomRouteLocator routeLocator = new CustomRouteLocator(this.server.getServletPrefix(), this.zuulProperties);
+        CustomRouteLocator routeLocator = new CustomRouteLocator(this.server.getServletPrefix(), zuulProperties);
         routeLocator.setJdbcTemplate(jdbcTemplate);
         return routeLocator;
     }
