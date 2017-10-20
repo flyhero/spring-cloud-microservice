@@ -31,6 +31,12 @@
 			<artifactId>common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+
+		<!--配置中心客户端-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
 <!--		<dependency>
 			<groupId>com.dfocus</groupId>
 			<artifactId>ratelimit</artifactId>
