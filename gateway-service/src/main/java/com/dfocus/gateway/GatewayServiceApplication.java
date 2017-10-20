@@ -1,10 +1,17 @@
 package com.dfocus.gateway;
 
+import com.netflix.client.ClientException;
+import com.netflix.client.ClientFactory;
+import com.netflix.client.IClient;
+import com.netflix.client.config.CommonClientConfigKey;
+import com.netflix.client.config.DefaultClientConfigImpl;
+import com.netflix.client.config.IClientConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
+import org.springframework.context.annotation.Bean;
 
 
 import javax.servlet.http.HttpServletRequest;
@@ -16,9 +23,24 @@ import javax.servlet.http.HttpServletRequest;
 public class GatewayServiceApplication {
 	private static final Logger logger = LoggerFactory.getLogger(GatewayServiceApplication.class);
 
+/*	@Bean
+	public IClient setRibbon(){
+		logger.info("================进行负载均衡配置=================");
+		String listOfServers = "http://localhost:8990/,http://localhost:8991/";
+		IClient client =null;
+		try {
+			client= ClientFactory.createNamedClient("compute",new DefaultClientConfigImpl().set(CommonClientConfigKey.ListOfServers,listOfServers).getClass());
+		} catch (ClientException e) {
+			System.out.println(e.toString());
+			e.printStackTrace();
+		}
+		return client;
+	}*/
+
 
 	public static void main(String[] args) {
 		logger.info("======================正在启动网关服务=======================");
+
 		SpringApplication.run(GatewayServiceApplication.class, args);
 		//logger.info("======================网关服务启动完毕=======================");
 	}

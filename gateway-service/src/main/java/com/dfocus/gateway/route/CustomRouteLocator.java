@@ -69,6 +69,7 @@ public class CustomRouteLocator extends SimpleRouteLocator implements Refreshabl
                     path = "/" + path;
                 }
             }
+            System.out.println("proper===="+entry.getValue().getServiceId());
             values.put(path, entry.getValue());
         }
         return values;
@@ -86,6 +87,7 @@ public class CustomRouteLocator extends SimpleRouteLocator implements Refreshabl
             try {
                 org.springframework.beans.BeanUtils.copyProperties(result,zuulRoute);
             } catch (Exception e) {
+                System.out.println(e.toString());
                 logger.error("=============load zuul route info from db with error==============",e);
             }
             routes.put(zuulRoute.getPath(),zuulRoute);
@@ -108,7 +110,8 @@ public class CustomRouteLocator extends SimpleRouteLocator implements Refreshabl
         private String path;
 
         /**
-         * The service ID (if any) to map to this route. You can specify a physical URL or
+         * The service ID (if any) to map to
+         * this route. You can specify a physical URL or
          * a service, but not both.
          */
         private String serviceId;

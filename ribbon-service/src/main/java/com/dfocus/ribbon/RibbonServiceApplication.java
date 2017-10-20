@@ -1,5 +1,10 @@
 package com.dfocus.ribbon;
 
+import com.netflix.client.config.IClientConfig;
+import com.netflix.loadbalancer.BestAvailableRule;
+import com.netflix.loadbalancer.IRule;
+import com.netflix.loadbalancer.Server;
+import com.netflix.loadbalancer.ServerList;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
@@ -20,6 +25,7 @@ public class RibbonServiceApplication {
 	public RestTemplate restTemplate(){
 		return new RestTemplate();
 	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(RibbonServiceApplication.class, args);
 	}

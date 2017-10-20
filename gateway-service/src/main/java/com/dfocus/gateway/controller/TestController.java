@@ -1,5 +1,6 @@
 package com.dfocus.gateway.controller;
 
+import com.netflix.client.config.IClientConfig;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,14 +14,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
     public static final String RESPONSE_BODY = "ResponseBody";
 
-    @GetMapping("serviceA")
+    @GetMapping("/serviceA")
     public ResponseEntity<String> serviceA() {
         return ResponseEntity.ok(RESPONSE_BODY);
     }
 
     @GetMapping("/serviceB")
     public ResponseEntity<String> serviceB() {
-        return ResponseEntity.ok(RESPONSE_BODY);
+        return ResponseEntity.ok("sb");
     }
 
     @GetMapping("/serviceC")
