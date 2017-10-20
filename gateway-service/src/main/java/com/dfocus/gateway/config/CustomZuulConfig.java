@@ -3,9 +3,12 @@ package com.dfocus.gateway.config;
 import com.dfocus.gateway.route.CustomRouteLocator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.web.ServerProperties;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.netflix.zuul.filters.ZuulProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 /**
@@ -23,6 +26,15 @@ public class CustomZuulConfig {
     ServerProperties server;
     @Autowired
     JdbcTemplate jdbcTemplate;
+
+    @Bean
+    @RefreshScope
+    @ConfigurationProperties("zuul")
+    @Primary
+    public ZuulProperties zuulProperties() {
+        return new ZuulProperties();
+    }
+
 
     @Bean
     public CustomRouteLocator routeLocator() {
