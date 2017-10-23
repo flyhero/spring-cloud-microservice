@@ -6,11 +6,14 @@ import com.dfocus.gateway.config.JwtProperties;
 import com.marcosbarbero.cloud.autoconfigure.zuul.ratelimit.config.properties.RateLimitProperties;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
+import com.netflix.zuul.exception.ZuulException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.netflix.zuul.filters.Route;
 import org.springframework.cloud.netflix.zuul.filters.RouteLocator;
+import org.springframework.cloud.netflix.zuul.util.ZuulRuntimeException;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.util.UrlPathHelper;
@@ -64,27 +67,26 @@ public class AuthPreFilter extends ZuulFilter{
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
         String token = request.getHeader("Authorization");
+        HttpStatus tooManyRequests = HttpStatus.EXPECTATION_FAILED;
+
         if (token == null || token.equals("")) {
             ctx.setSendZuulResponse(false);
             ctx.setResponseStatusCode(401);
-            try {
-                ctx.getResponse().getWriter().write("token can not null");
-                logger.info("token can not null");
-                return null;
+            ZuulException zuulException = new ZuulException(tooManyRequests.toString(), tooManyRequests.value(), null);
+            throw new ZuulRuntimeException(zuulException);
+        }else {
+            try{
+                Map<String, Claim> map= ucenterAuth.verify(token);
+                if (map == null) {
+                    responseHandler(ctx,"token 无效");
+                    return null;
+                }
+
             }catch (Exception e){
 
             }
         }
-        try{
-            Map<String, Claim> map= ucenterAuth.verify(token);
-            if (map == null) {
-                responseHandler(ctx,"token 无效");
-                return null;
-            }
 
-        }catch (Exception e){
-
-        }
 
         return null;
     }
