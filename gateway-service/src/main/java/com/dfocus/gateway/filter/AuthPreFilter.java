@@ -61,7 +61,7 @@ public class AuthPreFilter extends ZuulFilter{
     @Override
     public Object run() {
         System.out.println("=============AuthPreFilter==============");
-/*        RequestContext ctx = RequestContext.getCurrentContext();
+        RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
         String token = request.getHeader("Authorization");
         if (token == null || token.equals("")) {
@@ -84,7 +84,7 @@ public class AuthPreFilter extends ZuulFilter{
 
         }catch (Exception e){
 
-        }*/
+        }
 
         return null;
     }

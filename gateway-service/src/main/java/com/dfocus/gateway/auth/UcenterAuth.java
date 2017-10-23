@@ -43,7 +43,7 @@ public class UcenterAuth implements Auth{
                     .build();
             jwt = verifier.verify(token);
             Map<String, Claim> claims = jwt.getClaims();
-            System.out.println("====用户名===="+claims.get("username").asString());
+            //System.out.println("====用户名===="+claims.get("username").asString());
             return  jwt.getClaims();
         }catch (Exception e){
             System.out.println(e.toString());
