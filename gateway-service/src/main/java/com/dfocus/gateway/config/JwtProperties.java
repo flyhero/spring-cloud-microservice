@@ -5,6 +5,7 @@ import com.marcosbarbero.cloud.autoconfigure.zuul.ratelimit.config.properties.Ra
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.stereotype.Component;
 
 import java.util.Map;
 import java.util.Optional;
@@ -13,8 +14,8 @@ import java.util.Optional;
  * Author: qfwang
  * Date: 2017-10-23 下午12:16
  */
+@Component
 @ConfigurationProperties(prefix = "zuul.jwt")
-@RefreshScope
 public class JwtProperties {
     private boolean enabled;
     private Map<String,Boolean> bos = Maps.newHashMap();
