@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6362a4ad-8fbb-41d6-9b06-17a2a22548b2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/CustomRibbonConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/RibbonClientDefaultConfigurationConfig.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config-repo/gateway-service.properties" afterPath="$PROJECT_DIR$/config-repo/gateway-service.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/JwtProperties.java" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/JwtProperties.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -62,8 +58,8 @@
       <file leaf-file-name="gateway-service.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config-repo/gateway-service.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="395">
+              <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -932,7 +928,7 @@
       <workItem from="1508376110433" duration="15151000" />
       <workItem from="1508463616442" duration="23569000" />
       <workItem from="1508722050849" duration="19024000" />
-      <workItem from="1508809725704" duration="14145000" />
+      <workItem from="1508809725704" duration="14258000" />
     </task>
     <servers />
   </component>
@@ -969,7 +965,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="347206000" />
+    <option name="totallyTimeSpent" value="347319000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1421,8 +1417,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config-repo/gateway-service.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="395">
+          <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
           <folding />
         </state>
       </provider>
