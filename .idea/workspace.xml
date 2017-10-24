@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6362a4ad-8fbb-41d6-9b06-17a2a22548b2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/common/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/target/surefire-reports/TEST-com.dfocus.AppTest.xml" afterPath="$PROJECT_DIR$/common/target/surefire-reports/TEST-com.dfocus.AppTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/target/surefire-reports/com.dfocus.AppTest.txt" afterPath="$PROJECT_DIR$/common/target/surefire-reports/com.dfocus.AppTest.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config-repo/gateway-service.properties" afterPath="$PROJECT_DIR$/config-repo/gateway-service.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config-server/Dockerfile" afterPath="$PROJECT_DIR$/config-server/Dockerfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config-server/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/config-server/src/main/resources/application.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docker-compose.yml" afterPath="$PROJECT_DIR$/docker-compose.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gateway-service/Dockerfile" afterPath="$PROJECT_DIR$/gateway-service/Dockerfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/controller/TestController.java" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/controller/TestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/bootstrap.properties" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/bootstrap.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -47,7 +37,7 @@
       <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gateway-service/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
+            <state relative-caret-position="-53">
               <caret line="3" column="37" lean-forward="false" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
               <folding />
             </state>
@@ -67,8 +57,8 @@
       <file leaf-file-name="docker-compose.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docker-compose.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="49" column="18" lean-forward="true" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+            <state relative-caret-position="612">
+              <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -99,6 +89,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="5" column="103" lean-forward="false" selection-start-line="5" selection-start-column="103" selection-end-line="5" selection-end-column="103" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gateway-service/src/main/resources/bootstrap.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -480,6 +480,14 @@
               <item name="gateway" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="spring-cloud-microservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-microservice" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -836,7 +844,7 @@
       <workItem from="1508376110433" duration="15151000" />
       <workItem from="1508463616442" duration="23569000" />
       <workItem from="1508722050849" duration="19024000" />
-      <workItem from="1508809725704" duration="9458000" />
+      <workItem from="1508809725704" duration="10300000" />
     </task>
     <servers />
   </component>
@@ -873,7 +881,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="342519000" />
+    <option name="totallyTimeSpent" value="343361000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1240,14 +1248,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/resources/bootstrap.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/controller/RouteController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -1298,16 +1298,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gateway-service/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
+        <state relative-caret-position="-53">
           <caret line="3" column="37" lean-forward="false" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/resources/bootstrap.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="49" column="18" lean-forward="true" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+        <state relative-caret-position="612">
+          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding />
         </state>
       </provider>
