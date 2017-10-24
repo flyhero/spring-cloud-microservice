@@ -18,7 +18,6 @@ import org.springframework.web.util.UrlPathHelper;
 @Configuration
 //@EnableConfigurationProperties(JwtProperties.class)
 @ConditionalOnProperty(prefix = "zuul.jwt",name = "enabled",havingValue = "true")
-@RefreshScope
 public class JwtConfig {
     private final UrlPathHelper urlPathHelper = new UrlPathHelper();
 
