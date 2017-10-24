@@ -58,8 +58,8 @@
       <file leaf-file-name="gateway-service.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config-repo/gateway-service.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="30" column="32" lean-forward="false" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+            <state relative-caret-position="410">
+              <caret line="29" column="21" lean-forward="false" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -898,7 +898,7 @@
       <workItem from="1508376110433" duration="15151000" />
       <workItem from="1508463616442" duration="23569000" />
       <workItem from="1508722050849" duration="19024000" />
-      <workItem from="1508809725704" duration="14884000" />
+      <workItem from="1508809725704" duration="15007000" />
     </task>
     <servers />
   </component>
@@ -935,7 +935,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="347945000" />
+    <option name="totallyTimeSpent" value="348068000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1387,8 +1387,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config-repo/gateway-service.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="30" column="32" lean-forward="false" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+        <state relative-caret-position="410">
+          <caret line="29" column="21" lean-forward="false" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
           <folding />
         </state>
       </provider>
