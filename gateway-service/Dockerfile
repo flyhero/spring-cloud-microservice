@@ -1,6 +1,6 @@
-FROM frolvlad/alpine-oraclejdk8:slim
+FROM java:8-jre
 VOLUME /tmp
-ADD ./target/gateway-service-0.0.1-SNAPSHOT.jar app.jar
-RUN sh -c 'touch /app.jar'
+ADD ./target/gateway-service-0.0.1-SNAPSHOT.jar gateway-service.jar
+RUN sh -c 'touch /gateway-service.jar'
 ENV JAVA_OPTS=""
-ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar" ]
+ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /gateway-service.jar" ]

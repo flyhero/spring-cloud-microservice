@@ -11,7 +11,6 @@ services:
     depends_on:
       - db
       - redis
-      - config-server
     networks:
       - micro-back
 
@@ -23,10 +22,10 @@ services:
     image: config-server
     ports:
       - "8881:8881"
-    depends_on:
-      - rabbitmq
     networks:
       - micro-back
+    depends_on:
+      - rabbitmq
 
   db:
     image: mysql
@@ -50,8 +49,8 @@ services:
       - micro-back
 
   rabbitmq:
-    image: rabbitmq
-    container_name: rabbitmq001
+    image: rabbitmq:3.6.12-management
+    container_name: myrabbitmq
     ports:
       - "5672:5672"
       - "15672:15672"
@@ -59,7 +58,6 @@ services:
     command: bash -c "cd /etc/rabbitmq && rabbitmq-plugins enable rabbitmq_web_stomp"
     networks:
       - micro-back
-
 
 networks:
   micro-back:

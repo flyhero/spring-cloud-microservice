@@ -17,10 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
     public static final String RESPONSE_BODY = "ResponseBody";
 
-    @Value("${foo}")
-    public String name;
-    @Value("${zuul.jwt.enabled}")
-    public String jwt;
 
     @GetMapping("/serviceA")
     public ResponseEntity<String> serviceA() {
@@ -34,7 +30,7 @@ public class TestController {
 
     @GetMapping("/serviceC")
     public ResponseEntity<String> serviceC() {
-        return ResponseEntity.ok(name+jwt);
+        return ResponseEntity.ok(RESPONSE_BODY);
     }
 
     @GetMapping("/serviceD/{paramName}")
