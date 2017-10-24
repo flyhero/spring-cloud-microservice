@@ -16,13 +16,11 @@ import org.springframework.web.util.UrlPathHelper;
  * Date: 2017-10-23 下午1:38
  */
 @Configuration
-//@EnableConfigurationProperties(JwtProperties.class)
+//@EnableConfigurationProperties(JwtProperties.class) 相当于对JwtProperties加注解@Component
 @ConditionalOnProperty(prefix = "zuul.jwt",name = "enabled",havingValue = "true")
 public class JwtConfig {
     private final UrlPathHelper urlPathHelper = new UrlPathHelper();
 
-/*    @Autowired
-    private JwtProperties jwtProperties;*/
     @Bean
     public ZuulFilter authPreFilter(JwtProperties jwtProperties, RouteLocator routeLocator,UrlPathHelper urlPathHelper){
         return new AuthPreFilter(jwtProperties,urlPathHelper,routeLocator);

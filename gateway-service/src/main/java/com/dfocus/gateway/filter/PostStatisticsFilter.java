@@ -2,6 +2,8 @@ package com.dfocus.gateway.filter;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,6 +13,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class PostStatisticsFilter extends ZuulFilter{
+    Logger logger = LoggerFactory.getLogger(PostStatisticsFilter.class);
     @Override
     public String filterType() {
         return "post";
@@ -33,7 +36,7 @@ public class PostStatisticsFilter extends ZuulFilter{
         long startTimeMillis = (long)ctx.get("startTimeMillis");
         long endTimeMillis = System.currentTimeMillis();
         long execTimeMillis = startTimeMillis - endTimeMillis;
-
+        logger.info("execTimeMillis:"+execTimeMillis+" ms");
         return null;
     }
 }
