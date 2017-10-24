@@ -21,8 +21,8 @@ import org.springframework.web.util.UrlPathHelper;
 public class JwtConfig {
     private final UrlPathHelper urlPathHelper = new UrlPathHelper();
 
-    @Autowired
-    private JwtProperties jwtProperties;
+/*    @Autowired
+    private JwtProperties jwtProperties;*/
     @Bean
     public ZuulFilter authPreFilter(JwtProperties jwtProperties, RouteLocator routeLocator,UrlPathHelper urlPathHelper){
         return new AuthPreFilter(jwtProperties,urlPathHelper,routeLocator);
