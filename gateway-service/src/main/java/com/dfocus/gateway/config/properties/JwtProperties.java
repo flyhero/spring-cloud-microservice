@@ -1,10 +1,8 @@
-package com.dfocus.gateway.config;
+package com.dfocus.gateway.config.properties;
 
 import com.google.common.collect.Maps;
-import com.marcosbarbero.cloud.autoconfigure.zuul.ratelimit.config.properties.RateLimitProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
