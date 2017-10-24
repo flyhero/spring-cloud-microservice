@@ -14,6 +14,7 @@ import java.util.Optional;
  * Author: qfwang
  * Date: 2017-10-23 下午12:16
  */
+@RefreshScope
 @Component
 @ConfigurationProperties(prefix = "zuul.jwt")
 public class JwtProperties {
