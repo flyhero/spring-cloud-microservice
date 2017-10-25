@@ -1,6 +1,7 @@
 package com.dfocus.gateway.filter;
 
 import com.dfocus.common.util.HttpUtils;
+import com.dfocus.gateway.base.GatewayEnum;
 import com.dfocus.gateway.config.properties.IPsRestrictionProperties;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
@@ -19,16 +20,14 @@ import static org.springframework.cloud.netflix.zuul.filters.support.FilterConst
  * Time: 下午2:44
  */
 
-public class PreIPsFilter extends ZuulFilter {
+public class PreIPsFilter extends AbstractGatewayFilter {
 
     private IPsRestrictionProperties iPsRestrictionProperties;
-    private RouteLocator routeLocator;
-    private UrlPathHelper urlPathHelper;
+
 
     public PreIPsFilter(IPsRestrictionProperties iPsRestrictionProperties, RouteLocator routeLocator, UrlPathHelper urlPathHelper) {
+        super(routeLocator,urlPathHelper);
         this.iPsRestrictionProperties = iPsRestrictionProperties;
-        this.routeLocator = routeLocator;
-        this.urlPathHelper = urlPathHelper;
     }
 
     @Override
@@ -51,6 +50,7 @@ public class PreIPsFilter extends ZuulFilter {
 
         RequestContext ctx = RequestContext.getCurrentContext();
         String ip = HttpUtils.getIPAddr(ctx.getRequest());
+        System.out.println("==========ip:"+ip);
         Route route = getMatchingRoute();
         policy(route).ifPresent(ipList -> {
             final String black = ipList.getBlacklist();
@@ -62,11 +62,14 @@ public class PreIPsFilter extends ZuulFilter {
                     String prefixThree= s.substring(0,s.lastIndexOf("."));
                     if(suffix.equals("*")){
                         if(ip.contains(prefixThree)){
-                            // 禁止
+                            responseHandler(ctx, GatewayEnum.ACCESS_DENIED);
+                            break;
                         }
                     }else {
                         if(ip.equals(s)){
                             // 禁止
+                            responseHandler(ctx, GatewayEnum.ACCESS_DENIED);
+                            break;
                         }
                     }
                        // 192.168.0.*   192.168.0.12
@@ -77,13 +80,14 @@ public class PreIPsFilter extends ZuulFilter {
                     String suffix = w.substring(w.lastIndexOf(".")+1,w.length());
                     String prefixThree= w.substring(0,w.lastIndexOf("."));
                     if(suffix.equals("*")){
-                        if(ip.contains(prefixThree)){
-                            //放行
-                            ctx.set("w");
+                        if(!ip.contains(prefixThree)){
+                            responseHandler(ctx, GatewayEnum.ACCESS_DENIED);
+                            break;
                         }
                     }else {
-                        if(ip.equals(w)){
-
+                        if(!ip.equals(w)){
+                            responseHandler(ctx, GatewayEnum.ACCESS_DENIED);
+                            break;
                         }
                     }
                 }
@@ -97,12 +101,7 @@ public class PreIPsFilter extends ZuulFilter {
         return null;
     }
 
-    Route getMatchingRoute() {
-        String requestURI = urlPathHelper.getPathWithinApplication(RequestContext.getCurrentContext().getRequest());
-        System.out.println("==========requestURI:"+requestURI);
-        return routeLocator.getMatchingRoute(requestURI);
-    }
-    protected Optional<IPsRestrictionProperties.IPList> policy(final Route route) {
+    public Optional<IPsRestrictionProperties.IPList> policy(final Route route) {
         if (route != null) {
             System.out.println("=================="+route.getId());
             return iPsRestrictionProperties.getIps(route.getId());

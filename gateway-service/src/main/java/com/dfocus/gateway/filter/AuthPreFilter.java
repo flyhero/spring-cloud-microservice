@@ -1,7 +1,12 @@
 package com.dfocus.gateway.filter;
 
+import com.alibaba.fastjson.JSON;
 import com.auth0.jwt.interfaces.Claim;
+import com.dfocus.common.base.JSONResult;
+import com.dfocus.common.base.TipEnum;
 import com.dfocus.gateway.auth.UcenterAuth;
+import com.dfocus.gateway.base.GatewayEnum;
+import com.dfocus.gateway.base.GatewayResult;
 import com.dfocus.gateway.config.properties.JwtProperties;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
@@ -26,15 +31,12 @@ import java.util.Optional;
 import static org.springframework.cloud.netflix.zuul.filters.support.FilterConstants.DEBUG_FILTER_ORDER;
 import static org.springframework.cloud.netflix.zuul.filters.support.FilterConstants.PRE_TYPE;
 
-public class AuthPreFilter extends ZuulFilter{
+public class AuthPreFilter extends AbstractGatewayFilter{
 
     private Logger logger = LoggerFactory.getLogger(AuthPreFilter.class);
 
     private final JwtProperties properties;
 
-    private final UrlPathHelper urlPathHelper;
-
-    private final RouteLocator routeLocator;
     @Autowired
     private UcenterAuth ucenterAuth;
     @Override
@@ -54,9 +56,10 @@ public class AuthPreFilter extends ZuulFilter{
 
 
     public AuthPreFilter(JwtProperties properties, UrlPathHelper urlPathHelper, RouteLocator routeLocator) {
+        super(routeLocator,urlPathHelper);
         this.properties = properties;
-        this.urlPathHelper = urlPathHelper;
-        this.routeLocator = routeLocator;
+/*        this.urlPathHelper = urlPathHelper;
+        this.routeLocator = routeLocator;*/
     }
 
     @Override
@@ -67,13 +70,9 @@ public class AuthPreFilter extends ZuulFilter{
         String token = request.getHeader("Authorization");
         HttpStatus tooManyRequests = HttpStatus.EXPECTATION_FAILED;
 
-        if (token == null || token.equals("")) {
-/*            ctx.setSendZuulResponse(false);
-            ctx.setResponseStatusCode(401);
-                ctx.setResponseBody("hahahha");*/
-            ctx.set("error.status_code",500);
 
-                //responseHandler(ctx,"this is a test");
+        if (token == null || token.equals("")) {
+                super.responseHandler(ctx,GatewayEnum.MISS_TOKEN);
                 return  null;
 /*            ZuulException zuulException = new ZuulException(tooManyRequests.toString(), tooManyRequests.value(), null);
             throw new ZuulRuntimeException(zuulException);*/
@@ -81,7 +80,7 @@ public class AuthPreFilter extends ZuulFilter{
             try{
                 Map<String, Claim> map= ucenterAuth.verify(token);
                 if (map == null) {
-                    responseHandler(ctx,"token 无效");
+                    super.responseHandler(ctx, GatewayEnum.INVALID_TOKEN);
                     return null;
                 }
 
@@ -94,24 +93,8 @@ public class AuthPreFilter extends ZuulFilter{
         return null;
     }
 
-    private void responseHandler(RequestContext ctx,String msg) throws IOException {
-        ctx.setSendZuulResponse(false);//zuul过滤请求，false为不路由，true为路由
-        HttpServletResponse httpResponse = ctx.getResponse();
-        httpResponse.setCharacterEncoding("UTF-8");
-        httpResponse.setContentType(MediaType.APPLICATION_JSON_UTF8_VALUE);
-        httpResponse.setStatus(HttpServletResponse.SC_OK);
-        httpResponse.sendError(123,"测试返回");
-        ctx.setResponse(httpResponse);//返回response信息
-    }
-
-    Route getMatchingRoute() {
-        String requestURI = urlPathHelper.getPathWithinApplication(RequestContext.getCurrentContext().getRequest());
-        System.out.println("==========requestURI:"+requestURI);
-        return routeLocator.getMatchingRoute(requestURI);
-    }
-    protected Optional<Boolean> policy(final Route route) {
+    public Optional<Boolean> policy(final Route route) {
         if (route != null) {
-            System.out.println("=================="+route.getId());
             return properties.getBo(route.getId());
         }
         return Optional.ofNullable(null);

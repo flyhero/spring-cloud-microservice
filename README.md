@@ -104,9 +104,9 @@ config client 依赖
 ![调用链追踪](doc/zipkin.png)
 
 ## TODO
-1.动态路由
-2.流量限制
-
+- [x] 动态路由
+- [x] 流量限制
+- [x] IP限制
 ## 遇到的问题
 1.2017-10-12 15:20:00.862 ERROR org.thymeleaf.TemplateEngine Line:1085 - [THYMELEAF][http-nio-8082-exec-1] Exception processing template "index": Error resolving template "index", template might not exist or might not be accessible by any of the configured Template Resolvers
   
