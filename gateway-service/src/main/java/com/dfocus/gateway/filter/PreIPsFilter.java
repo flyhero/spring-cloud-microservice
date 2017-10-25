@@ -24,15 +24,12 @@ import static org.springframework.cloud.netflix.zuul.filters.support.FilterConst
  * Time: 下午2:44
  */
 
-public class PreIPsFilter extends ZuulFilter {
+public class PreIPsFilter extends AbstractGatewayFilter {
 
     private IPsRestrictionProperties iPsRestrictionProperties;
-    private final RouteLocator routeLocator;
-    private final UrlPathHelper urlPathHelper;
 
     public PreIPsFilter(IPsRestrictionProperties iPsRestrictionProperties, RouteLocator routeLocator, UrlPathHelper urlPathHelper) {
-        this.routeLocator = routeLocator;
-        this.urlPathHelper = urlPathHelper;
+        super(routeLocator,urlPathHelper);
         this.iPsRestrictionProperties = iPsRestrictionProperties;
     }
 
@@ -68,13 +65,13 @@ public class PreIPsFilter extends ZuulFilter {
                     String prefixThree= s.substring(0,s.lastIndexOf("."));
                     if(suffix.equals("*")){
                         if(ip.contains(prefixThree)){
-                            //responseHandler(ctx, GatewayEnum.ACCESS_DENIED);
+                            responseHandler(ctx, GatewayEnum.ACCESS_DENIED);
                             break;
                         }
                     }else {
                         if(ip.equals(s)){
                             // 禁止
-                            //responseHandler(ctx, GatewayEnum.ACCESS_DENIED);
+                            responseHandler(ctx, GatewayEnum.ACCESS_DENIED);
                             break;
                         }
                     }
@@ -87,12 +84,12 @@ public class PreIPsFilter extends ZuulFilter {
                     String prefixThree= w.substring(0,w.lastIndexOf("."));
                     if(suffix.equals("*")){
                         if(!ip.contains(prefixThree)){
-                            //responseHandler(ctx, GatewayEnum.ACCESS_DENIED);
+                            responseHandler(ctx, GatewayEnum.ACCESS_DENIED);
                             break;
                         }
                     }else {
                         if(!ip.equals(w)){
-                            //responseHandler(ctx, GatewayEnum.ACCESS_DENIED);
+                            responseHandler(ctx, GatewayEnum.ACCESS_DENIED);
                             break;
                         }
                     }
@@ -107,10 +104,7 @@ public class PreIPsFilter extends ZuulFilter {
         return null;
     }
 
-    Route getMatchingRoute() {
-        String requestURI = urlPathHelper.getPathWithinApplication(RequestContext.getCurrentContext().getRequest());
-        return routeLocator.getMatchingRoute(requestURI);
-    }
+
     public Optional<IPsRestrictionProperties.IPList> policy(final Route route) {
         if (route != null) {
             System.out.println("=================="+route.getId());
