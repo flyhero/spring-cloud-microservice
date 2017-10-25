@@ -26,6 +26,11 @@ public abstract class AbstractGatewayFilter extends ZuulFilter{
         this.urlPathHelper = urlPathHelper;
     }
 
+    @Override
+    public boolean shouldFilter() {
+        return  true;
+    }
+
     protected void responseHandler(RequestContext ctx, GatewayEnum gatewayEnum){
         ctx.setSendZuulResponse(false);//zuul过滤请求，false为不路由，true为路由
         HttpServletResponse httpResponse = ctx.getResponse();

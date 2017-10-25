@@ -14,7 +14,7 @@ import java.util.Optional;
  */
 @RefreshScope
 @Component
-@ConfigurationProperties("zuul.ip")
+@ConfigurationProperties(prefix = "zuul.ip")
 public class IPsRestrictionProperties {
     private boolean enabled;
     private Map<String,IPList> ips = Maps.newHashMap();
