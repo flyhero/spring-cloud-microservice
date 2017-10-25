@@ -21,6 +21,7 @@ public class JwtConfig {
 
     @Bean
     public ZuulFilter authPreFilter(JwtProperties jwtProperties, RouteLocator routeLocator, UrlPathHelper urlPathHelper){
+        System.out.println("+++++++++++++++++++JwtConfig");
         return new PreJwtFilter(jwtProperties,routeLocator,urlPathHelper);
     }
 }

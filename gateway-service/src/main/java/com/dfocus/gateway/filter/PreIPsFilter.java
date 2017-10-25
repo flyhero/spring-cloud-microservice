@@ -45,6 +45,7 @@ public class PreIPsFilter extends AbstractGatewayFilter {
 
     @Override
     public boolean shouldFilter() {
+        System.out.println("======="+iPsRestrictionProperties.isEnabled());
         return iPsRestrictionProperties.isEnabled() && policy(getMatchingRoute()).isPresent();
     }
 
