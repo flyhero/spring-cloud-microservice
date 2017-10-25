@@ -17,15 +17,18 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
     public static final String RESPONSE_BODY = "ResponseBody";
 
+    @Value("${zuul.ip.enabled}")
+    private String enabled;
+
 
     @GetMapping("/serviceA")
     public ResponseEntity<String> serviceA() {
-        return ResponseEntity.ok(RESPONSE_BODY);
+        return ResponseEntity.ok(enabled);
     }
 
     @GetMapping("/serviceB")
     public ResponseEntity<String> serviceB() {
-        return ResponseEntity.ok("sb");
+        return ResponseEntity.ok("sb"+enabled);
     }
 
     @GetMapping("/serviceC")

@@ -33,6 +33,10 @@ public class IPsRestrictionProperties {
         return Optional.ofNullable(ips.get(key));
     }
 
+    public Map<String, IPList> getIps() {
+        return ips;
+    }
+
     public void setIps(Map<String, IPList> ips) {
         this.ips = ips;
     }

@@ -47,7 +47,7 @@ public class PreIPsFilter extends AbstractGatewayFilter {
 
     @Override
     public Object run() {
-
+        System.out.println("==========PreIPsFilter===========");
         RequestContext ctx = RequestContext.getCurrentContext();
         String ip = HttpUtils.getIPAddr(ctx.getRequest());
         System.out.println("==========ip:"+ip);
