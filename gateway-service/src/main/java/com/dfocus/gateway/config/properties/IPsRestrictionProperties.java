@@ -12,9 +12,9 @@ import java.util.Optional;
  * Author: qfwang
  * Date: 2017-10-24 下午7:20
  */
-@RefreshScope
-@Component
-@ConfigurationProperties(prefix = "zuul.ip")
+//@RefreshScope
+//@Component
+//@ConfigurationProperties(prefix = "zuul.ip")
 public class IPsRestrictionProperties {
     private boolean enabled;
     private Map<String,IPList> ips = Maps.newHashMap();

@@ -1,7 +1,7 @@
 package com.dfocus.gateway.config;
 
 import com.dfocus.gateway.config.properties.JwtProperties;
-import com.dfocus.gateway.filter.AuthPreFilter;
+import com.dfocus.gateway.filter.PreJwtFilter;
 import com.netflix.zuul.ZuulFilter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.cloud.netflix.zuul.filters.RouteLocator;
@@ -21,6 +21,6 @@ public class JwtConfig {
 
     @Bean
     public ZuulFilter authPreFilter(JwtProperties jwtProperties, RouteLocator routeLocator, UrlPathHelper urlPathHelper){
-        return new AuthPreFilter(jwtProperties,urlPathHelper,routeLocator);
+        return new PreJwtFilter(jwtProperties,routeLocator,urlPathHelper);
     }
 }

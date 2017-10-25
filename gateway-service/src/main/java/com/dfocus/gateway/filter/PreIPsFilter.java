@@ -1,15 +1,19 @@
 package com.dfocus.gateway.filter;
 
+import com.alibaba.fastjson.JSON;
 import com.dfocus.common.util.HttpUtils;
 import com.dfocus.gateway.base.GatewayEnum;
+import com.dfocus.gateway.base.GatewayResult;
 import com.dfocus.gateway.config.properties.IPsRestrictionProperties;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import org.springframework.cloud.netflix.zuul.filters.Route;
 import org.springframework.cloud.netflix.zuul.filters.RouteLocator;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.util.UrlPathHelper;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.Optional;
 
 import static org.springframework.cloud.netflix.zuul.filters.support.FilterConstants.PRE_TYPE;
@@ -20,13 +24,15 @@ import static org.springframework.cloud.netflix.zuul.filters.support.FilterConst
  * Time: 下午2:44
  */
 
-public class PreIPsFilter extends AbstractGatewayFilter {
+public class PreIPsFilter extends ZuulFilter {
 
     private IPsRestrictionProperties iPsRestrictionProperties;
-
+    private final RouteLocator routeLocator;
+    private final UrlPathHelper urlPathHelper;
 
     public PreIPsFilter(IPsRestrictionProperties iPsRestrictionProperties, RouteLocator routeLocator, UrlPathHelper urlPathHelper) {
-        super(routeLocator,urlPathHelper);
+        this.routeLocator = routeLocator;
+        this.urlPathHelper = urlPathHelper;
         this.iPsRestrictionProperties = iPsRestrictionProperties;
     }
 
@@ -49,7 +55,7 @@ public class PreIPsFilter extends AbstractGatewayFilter {
     public Object run() {
         System.out.println("==========PreIPsFilter===========");
         RequestContext ctx = RequestContext.getCurrentContext();
-        String ip = HttpUtils.getIPAddr(ctx.getRequest());
+        String ip = HttpUtils.getIpAddr(ctx.getRequest());
         System.out.println("==========ip:"+ip);
         Route route = getMatchingRoute();
         policy(route).ifPresent(ipList -> {
@@ -62,13 +68,13 @@ public class PreIPsFilter extends AbstractGatewayFilter {
                     String prefixThree= s.substring(0,s.lastIndexOf("."));
                     if(suffix.equals("*")){
                         if(ip.contains(prefixThree)){
-                            responseHandler(ctx, GatewayEnum.ACCESS_DENIED);
+                            //responseHandler(ctx, GatewayEnum.ACCESS_DENIED);
                             break;
                         }
                     }else {
                         if(ip.equals(s)){
                             // 禁止
-                            responseHandler(ctx, GatewayEnum.ACCESS_DENIED);
+                            //responseHandler(ctx, GatewayEnum.ACCESS_DENIED);
                             break;
                         }
                     }
@@ -81,12 +87,12 @@ public class PreIPsFilter extends AbstractGatewayFilter {
                     String prefixThree= w.substring(0,w.lastIndexOf("."));
                     if(suffix.equals("*")){
                         if(!ip.contains(prefixThree)){
-                            responseHandler(ctx, GatewayEnum.ACCESS_DENIED);
+                            //responseHandler(ctx, GatewayEnum.ACCESS_DENIED);
                             break;
                         }
                     }else {
                         if(!ip.equals(w)){
-                            responseHandler(ctx, GatewayEnum.ACCESS_DENIED);
+                            //responseHandler(ctx, GatewayEnum.ACCESS_DENIED);
                             break;
                         }
                     }
@@ -101,6 +107,10 @@ public class PreIPsFilter extends AbstractGatewayFilter {
         return null;
     }
 
+    Route getMatchingRoute() {
+        String requestURI = urlPathHelper.getPathWithinApplication(RequestContext.getCurrentContext().getRequest());
+        return routeLocator.getMatchingRoute(requestURI);
+    }
     public Optional<IPsRestrictionProperties.IPList> policy(final Route route) {
         if (route != null) {
             System.out.println("=================="+route.getId());
