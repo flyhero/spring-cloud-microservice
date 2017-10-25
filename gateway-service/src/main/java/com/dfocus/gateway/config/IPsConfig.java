@@ -21,8 +21,8 @@ public class IPsConfig {
     private final UrlPathHelper urlPathHelper = new UrlPathHelper();
 
     @Bean
-    public ZuulFilter authPreFilter(IPsRestrictionProperties properties, RouteLocator routeLocator, UrlPathHelper urlPathHelper){
-        System.out.println("+++++++++++++++++++");
+    public ZuulFilter preIPsFilter(IPsRestrictionProperties properties, RouteLocator routeLocator, UrlPathHelper urlPathHelper){
+        System.out.println("+++++++++++++++++++IPsConfig");
         return new PreIPsFilter(properties,routeLocator,urlPathHelper);
     }
 }
