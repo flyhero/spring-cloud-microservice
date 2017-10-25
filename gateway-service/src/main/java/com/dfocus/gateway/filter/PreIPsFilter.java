@@ -53,8 +53,43 @@ public class PreIPsFilter extends ZuulFilter {
         String ip = HttpUtils.getIPAddr(ctx.getRequest());
         Route route = getMatchingRoute();
         policy(route).ifPresent(ipList -> {
-            final String[] blacklist = ipList.getBlacklist().split(",");
-            final String[] whitelist = ipList.getWhitelist().split(",");
+            final String black = ipList.getBlacklist();
+            final String white = ipList.getWhitelist();
+            if(black != null && !black.equals("")){
+                final String[] blacklist = black.split(",");
+                for(String s : blacklist){
+                    String suffix = s.substring(s.lastIndexOf(".")+1,s.length());
+                    String prefixThree= s.substring(0,s.lastIndexOf("."));
+                    if(suffix.equals("*")){
+                        if(ip.contains(prefixThree)){
+                            // 禁止
+                        }
+                    }else {
+                        if(ip.equals(s)){
+                            // 禁止
+                        }
+                    }
+                       // 192.168.0.*   192.168.0.12
+                }
+            }else {
+                final String[] whitelist = ipList.getWhitelist().split(",");
+                for (String w : whitelist){
+                    String suffix = w.substring(w.lastIndexOf(".")+1,w.length());
+                    String prefixThree= w.substring(0,w.lastIndexOf("."));
+                    if(suffix.equals("*")){
+                        if(ip.contains(prefixThree)){
+                            //放行
+                            ctx.set("w");
+                        }
+                    }else {
+                        if(ip.equals(w)){
+
+                        }
+                    }
+                }
+            }
+
+
 
 
         });

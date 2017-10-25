@@ -68,10 +68,15 @@ public class AuthPreFilter extends ZuulFilter{
         HttpStatus tooManyRequests = HttpStatus.EXPECTATION_FAILED;
 
         if (token == null || token.equals("")) {
-            ctx.setSendZuulResponse(false);
+/*            ctx.setSendZuulResponse(false);
             ctx.setResponseStatusCode(401);
-            ZuulException zuulException = new ZuulException(tooManyRequests.toString(), tooManyRequests.value(), null);
-            throw new ZuulRuntimeException(zuulException);
+                ctx.setResponseBody("hahahha");*/
+            ctx.set("error.status_code",500);
+
+                //responseHandler(ctx,"this is a test");
+                return  null;
+/*            ZuulException zuulException = new ZuulException(tooManyRequests.toString(), tooManyRequests.value(), null);
+            throw new ZuulRuntimeException(zuulException);*/
         }else {
             try{
                 Map<String, Claim> map= ucenterAuth.verify(token);
@@ -95,8 +100,7 @@ public class AuthPreFilter extends ZuulFilter{
         httpResponse.setCharacterEncoding("UTF-8");
         httpResponse.setContentType(MediaType.APPLICATION_JSON_UTF8_VALUE);
         httpResponse.setStatus(HttpServletResponse.SC_OK);
-        httpResponse.getWriter().write(msg);
-
+        httpResponse.sendError(123,"测试返回");
         ctx.setResponse(httpResponse);//返回response信息
     }
 
