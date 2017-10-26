@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6362a4ad-8fbb-41d6-9b06-17a2a22548b2" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/IPsConfig.java" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/IPsConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/src/main/java/com/dfocus/App.java" afterPath="$PROJECT_DIR$/common/src/main/java/com/dfocus/App.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gateway-service/pom.xml" afterPath="$PROJECT_DIR$/gateway-service/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/AbstractGatewayFilter.java" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/AbstractGatewayFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/PreStatisticsFilter.java" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/PreStatisticsFilter.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,18 +43,8 @@
       <file leaf-file-name="JwtConfig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/JwtConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="81" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IPsConfig.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/IPsConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+            <state relative-caret-position="225">
+              <caret line="22" column="63" lean-forward="false" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -57,17 +53,9 @@
       <file leaf-file-name="PreJwtFilter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/PreJwtFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1494#1495#0" expanded="true" />
-                <element signature="e#1525#1526#0" expanded="true" />
-                <element signature="e#1571#1572#0" expanded="true" />
-                <element signature="e#1595#1596#0" expanded="true" />
-                <element signature="e#1646#1647#0" expanded="true" />
-                <element signature="e#1733#1734#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="681">
+              <caret line="96" column="29" lean-forward="false" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,69 +63,93 @@
       <file leaf-file-name="gateway-service.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config-repo/gateway-service.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="20" lean-forward="true" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+            <state relative-caret-position="200">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomZuulConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/CustomZuulConfig.java">
+      <file leaf-file-name="RedisRateLimiter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/repository/RedisRateLimiter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+            <state relative-caret-position="164">
+              <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1135#1136#0" expanded="true" />
+                <element signature="e#1185#1186#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractGatewayFilter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/AbstractGatewayFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-107">
+              <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/controller/TestController.java">
+      <file leaf-file-name="RateLimitPreFilter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/RateLimitPreFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+            <state relative-caret-position="248">
+              <caret line="49" column="31" lean-forward="false" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2903#2904#0" expanded="true" />
+                <element signature="e#2990#2991#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RateLimitConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/RateLimitConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="64" column="75" lean-forward="false" selection-start-line="64" selection-start-column="63" selection-end-line="64" selection-end-column="75" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PreStatisticsFilter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/PreStatisticsFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="37" column="59" lean-forward="true" selection-start-line="37" selection-start-column="59" selection-end-line="37" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PreIPsFilter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/PreIPsFilter.java">
+      <file leaf-file-name="RateLimitPostFilter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/RateLimitPostFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="59" column="44" lean-forward="false" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
+            <state relative-caret-position="-720">
+              <caret line="20" column="61" lean-forward="false" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ErrorFilter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/ErrorFilter.java">
+      <file leaf-file-name="DefaultRateLimitKeyGenerator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/DefaultRateLimitKeyGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IPsRestrictionProperties.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/properties/IPsRestrictionProperties.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="19" column="24" lean-forward="false" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JwtProperties.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/properties/JwtProperties.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="43" />
-              <folding />
+            <state relative-caret-position="192">
+              <caret line="47" column="61" lean-forward="false" selection-start-line="47" selection-start-column="61" selection-end-line="47" selection-end-column="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1230#1231#0" expanded="true" />
+                <element signature="e#1274#1275#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -177,6 +189,7 @@
       <find>++++++++++++</find>
       <find>IPs</find>
       <find>++++++++</find>
+      <find>sendErrorFilter.ran</find>
     </findStrings>
     <replaceStrings>
       <replace>QRcodeEnum</replace>
@@ -190,15 +203,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ratelimit/src/main/java/com/dfocus/ratelimit/config/properties/RateLimitProperties.java" />
-        <option value="$PROJECT_DIR$/ratelimit/src/main/java/com/dfocus/ratelimit/config/Rate.java" />
-        <option value="$PROJECT_DIR$/ratelimit/src/main/java/com/dfocus/ratelimit/config/repository/RedisRateLimiter.java" />
-        <option value="$PROJECT_DIR$/ratelimit/src/main/java/com/dfocus/ratelimit/config/RateLimitKeyGenerator.java" />
-        <option value="$PROJECT_DIR$/ratelimit/src/main/java/com/dfocus/ratelimit/config/DefaultRateLimitKeyGenerator.java" />
-        <option value="$PROJECT_DIR$/ratelimit/src/main/java/com/dfocus/ratelimit/filter/RateLimitPostFilter.java" />
-        <option value="$PROJECT_DIR$/ratelimit/src/main/java/com/dfocus/ratelimit/filter/AbstractRateLimitFilter.java" />
-        <option value="$PROJECT_DIR$/ratelimit/src/main/java/com/dfocus/ratelimit/filter/RateLimitPreFilter.java" />
-        <option value="$PROJECT_DIR$/ratelimit/src/main/java/com/dfocus/ratelimit/config/repository/AbstractRateLimiter.java" />
         <option value="$PROJECT_DIR$/ratelimit/pom.xml" />
         <option value="$PROJECT_DIR$/gateway-service/src/test/java/com/dfocus/gateway/event/RefreshRouteServiceTest.java" />
         <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/controller/RouteController.java" />
@@ -214,7 +218,6 @@
         <option value="$PROJECT_DIR$/config-repo/application-dev.properties" />
         <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/auth/UcenterAuth.java" />
         <option value="$PROJECT_DIR$/gateway-service/src/main/resources/logback-spring.xml" />
-        <option value="$PROJECT_DIR$/gateway-service/pom.xml" />
         <option value="$PROJECT_DIR$/config-server/pom.xml" />
         <option value="$PROJECT_DIR$/gateway-service/Dockerfile" />
         <option value="$PROJECT_DIR$/config-server/Dockerfile" />
@@ -224,7 +227,6 @@
         <option value="$PROJECT_DIR$/gateway-service/src/main/resources/bootstrap.properties" />
         <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/PostStatisticsFilter.java" />
         <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/JwtProperties.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/dfocus/App.java" />
         <option value="$PROJECT_DIR$/common/pom.xml" />
         <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/AbstractZuulFilter.java" />
         <option value="$PROJECT_DIR$/README.md" />
@@ -233,14 +235,25 @@
         <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/AuthPreFilter.java" />
         <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/properties/JwtProperties.java" />
         <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/PreAuthFilter.java" />
-        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/AbstractGatewayFilter.java" />
         <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/PreJwtFilter.java" />
         <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/controller/TestController.java" />
         <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/PreIPsFilter.java" />
         <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/JwtConfig.java" />
-        <option value="$PROJECT_DIR$/config-repo/gateway-service.properties" />
         <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/properties/IPsRestrictionProperties.java" />
         <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/IPsConfig.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/dfocus/App.java" />
+        <option value="$PROJECT_DIR$/gateway-service/pom.xml" />
+        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/properties/RateLimitProperties.java" />
+        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/repository/Rate.java" />
+        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/repository/RedisRateLimiter.java" />
+        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/AbstractGatewayFilter.java" />
+        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/DefaultRateLimitKeyGenerator.java" />
+        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/RateLimitPreFilter.java" />
+        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/RateLimitPostFilter.java" />
+        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/RateLimitConfiguration.java" />
+        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/RateLimitConfig.java" />
+        <option value="$PROJECT_DIR$/config-repo/gateway-service.properties" />
+        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/PreStatisticsFilter.java" />
       </list>
     </option>
   </component>
@@ -512,7 +525,8 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-cloud-microservice" type="b2602c69:ProjectViewProjectNode" />
@@ -523,6 +537,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="gateway" type="462c0819:PsiDirectoryNode" />
               <item name="filter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-microservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-microservice" type="462c0819:PsiDirectoryNode" />
+              <item name="zipkin-server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud-microservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -550,11 +573,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.dfocus.gateway.config" />
-      <recent name="com.dfocus.gateway.base" />
       <recent name="com.dfocus.gateway.filter" />
+      <recent name="com.dfocus.gateway.config" />
+      <recent name="com.dfocus.gateway.config.repository" />
       <recent name="com.dfocus.gateway.config.properties" />
-      <recent name="com.dfocus.ratelimit" />
+      <recent name="com.dfocus.gateway.base" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -875,7 +898,8 @@
       <workItem from="1508463616442" duration="23569000" />
       <workItem from="1508722050849" duration="19024000" />
       <workItem from="1508809725704" duration="21207000" />
-      <workItem from="1508896315778" duration="23885000" />
+      <workItem from="1508896315778" duration="23986000" />
+      <workItem from="1508980785819" duration="14632000" />
     </task>
     <servers />
   </component>
@@ -912,7 +936,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="378153000" />
+    <option name="totallyTimeSpent" value="392886000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -925,26 +949,26 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22128174" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32776934" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36154777" sideWeight="0.29470673" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run Dashboard" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="1.0" sideWeight="0.7052933" order="9" side_tool="false" content_ui="combo" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36154777" sideWeight="0.7052933" order="9" side_tool="false" content_ui="combo" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18025751" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2648126" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47763" sideWeight="0.62732476" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3555018" sideWeight="0.62732476" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2832618" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2725322" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39903265" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -953,6 +977,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -989,205 +1014,33 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="14" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar:///usr/local/maven-repository/org/springframework/cloud/spring-cloud-netflix-core/1.3.5.RELEASE/spring-cloud-netflix-core-1.3.5.RELEASE.jar!/org/springframework/cloud/netflix/zuul/filters/post/SendErrorFilter.class</url>
+          <line>43</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="24" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///usr/local/maven-repository/com/google/guava/guava/18.0/guava-18.0.jar!/com/google/common/collect/Maps.class">
+    <entry file="jar:///usr/local/maven-repository/com/netflix/zuul/zuul-core/1.3.0/zuul-core-1.3.0.jar!/com/netflix/zuul/ZuulRunner.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="105" column="39" lean-forward="false" selection-start-line="105" selection-start-column="39" selection-end-line="105" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/JwtProperties.java" />
-    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/dfocus/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="59" lean-forward="false" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="34" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="42" column="21" lean-forward="false" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/dfocus/common/controller/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/util/concurrent/ConcurrentHashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="933" column="13" lean-forward="false" selection-start-line="933" selection-start-column="13" selection-end-line="933" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/maven-repository/com/netflix/zuul/zuul-core/1.3.0/zuul-core-1.3.0.jar!/com/netflix/zuul/context/RequestContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="60" column="27" lean-forward="true" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
+        <state relative-caret-position="184">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding>
-            <element signature="e#4876#4877#0" expanded="true" />
-            <element signature="e#4922#4923#0" expanded="true" />
+            <element signature="e#1707#1708#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/maven-repository/org/apache/tomcat/embed/tomcat-embed-core/8.5.20/tomcat-embed-core-8.5.20.jar!/javax/servlet/http/HttpServletResponse.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/dfocus/common/base/JSONResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/auth/UcenterAuth.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-211">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/auth/Auth.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/base/GatewayResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding>
-            <element signature="e#247#248#0" expanded="false" />
-            <element signature="e#285#286#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qrcode-service/src/main/java/com/dfocus/qrcode/base/QRcodeResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="e#242#243#0" expanded="false" />
-            <element signature="e#280#281#0" expanded="false" />
-            <element signature="e#337#338#0" expanded="false" />
-            <element signature="e#404#405#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qrcode-service/src/main/java/com/dfocus/qrcode/base/QRcodeEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/dfocus/common/base/TipEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/util/Optional.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="49" column="19" lean-forward="false" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="297">
-            <caret line="108" column="10" lean-forward="false" selection-start-line="108" selection-start-column="10" selection-end-line="108" selection-end-column="10" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/base/GatewayEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/controller/AuthController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/controller/RouteController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/dfocus/common/util/HttpUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="47" column="17" lean-forward="false" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar:///usr/local/maven-repository/com/netflix/zuul/zuul-core/1.3.0/zuul-core-1.3.0.jar!/com/netflix/zuul/http/ZuulServlet.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1232,18 +1085,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/local/maven-repository/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.20/tomcat-embed-websocket-8.5.20.jar!/org/apache/tomcat/websocket/server/WsFilter.class">
+    <entry file="jar:///usr/local/maven-repository/org/apache/tomcat/embed/tomcat-embed-core/8.5.20/tomcat-embed-core-8.5.20.jar!/org/apache/catalina/core/ApplicationFilterChain.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state relative-caret-position="120">
+          <caret line="132" column="0" lean-forward="true" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/local/maven-repository/org/springframework/boot/spring-boot/1.5.7.RELEASE/spring-boot-1.5.7.RELEASE.jar!/org/springframework/boot/web/filter/ApplicationContextHeaderFilter.class">
+    <entry file="jar:///usr/local/maven-repository/org/springframework/boot/spring-boot-actuator/1.5.7.RELEASE/spring-boot-actuator-1.5.7.RELEASE.jar!/org/springframework/boot/actuate/autoconfigure/MetricsFilter.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="376">
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/maven-repository/org/springframework/spring-web/4.3.11.RELEASE/spring-web-4.3.11.RELEASE.jar!/org/springframework/web/filter/CharacterEncodingFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/maven-repository/org/springframework/spring-web/4.3.11.RELEASE/spring-web-4.3.11.RELEASE.jar!/org/springframework/web/filter/HiddenHttpMethodFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/maven-repository/org/springframework/spring-web/4.3.11.RELEASE/spring-web-4.3.11.RELEASE.jar!/org/springframework/web/filter/HttpPutFormContentFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/maven-repository/org/springframework/spring-web/4.3.11.RELEASE/spring-web-4.3.11.RELEASE.jar!/org/springframework/web/filter/RequestContextFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="34" column="157" lean-forward="false" selection-start-line="34" selection-start-column="157" selection-end-line="34" selection-end-column="157" />
           <folding />
         </state>
       </provider>
@@ -1256,6 +1141,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///usr/local/maven-repository/org/springframework/boot/spring-boot/1.5.7.RELEASE/spring-boot-1.5.7.RELEASE.jar!/org/springframework/boot/web/filter/ApplicationContextHeaderFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar:///usr/local/maven-repository/org/springframework/spring-web/4.3.11.RELEASE/spring-web-4.3.11.RELEASE.jar!/org/springframework/web/filter/OncePerRequestFilter.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1264,131 +1157,169 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/local/maven-repository/org/apache/tomcat/embed/tomcat-embed-core/8.5.20/tomcat-embed-core-8.5.20.jar!/org/apache/catalina/core/ApplicationFilterChain.class">
+    <entry file="jar:///usr/local/maven-repository/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.20/tomcat-embed-websocket-8.5.20.jar!/org/apache/tomcat/websocket/server/WsFilter.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        <state relative-caret-position="335">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/local/maven-repository/org/springframework/spring-web/4.3.11.RELEASE/spring-web-4.3.11.RELEASE.jar!/org/springframework/web/filter/RequestContextFilter.class">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/Throwable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="2634">
+          <caret line="285" column="11" lean-forward="false" selection-start-line="285" selection-start-column="11" selection-end-line="285" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/local/maven-repository/com/netflix/zuul/zuul-core/1.3.0/zuul-core-1.3.0.jar!/com/netflix/zuul/ZuulRunner.class">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/Exception.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state relative-caret-position="181">
+          <caret line="83" column="10" lean-forward="true" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
+          <folding>
+            <element signature="e#2406#2407#0" expanded="false" />
+            <element signature="e#2443#2444#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/maven-repository/com/netflix/zuul/zuul-core/1.3.0/zuul-core-1.3.0.jar!/com/netflix/zuul/exception/ZuulException.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/local/maven-repository/com/netflix/zuul/zuul-core/1.3.0/zuul-core-1.3.0.jar!/com/netflix/zuul/FilterProcessor.class">
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/dfocus/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+        <state relative-caret-position="210">
+          <caret line="14" column="38" lean-forward="false" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/maven-repository/com/netflix/zuul/zuul-core/1.3.0/zuul-core-1.3.0.jar!/com/netflix/zuul/context/RequestContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="68" column="68" lean-forward="false" selection-start-line="68" selection-start-column="68" selection-end-line="68" selection-end-column="68" />
+          <folding>
+            <element signature="e#3228#3229#0" expanded="true" />
+            <element signature="e#3283#3284#0" expanded="true" />
+            <element signature="e#3329#3330#0" expanded="true" />
+            <element signature="e#3370#3371#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/maven-repository/com/netflix/zuul/zuul-core/1.3.0/zuul-core-1.3.0.jar!/com/netflix/zuul/IZuulFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar:///usr/local/maven-repository/com/netflix/zuul/zuul-core/1.3.0/zuul-core-1.3.0.jar!/com/netflix/zuul/ZuulFilter.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        <state relative-caret-position="150">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/AuthPreFilter.java">
+    <entry file="jar:///usr/local/maven-repository/com/netflix/zuul/zuul-core/1.3.0/zuul-core-1.3.0.jar!/com/netflix/zuul/FilterProcessor.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="66" column="25" lean-forward="true" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
+        <state relative-caret-position="301">
+          <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/PreStatisticsFilter.java">
+    <entry file="jar:///usr/local/maven-repository/org/springframework/cloud/spring-cloud-netflix-core/1.3.5.RELEASE/spring-cloud-netflix-core-1.3.5.RELEASE.jar!/org/springframework/cloud/netflix/zuul/filters/post/SendResponseFilter.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="315">
+          <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/ErrorFilter.java">
+    <entry file="jar:///usr/local/maven-repository/org/springframework/cloud/spring-cloud-netflix-core/1.3.5.RELEASE/spring-cloud-netflix-core-1.3.5.RELEASE.jar!/org/springframework/cloud/netflix/zuul/filters/post/SendErrorFilter.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="77">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/AbstractGatewayFilter.java">
+    <entry file="jar:///usr/local/maven-repository/org/springframework/cloud/spring-cloud-netflix-core/1.3.4.RELEASE/spring-cloud-netflix-core-1.3.4.RELEASE.jar!/org/springframework/cloud/netflix/zuul/filters/post/SendErrorFilter.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/PreJwtFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1494#1495#0" expanded="true" />
-            <element signature="e#1525#1526#0" expanded="true" />
-            <element signature="e#1571#1572#0" expanded="true" />
-            <element signature="e#1595#1596#0" expanded="true" />
-            <element signature="e#1646#1647#0" expanded="true" />
-            <element signature="e#1733#1734#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/controller/TestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        <state relative-caret-position="300">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/PreIPsFilter.java">
+    <entry file="file://$PROJECT_DIR$/common/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="59" column="44" lean-forward="false" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
+        <state relative-caret-position="28">
+          <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config-repo/gateway-service.properties">
+    <entry file="file://$PROJECT_DIR$/config-client-service/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="20" lean-forward="true" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+        <state relative-caret-position="177">
+          <caret line="51" column="42" lean-forward="false" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/CustomZuulConfig.java">
+    <entry file="file://$PROJECT_DIR$/config-server/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        <state relative-caret-position="186">
+          <caret line="46" column="45" lean-forward="false" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eureka-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="43" column="38" lean-forward="false" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/maven-repository/org/springframework/cloud/spring-cloud-dependencies/Dalston.SR3/spring-cloud-dependencies-Dalston.SR3.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="51" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/maven-repository/com/marcosbarbero/cloud/spring-cloud-zuul-ratelimit/1.3.4.RELEASE/spring-cloud-zuul-ratelimit-1.3.4.RELEASE.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/maven-repository/com/marcosbarbero/cloud/spring-cloud-zuul-ratelimit-parent/1.3.4.RELEASE/spring-cloud-zuul-ratelimit-parent-1.3.4.RELEASE.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3617">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/properties/IPsRestrictionProperties.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="153">
           <caret line="19" column="24" lean-forward="false" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
           <folding />
         </state>
@@ -1396,24 +1327,199 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/properties/JwtProperties.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="43" />
+        <state relative-caret-position="120">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/properties/RateLimitProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="37" column="10" lean-forward="false" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2091#2092#0" expanded="true" />
+            <element signature="e#2120#2121#0" expanded="true" />
+            <element signature="e#2160#2161#0" expanded="true" />
+            <element signature="e#2196#2197#0" expanded="true" />
+            <element signature="e#2254#2255#0" expanded="true" />
+            <element signature="e#2304#2305#0" expanded="true" />
+            <element signature="e#2352#2353#0" expanded="true" />
+            <element signature="e#2383#2384#0" expanded="true" />
+            <element signature="e#2444#2445#0" expanded="true" />
+            <element signature="e#2484#2485#0" expanded="true" />
+            <element signature="e#2522#2523#0" expanded="true" />
+            <element signature="e#2556#2557#0" expanded="true" />
+            <element signature="e#2611#2612#0" expanded="true" />
+            <element signature="e#2657#2658#0" expanded="true" />
+            <element signature="e#2691#2692#0" expanded="true" />
+            <element signature="e#2721#2722#0" expanded="true" />
+            <element signature="e#2768#2769#0" expanded="true" />
+            <element signature="e#2806#2807#0" expanded="true" />
+            <element signature="e#2842#2843#0" expanded="true" />
+            <element signature="e#2874#2875#0" expanded="true" />
+            <element signature="e#2924#2925#0" expanded="true" />
+            <element signature="e#2966#2967#0" expanded="true" />
+            <element signature="e#3007#3008#0" expanded="true" />
+            <element signature="e#3040#3041#0" expanded="true" />
+            <element signature="e#3096#3097#0" expanded="true" />
+            <element signature="e#3140#3141#0" expanded="true" />
+            <element signature="e#3498#3499#0" expanded="true" />
+            <element signature="e#3544#3545#0" expanded="true" />
+            <element signature="e#3608#3609#0" expanded="true" />
+            <element signature="e#3670#3671#0" expanded="true" />
+            <element signature="e#3704#3705#0" expanded="true" />
+            <element signature="e#3740#3741#0" expanded="true" />
+            <element signature="e#3784#3785#0" expanded="true" />
+            <element signature="e#3826#3827#0" expanded="true" />
+            <element signature="e#3860#3861#0" expanded="true" />
+            <element signature="e#3896#3897#0" expanded="true" />
+            <element signature="e#3940#3941#0" expanded="true" />
+            <element signature="e#3982#3983#0" expanded="true" />
+            <element signature="e#4021#4022#0" expanded="true" />
+            <element signature="e#4056#4057#0" expanded="true" />
+            <element signature="e#4104#4105#0" expanded="true" />
+            <element signature="e#4144#4145#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="71" column="40" lean-forward="false" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/repository/Rate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-707">
+          <caret line="18" column="51" lean-forward="false" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+          <folding>
+            <element signature="e#1732#1733#0" expanded="true" />
+            <element signature="e#1758#1759#0" expanded="true" />
+            <element signature="e#1796#1797#0" expanded="true" />
+            <element signature="e#1826#1827#0" expanded="true" />
+            <element signature="e#1860#1861#0" expanded="true" />
+            <element signature="e#1892#1893#0" expanded="true" />
+            <element signature="e#1940#1941#0" expanded="true" />
+            <element signature="e#1982#1983#0" expanded="true" />
+            <element signature="e#2021#2022#0" expanded="true" />
+            <element signature="e#2058#2059#0" expanded="true" />
+            <element signature="e#2116#2117#0" expanded="true" />
+            <element signature="e#2168#2169#0" expanded="true" />
+            <element signature="e#2198#2199#0" expanded="true" />
+            <element signature="e#2226#2227#0" expanded="true" />
+            <element signature="e#2266#2267#0" expanded="true" />
+            <element signature="e#2300#2301#0" expanded="true" />
+            <element signature="e#2335#2336#0" expanded="true" />
+            <element signature="e#2368#2369#0" expanded="true" />
+            <element signature="e#2418#2419#0" expanded="true" />
+            <element signature="e#2462#2463#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/DefaultRateLimitKeyGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="47" column="61" lean-forward="false" selection-start-line="47" selection-start-column="61" selection-end-line="47" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1230#1231#0" expanded="true" />
+            <element signature="e#1274#1275#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/maven-repository/com/google/guava/guava/18.0/guava-18.0.jar!/com/google/common/util/concurrent/RateLimiter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/AbstractGatewayFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-107">
+          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/PreJwtFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="681">
+          <caret line="96" column="29" lean-forward="false" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/RateLimitPostFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-720">
+          <caret line="20" column="61" lean-forward="false" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/RateLimitPreFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="49" column="31" lean-forward="false" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2903#2904#0" expanded="true" />
+            <element signature="e#2990#2991#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/repository/RedisRateLimiter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1135#1136#0" expanded="true" />
+            <element signature="e#1185#1186#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config-repo/gateway-service.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/JwtConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="81" />
+        <state relative-caret-position="225">
+          <caret line="22" column="63" lean-forward="false" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/IPsConfig.java">
+    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/RateLimitConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        <state relative-caret-position="382">
+          <caret line="64" column="75" lean-forward="false" selection-start-line="64" selection-start-column="63" selection-end-line="64" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/PreStatisticsFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="37" column="59" lean-forward="true" selection-start-line="37" selection-start-column="59" selection-end-line="37" selection-end-column="59" />
           <folding />
         </state>
       </provider>

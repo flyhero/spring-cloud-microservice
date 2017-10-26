@@ -15,7 +15,6 @@
         <module name="monitoring-service" />
         <module name="order-service" />
         <module name="qrcode-service" />
-        <module name="ratelimit" />
         <module name="ribbon-service" />
         <module name="ucenter-service" />
         <module name="zipkin-client" />
