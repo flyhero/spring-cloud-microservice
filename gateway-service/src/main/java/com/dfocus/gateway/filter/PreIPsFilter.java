@@ -7,6 +7,8 @@ import com.dfocus.gateway.base.GatewayResult;
 import com.dfocus.gateway.config.properties.IPsRestrictionProperties;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.cloud.netflix.zuul.filters.Route;
 import org.springframework.cloud.netflix.zuul.filters.RouteLocator;
 import org.springframework.http.MediaType;
@@ -25,6 +27,8 @@ import static org.springframework.cloud.netflix.zuul.filters.support.FilterConst
  */
 
 public class PreIPsFilter extends AbstractGatewayFilter {
+
+    private final Logger logger = LoggerFactory.getLogger(PreIPsFilter.class);
 
     private IPsRestrictionProperties iPsRestrictionProperties;
 
@@ -45,16 +49,16 @@ public class PreIPsFilter extends AbstractGatewayFilter {
 
     @Override
     public boolean shouldFilter() {
-        System.out.println("======="+iPsRestrictionProperties.isEnabled());
-        return iPsRestrictionProperties.isEnabled() && policy(getMatchingRoute()).isPresent();
+        boolean flag = policy(getMatchingRoute()).isPresent();
+        logger.debug("是否启用IP限制："+flag);
+        return iPsRestrictionProperties.isEnabled() && flag;
     }
 
     @Override
     public Object run() {
-        System.out.println("==========PreIPsFilter===========");
+        logger.info("================IP限制中==============");
         RequestContext ctx = RequestContext.getCurrentContext();
         String ip = HttpUtils.getIpAddr(ctx.getRequest());
-        System.out.println("==========ip:"+ip);
         Route route = getMatchingRoute();
         policy(route).ifPresent(ipList -> {
             final String black = ipList.getBlacklist();
@@ -108,7 +112,7 @@ public class PreIPsFilter extends AbstractGatewayFilter {
 
     public Optional<IPsRestrictionProperties.IPList> policy(final Route route) {
         if (route != null) {
-            System.out.println("=================="+route.getId());
+            logger.debug("==========IP限制：获取路由========"+route.getId());
             return iPsRestrictionProperties.getIps(route.getId());
         }
         return Optional.ofNullable(null);

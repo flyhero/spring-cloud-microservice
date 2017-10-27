@@ -31,6 +31,29 @@
         </triggeringPolicy>
     </appender>
 
+    <!-- 输出到文件 -->
+    <appender name="AnalysisLog"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOGPATH}${file.separator}${TIMESTAMP}-Analysis.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>
+                %d{HH:mm:ss.SSS} [%thread] %-5level %logger{40} - %msg%n
+            </pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOGPATH}${file.separator}all${file.separator}%d{yyyy-MM-dd}-Analysis.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>10MB</MaxFileSize>
+        </triggeringPolicy>
+    </appender>
+
+    <logger name="com.dfocus.gateway.filter.PostStatisticsFilter" level="INFO">
+        <appender-ref ref="AnalysisLog"/>
+    </logger>
+
     <root level="INFO">
         <appender-ref ref="fileLog" />
         <appender-ref ref="stdout"  />

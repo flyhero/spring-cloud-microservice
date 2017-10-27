@@ -1,6 +1,7 @@
 package com.dfocus.common.controller;
 
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.io.IOException;

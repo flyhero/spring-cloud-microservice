@@ -16,7 +16,6 @@
 
     <modules>
         <module>common</module>
-        <module>ratelimit</module>
         <module>eureka-service</module>
         <module>gateway-service</module>
         <module>config-server</module>

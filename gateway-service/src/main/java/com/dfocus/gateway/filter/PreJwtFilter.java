@@ -59,7 +59,7 @@ public class PreJwtFilter extends AbstractGatewayFilter{
 
     @Override
     public Object run() {
-        System.out.println("=============AuthPreFilter==============");
+        logger.info("================JWT验证中=================");
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
         String token = request.getHeader("Authorization");
@@ -94,6 +94,7 @@ public class PreJwtFilter extends AbstractGatewayFilter{
 
     public Optional<Boolean> policy(final Route route) {
         if (route != null) {
+            logger.debug("==========JWT：获取路由========"+route.getId());
             return properties.getBo(route.getId());
         }
         return Optional.ofNullable(null);

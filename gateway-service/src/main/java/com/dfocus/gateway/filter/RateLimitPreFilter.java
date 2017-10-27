@@ -23,6 +23,8 @@ import com.dfocus.gateway.config.repository.RedisRateLimiter;
 import com.google.common.util.concurrent.RateLimiter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.cloud.netflix.zuul.filters.Route;
 import org.springframework.cloud.netflix.zuul.filters.RouteLocator;
 import org.springframework.cloud.netflix.zuul.util.ZuulRuntimeException;
@@ -46,6 +48,8 @@ import static org.springframework.web.context.request.RequestAttributes.SCOPE_RE
  * @author Liel Chayoun
  */
 public class RateLimitPreFilter extends AbstractGatewayFilter {
+
+    private final Logger logger = LoggerFactory.getLogger(RateLimitPreFilter.class);
 
     private final RedisRateLimiter rateLimiter;
     private final DefaultRateLimitKeyGenerator rateLimitKeyGenerator;
@@ -76,6 +80,7 @@ public class RateLimitPreFilter extends AbstractGatewayFilter {
 
     @Override
     public Object run() {
+        logger.info("=====================限流中======================");
         final RequestContext ctx = RequestContext.getCurrentContext();
         final HttpServletResponse response = ctx.getResponse();
         final HttpServletRequest request = ctx.getRequest();
@@ -120,7 +125,7 @@ public class RateLimitPreFilter extends AbstractGatewayFilter {
 
     public Optional<RateLimitProperties.Policy> policy(final Route route) {
         if (route != null) {
-            System.out.println("=================="+route.getId());
+            logger.debug("==========限流：获取路由========"+route.getId());
             return properties.getPolicy(route.getId());
         }
         return Optional.ofNullable(properties.getDefaultPolicy());

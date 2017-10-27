@@ -41,6 +41,7 @@ import static com.dfocus.gateway.config.properties.RateLimitProperties.PREFIX;
 
 /**
  * @author Marcos Barbero
+ * 来自 https://github.com/marcosbarbero/spring-cloud-zuul-ratelimit
  */
 @Configuration
 //@EnableConfigurationProperties(RateLimitProperties.class)

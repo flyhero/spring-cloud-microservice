@@ -5,6 +5,8 @@ import com.dfocus.gateway.base.GatewayEnum;
 import com.dfocus.gateway.base.GatewayResult;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.cloud.netflix.zuul.filters.Route;
 import org.springframework.cloud.netflix.zuul.filters.RouteLocator;
 import org.springframework.http.MediaType;
@@ -18,6 +20,8 @@ import java.util.Optional;
  * Date: 2017-10-25 下午8:02
  */
 public abstract class AbstractGatewayFilter extends ZuulFilter{
+
+    Logger logger = LoggerFactory.getLogger(AbstractGatewayFilter.class);
 
     public static final String QUOTA_HEADER = "X-RateLimit-Quota";
     public static final String REMAINING_QUOTA_HEADER = "X-RateLimit-Remaining-Quota";
@@ -44,6 +48,7 @@ public abstract class AbstractGatewayFilter extends ZuulFilter{
     }
     Route getMatchingRoute() {
         String requestURI = urlPathHelper.getPathWithinApplication(RequestContext.getCurrentContext().getRequest());
+        logger.info("requestURI:"+requestURI);
         return routeLocator.getMatchingRoute(requestURI);
     }
 
