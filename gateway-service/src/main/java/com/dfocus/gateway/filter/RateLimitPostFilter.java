@@ -90,7 +90,6 @@ public class RateLimitPostFilter extends AbstractGatewayFilter {
     }
     public Optional<RateLimitProperties.Policy> policy(final Route route) {
         if (route != null) {
-            System.out.println("=================="+route.getId());
             return properties.getPolicy(route.getId());
         }
         return Optional.ofNullable(properties.getDefaultPolicy());
