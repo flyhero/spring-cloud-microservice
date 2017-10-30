@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6362a4ad-8fbb-41d6-9b06-17a2a22548b2" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config-repo/gateway-service.properties" afterPath="$PROJECT_DIR$/config-repo/gateway-service.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/RateLimitPostFilter.java" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/RateLimitPostFilter.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,9 +37,21 @@
       <file leaf-file-name="gateway-service.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config-repo/gateway-service.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+            <state relative-caret-position="165">
+              <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomRouteLocator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/route/CustomRouteLocator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="287">
+              <caret line="87" column="13" lean-forward="true" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
+              <folding>
+                <marker date="1509348661000" expanded="true" signature="2728:2772" ph="select * fro... api_route" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -147,8 +159,8 @@
         <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/service/StatisticsService.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/config/CustomZuulConfig.java" />
-        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/route/CustomRouteLocator.java" />
         <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/filter/RateLimitPostFilter.java" />
+        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/route/CustomRouteLocator.java" />
         <option value="$PROJECT_DIR$/config-repo/gateway-service.properties" />
       </list>
     </option>
@@ -913,7 +925,7 @@
       <workItem from="1508896315778" duration="23986000" />
       <workItem from="1508980785819" duration="22836000" />
       <workItem from="1509067437655" duration="26727000" />
-      <workItem from="1509326832628" duration="12425000" />
+      <workItem from="1509326832628" duration="13302000" />
     </task>
     <servers />
   </component>
@@ -950,7 +962,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="440242000" />
+    <option name="totallyTimeSpent" value="441119000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1353,16 +1365,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/route/CustomRouteLocator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="79" column="58" lean-forward="false" selection-start-line="79" selection-start-column="58" selection-end-line="79" selection-end-column="58" />
-          <folding>
-            <marker date="1509345226000" expanded="true" signature="2728:2772" ph="select * fro... api_route" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/local/maven-repository/org/springframework/cloud/spring-cloud-netflix-core/1.3.4.RELEASE/spring-cloud-netflix-core-1.3.4.RELEASE.jar!/org/springframework/cloud/netflix/zuul/filters/post/SendResponseFilter.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -1455,10 +1457,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/dfocus/gateway/route/CustomRouteLocator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="87" column="13" lean-forward="true" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
+          <folding>
+            <marker date="1509348661000" expanded="true" signature="2728:2772" ph="select * fro... api_route" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config-repo/gateway-service.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        <state relative-caret-position="165">
+          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
           <folding />
         </state>
       </provider>
