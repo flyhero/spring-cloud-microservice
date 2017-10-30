@@ -80,7 +80,10 @@ public class CustomRouteLocator extends SimpleRouteLocator implements Refreshabl
         List<ZuulRouteVO> results = jdbcTemplate.query("select * from api_route where enabled = true ",new BeanPropertyRowMapper<>(ZuulRouteVO.class));
         for (ZuulRouteVO result : results) {
             logger.info("==============api :"+result.getServiceId());
-            if(StringUtils.isEmpty(result.getPath()) || StringUtils.isEmpty(result.getUrl()) ){
+/*            if(StringUtils.isEmpty(result.getPath()) || StringUtils.isEmpty(result.getUrl()) ){
+                continue;
+            }*/
+            if(StringUtils.isEmpty(result.getPath())){
                 continue;
             }
             ZuulRoute zuulRoute = new ZuulRoute();
