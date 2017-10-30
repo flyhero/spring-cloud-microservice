@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6362a4ad-8fbb-41d6-9b06-17a2a22548b2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config-repo/gateway-service.properties" afterPath="$PROJECT_DIR$/config-repo/gateway-service.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -77,8 +76,8 @@
       <file leaf-file-name="gateway-service.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config-repo/gateway-service.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+            <state relative-caret-position="374">
+              <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -993,7 +992,7 @@
       <workItem from="1508896315778" duration="23986000" />
       <workItem from="1508980785819" duration="22836000" />
       <workItem from="1509067437655" duration="26727000" />
-      <workItem from="1509326832628" duration="10497000" />
+      <workItem from="1509326832628" duration="10558000" />
     </task>
     <servers />
   </component>
@@ -1030,7 +1029,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="438314000" />
+    <option name="totallyTimeSpent" value="438375000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1529,8 +1528,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config-repo/gateway-service.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        <state relative-caret-position="374">
+          <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
           <folding />
         </state>
       </provider>
