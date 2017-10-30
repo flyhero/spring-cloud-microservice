@@ -59,7 +59,7 @@ public class PreStatisticsFilter extends AbstractGatewayFilter {
             e.printStackTrace();
         }
         ctx.put("startTimeMillis", System.currentTimeMillis());
-
+        ctx.set("requestInfo",ctx.getRequest());
 /*        if (true) {
             HttpStatus tooManyRequests = HttpStatus.TOO_MANY_REQUESTS;
             ctx.setResponseStatusCode(tooManyRequests.value());

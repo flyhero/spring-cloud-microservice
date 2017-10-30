@@ -5,9 +5,14 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.dfocus.common.util.HttpUtils;
 import com.netflix.zuul.context.RequestContext;
 import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+import org.springframework.cloud.netflix.zuul.filters.ProxyRequestHelper;
 import org.springframework.cloud.netflix.zuul.filters.Route;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.stereotype.Service;
+
+import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
 
 /**
  * Author: qfwang
@@ -16,28 +21,49 @@ import org.springframework.stereotype.Service;
 @Service
 public class StatisticsService {
 
+    private ProxyRequestHelper proxyRequestHelper = new ProxyRequestHelper();
     public String logApiInfo() {
         RequestContext ctx = RequestContext.getCurrentContext();
         long endTimeMillis = System.currentTimeMillis();
         long startTimeMillis = (long)ctx.get("startTimeMillis");
         long execTimeMillis = endTimeMillis - startTimeMillis;
 
+        HttpServletRequest request = (HttpServletRequest)ctx.get("requestInfo");
+        ClientHttpResponse response = (ClientHttpResponse)ctx.get("zuulResponse");
 
         ApiStatistics apiStatistics =new ApiStatistics();
-/*        apiStatistics.setRequestAppKey("wang");
-        apiStatistics.setRequestKey("wang");*/
 
 
         apiStatistics.setRequestTime(startTimeMillis);
         apiStatistics.setResponseTime(endTimeMillis);
         apiStatistics.setExecTime((int) execTimeMillis);
         apiStatistics.setIp(HttpUtils.getIPAddr(ctx.getRequest()));
-        apiStatistics.setFrontendPath(ctx.getRequest().getRequestURI());
+        apiStatistics.setFrontendPath(request.getRequestURI());
         //apiStatistics.setBackendPath(route.getPath());
-        apiStatistics.setStatusCode(ctx.getResponse().getStatus());
+        apiStatistics.setRequestHeaders((HttpHeaders) proxyRequestHelper.buildZuulRequestHeaders(request));
+        int status = 0;
+        try {
+            if(response != null){ //多实例，走负载均衡
+                apiStatistics.setStatusCode(response.getRawStatusCode());
+                apiStatistics.setResponseHeaders(response.getHeaders());
+            }else {
+                if(ctx.containsKey("sendErrorFilter.ran")){ //出现异常
+                    status = (int)ctx.getRequest().getAttribute("javax.servlet.error.status_code");
+                }else {
+                    status =ctx.getResponse().getStatus();
+                }
+                apiStatistics.setResponseHeaders(new HttpHeaders());
+                apiStatistics.setStatusCode(status);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
         apiStatistics.setResponseBody(ctx.getResponseBody());
-        apiStatistics.setMethod(ctx.getRequest().getMethod());
-        apiStatistics.setQueryString(ctx.getRequest().getQueryString());
+        apiStatistics.setMethod(request.getMethod());
+        apiStatistics.setQueryString(request.getQueryString());
+
         String apiInfo= JSON.toJSONString(apiStatistics);
         return apiInfo;
     }
