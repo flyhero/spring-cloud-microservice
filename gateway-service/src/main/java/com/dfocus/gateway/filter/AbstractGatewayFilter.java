@@ -9,13 +9,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.netflix.zuul.filters.Route;
 import org.springframework.cloud.netflix.zuul.filters.RouteLocator;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.web.util.UrlPathHelper;
 
 import javax.servlet.http.HttpServletResponse;
+import java.util.Map;
 import java.util.Optional;
 
 /**
+ * 过滤器抽象类
  * Author: qfwang
  * Date: 2017-10-25 下午8:02
  */
@@ -38,11 +41,20 @@ public abstract class AbstractGatewayFilter extends ZuulFilter{
         this.urlPathHelper = urlPathHelper;
     }
     public void responseHandler(RequestContext ctx, GatewayEnum gatewayEnum){
+        this.responseHandler(ctx,gatewayEnum,null);
+    }
+    public void responseHandler(RequestContext ctx, GatewayEnum gatewayEnum, HttpHeaders httpHeaders){
         ctx.setSendZuulResponse(false);//zuul过滤请求，false为不路由，true为路由
         HttpServletResponse httpResponse = ctx.getResponse();
         httpResponse.setCharacterEncoding("UTF-8");
         httpResponse.setContentType(MediaType.APPLICATION_JSON_UTF8_VALUE);
         httpResponse.setStatus(gatewayEnum.getCode());
+        if(httpHeaders != null){
+            Map<String,String> map = httpHeaders.toSingleValueMap();
+            for(Map.Entry<String,String> entry : map.entrySet()){
+                httpResponse.setHeader(entry.getKey(),entry.getValue());
+            }
+        }
         ctx.setResponseBody(JSON.toJSONString(new GatewayResult(gatewayEnum.getCode(),gatewayEnum.getMsg(),"")));
         ctx.setResponse(httpResponse);//返回response信息
     }

@@ -11,11 +11,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.netflix.zuul.filters.Route;
 import org.springframework.cloud.netflix.zuul.filters.RouteLocator;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.util.UrlPathHelper;
 
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Optional;
 
 import static org.springframework.cloud.netflix.zuul.filters.support.FilterConstants.PRE_TYPE;
@@ -89,7 +92,9 @@ public class PreIPsFilter extends AbstractGatewayFilter {
                     String prefixThree= w.substring(0,w.lastIndexOf("."));
                     if(suffix.equals("*")){
                         if(!ip.contains(prefixThree)){
-                            responseHandler(ctx, GatewayEnum.ACCESS_DENIED);
+                            HttpHeaders httpHeaders = new HttpHeaders();
+                            httpHeaders.put("x-ip", Arrays.asList("white"));
+                            responseHandler(ctx, GatewayEnum.ACCESS_DENIED,httpHeaders);
                             break;
                         }
                     }else {
