@@ -8,6 +8,7 @@ import java.time.LocalDate;
  */
 public class App 
 {
+    static int a;
     public static void main( String[] args )
     {
         System.out.println( "Hello World!" );
@@ -19,5 +20,10 @@ public class App
         System.out.println(!false);
         LocalDate localDate = LocalDate.now();
         System.out.println(localDate.toString());
+        try {
+            System.out.println(a);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

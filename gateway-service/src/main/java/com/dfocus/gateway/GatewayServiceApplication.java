@@ -5,20 +5,12 @@ import com.netflix.client.ClientFactory;
 import com.netflix.client.IClient;
 import com.netflix.client.config.CommonClientConfigKey;
 import com.netflix.client.config.DefaultClientConfigImpl;
-import com.netflix.client.config.IClientConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
-import org.springframework.cloud.netflix.zuul.filters.ZuulProperties;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Primary;
-
-
-import javax.servlet.http.HttpServletRequest;
 
 
 @SpringBootApplication
@@ -33,7 +25,7 @@ public class GatewayServiceApplication {
 		String listOfServers = "http://localhost:8990/,http://localhost:8991/";
 		IClient client =null;
 		try {
-			client= ClientFactory.createNamedClient("compute",new DefaultClientConfigImpl().set(CommonClientConfigKey.ListOfServers,listOfServers).getClass());
+			client= ClientFactory.createNamedClient("qrinfo",new DefaultClientConfigImpl().set(CommonClientConfigKey.ListOfServers,listOfServers).getClass());
 		} catch (ClientException e) {
 			System.out.println(e.toString());
 			e.printStackTrace();
