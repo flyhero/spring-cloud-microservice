@@ -52,6 +52,7 @@
 
     <logger name="com.dfocus.gateway.filter.PostStatisticsFilter" level="INFO">
         <appender-ref ref="AnalysisLog"/>
+        <appender-ref ref="logstash"/>
     </logger>
 
     <root level="INFO">

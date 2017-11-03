@@ -1,65 +1,41 @@
 version: '3'
 services:
-  gateway-service:
-    build:
-      context: ./gateway-service
-      dockerfile: Dockerfile
-    container_name: gateway-service
-    image: gateway-service
-    ports:
-      - "8082:8082"
-    depends_on:
-      - db
-      - redis
-      - config-server
-      - rabbitmq
-    networks:
-      - micro-back
-
-  config-server:
-    build:
-      context: ./config-server
-      dockerfile: Dockerfile
-    container_name: config-server
-    image: config-server
-    ports:
-      - "8881:8881"
-    depends_on:
-      - rabbitmq
-    networks:
-      - micro-back
-
-  db:
-    image: mysql
-    container_name: mysql001
-    volumes:
-      - /docker/mysql/data:/var/lib/mysql
+  elasticsearch:
+    image: elasticsearch:5.6.3
+    container_name: elasticsearch
     environment:
-      TZ: 'Asia/Shanghai'
-      MYSQL_ROOT_PASSWORD: 123456
+      - http.host=0.0.0.0
+      - transport.host=0.0.0.0
+      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
+      - "discovery.type=single-node"
     ports:
-      - "3306:3306"
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+       - /docker/elasticsearch/data:/usr/share/elasticsearch/data
     networks:
       - micro-back
 
-  redis:
-    image: redis
-    container_name: redis001
+  logstash:
+    image: logstash:5.6.3
+    container_name: logstash
     ports:
-      - "6379:6379"
+      - "4560:4560"
+    volumes:
+      - /docker/logstash/config/:/usr/share/logstash/config/
+    command: logstash -f /usr/share/logstash/config/logstash.conf
     networks:
       - micro-back
 
-  rabbitmq:
-    image: rabbitmq
-    container_name: rabbitmq001
+  kibana:
+    image: kibana:5.6.3
+    container_name: kibana
+    environment:
+      - SERVER_HOST=0.0.0.0
     ports:
-      - "5672:5672"
-      - "15672:15672"
-      - "15674:15674"
+      - "5601:5601"
     networks:
       - micro-back
-
 
 networks:
   micro-back:
