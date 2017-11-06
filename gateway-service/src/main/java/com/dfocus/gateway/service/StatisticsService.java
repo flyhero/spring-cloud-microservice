@@ -29,6 +29,7 @@ public class StatisticsService {
         long execTimeMillis = endTimeMillis - startTimeMillis;
 
         HttpServletRequest request = (HttpServletRequest)ctx.get("requestInfo");
+        Object respozuulResponsense = ctx.get("zuulResponse");
         ClientHttpResponse response = (ClientHttpResponse)ctx.get("zuulResponse");
 
         ApiStatistics apiStatistics =new ApiStatistics();

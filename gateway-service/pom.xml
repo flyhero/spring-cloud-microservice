@@ -37,15 +37,6 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
-<!--		<dependency>
-			<groupId>com.dfocus</groupId>
-			<artifactId>ratelimit</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>-->
-<!--		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka</artifactId>
-		</dependency>-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-zuul</artifactId>
@@ -73,12 +64,6 @@
 			<artifactId>java-jwt</artifactId>
 			<version>3.1.0</version>
 		</dependency>
-		<!--限流-->
-<!--		<dependency>
-			<groupId>com.marcosbarbero.cloud</groupId>
-			<artifactId>spring-cloud-zuul-ratelimit</artifactId>
-			<version>1.3.4.RELEASE</version>
-		</dependency>-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
