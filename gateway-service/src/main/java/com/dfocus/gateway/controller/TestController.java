@@ -61,7 +61,7 @@ public class TestController implements ErrorController{
      */
     @RequestMapping("/error")
     public GatewayResult error(){
-        return new GatewayResult(500,"出现错误","");
+        return new GatewayResult(500,"服务器内部出现异常","");
     }
 
     @Override

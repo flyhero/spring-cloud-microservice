@@ -54,7 +54,12 @@ public class TestController {
         Map<String,Object> map =new HashMap<>();
         return map;
     }
-
+    @GetMapping("error")
+    public Map error(){
+        Map<String,Object> map =new HashMap<>();
+        map.put("msg","error");
+        return map;
+    }
     @GetMapping("recv")
     public String recv(){
         try {

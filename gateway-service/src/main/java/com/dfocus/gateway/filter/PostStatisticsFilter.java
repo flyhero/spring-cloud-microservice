@@ -1,6 +1,7 @@
 package com.dfocus.gateway.filter;
 
 import com.dfocus.gateway.service.StatisticsService;
+import com.netflix.client.http.HttpResponse;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import org.slf4j.Logger;
@@ -34,7 +35,7 @@ public class PostStatisticsFilter extends AbstractGatewayFilter{
 
     @Override
     public int filterOrder() {
-        return 1000;
+        return 1001;
     }
 
     @Override
@@ -50,6 +51,8 @@ public class PostStatisticsFilter extends AbstractGatewayFilter{
     public Object run() {
         logger.info("================PostStatisticsFilter================");
         RequestContext ctx = RequestContext.getCurrentContext();
+        HttpResponse httpResponse =(HttpResponse)ctx.get("ribbonResponse");
+      //  System.out.println(httpResponse.getRequestedURI().getHost());
         String info = statisticsService.logApiInfo();
         if(ctx.containsKey("sendErrorFilter.ran")){
             logger.info("=================失败了");

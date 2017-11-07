@@ -52,14 +52,15 @@ public class PreStatisticsFilter extends AbstractGatewayFilter {
     public Object run() {
         System.out.println("==============统计分析埋点钟==============");
         RequestContext ctx = RequestContext.getCurrentContext();
-        try {
+/*        try {
            String body = ctx.getRequest().getReader().lines().reduce("",(accumulator, actual) -> accumulator + actual);
            logger.info("请求体："+body);
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
         ctx.put("startTimeMillis", System.currentTimeMillis());
         ctx.set("requestInfo",ctx.getRequest());
+        ctx.set("route",getMatchingRoute());
 /*        if (true) {
             HttpStatus tooManyRequests = HttpStatus.TOO_MANY_REQUESTS;
             ctx.setResponseStatusCode(tooManyRequests.value());
@@ -80,7 +81,11 @@ public class PreStatisticsFilter extends AbstractGatewayFilter {
             logger.info(t.toString());
             throw new ZuulRuntimeException(new ZuulException(t, HttpStatus.BAD_REQUEST.value(), t.getMessage()));
         }*/
-
+/*        try {
+            int a =10/0;
+        } catch (ZuulRuntimeException e) {
+            e.printStackTrace();
+        }*/
         return null;
 
     }

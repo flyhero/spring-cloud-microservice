@@ -3,8 +3,13 @@ package com.dfocus.gateway.service;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.annotation.JSONField;
 import com.dfocus.common.util.HttpUtils;
+import com.netflix.client.http.HttpResponse;
 import com.netflix.zuul.context.RequestContext;
 import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+import org.apache.http.Header;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.springframework.cloud.netflix.ribbon.RibbonHttpResponse;
+import org.springframework.cloud.netflix.ribbon.apache.RibbonApacheHttpResponse;
 import org.springframework.cloud.netflix.zuul.filters.ProxyRequestHelper;
 import org.springframework.cloud.netflix.zuul.filters.Route;
 import org.springframework.http.HttpHeaders;
@@ -13,6 +18,9 @@ import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Author: qfwang
@@ -29,37 +37,58 @@ public class StatisticsService {
         long execTimeMillis = endTimeMillis - startTimeMillis;
 
         HttpServletRequest request = (HttpServletRequest)ctx.get("requestInfo");
-        Object respozuulResponsense = ctx.get("zuulResponse");
-        ClientHttpResponse response = (ClientHttpResponse)ctx.get("zuulResponse");
+        //1.有负载均衡，异常，zuulResponse和ribbonResponse都为null
+        //2.无负载均衡，异常，zuulResponse和ribbonResponse为null
+        //3.无负载均衡，无异常/无效路径，zuulResponse -> CloseableHttpResponse ,但ribbonResponse为null
+        //4.有负载均衡，无异常/无效路径，zuulResponse -> ClientHttpResponse 和 ribbonResponse -> RibbonApacheHttpResponse
 
         ApiStatistics apiStatistics =new ApiStatistics();
+        HttpHeaders httpHeaders =new HttpHeaders();
+        int status = 0;
+        if(ctx.containsKey("sendErrorFilter.ran")){ //出现异常
+            status = (int)ctx.getRequest().getAttribute("javax.servlet.error.status_code");
+            Collection<String> headers = ctx.getResponse().getHeaderNames();
+            for (String s: headers){
+                httpHeaders.set(s,ctx.getResponse().getHeader(s));
+            }
 
+        }else {
+            Object zuulResponse = ctx.get("zuulResponse");
+            HttpResponse ribbonResponse =(HttpResponse)ctx.get("ribbonResponse");
+
+            ClientHttpResponse clientHttpResponse = null;
+            CloseableHttpResponse response = null;
+            if(zuulResponse instanceof ClientHttpResponse){ //有负载均衡
+                clientHttpResponse = (ClientHttpResponse)zuulResponse;
+                status =ribbonResponse.getStatus();
+                List<Map.Entry<String,String>> list = ribbonResponse.getHttpHeaders().getAllHeaders();
+                for(Map.Entry<String,String> entry : list){
+                    httpHeaders.add(entry.getKey(),entry.getValue());
+                }
+                apiStatistics.setRequestHost(ribbonResponse.getRequestedURI().getHost()+":"+ribbonResponse.getRequestedURI().getPort());
+                System.out.println(ribbonResponse.getRequestedURI().getPath());
+            }else { //无负载均衡
+                response=(CloseableHttpResponse)zuulResponse;
+                status = response.getStatusLine().getStatusCode();
+                for (Header header:response.getAllHeaders()){
+                    httpHeaders.set(header.getName(),header.getValue());
+                }
+                apiStatistics.setRequestHost(ctx.getRouteHost().getHost()+":"+ctx.getRouteHost().getPort());
+                apiStatistics.setFrontendPath(ctx.getRouteHost().toString());
+
+            }
+
+        }
+        apiStatistics.setResponseHeaders(httpHeaders);
+        apiStatistics.setStatusCode(status);
 
         apiStatistics.setRequestTime(startTimeMillis);
         apiStatistics.setResponseTime(endTimeMillis);
         apiStatistics.setExecTime((int) execTimeMillis);
         apiStatistics.setIp(HttpUtils.getIPAddr(ctx.getRequest()));
-        apiStatistics.setFrontendPath(request.getRequestURI());
-        //apiStatistics.setBackendPath(route.getPath());
+      //  apiStatistics.setFrontendPath(route.get);
+        apiStatistics.setBackendPath(request.getRequestURI());
         apiStatistics.setRequestHeaders((HttpHeaders) proxyRequestHelper.buildZuulRequestHeaders(request));
-        int status = 0;
-        try {
-            if(response != null){ //多实例，走负载均衡
-                apiStatistics.setStatusCode(response.getRawStatusCode());
-                apiStatistics.setResponseHeaders(response.getHeaders());
-            }else {
-                if(ctx.containsKey("sendErrorFilter.ran")){ //出现异常
-                    status = (int)ctx.getRequest().getAttribute("javax.servlet.error.status_code");
-                }else {
-                    status =ctx.getResponse().getStatus();
-                }
-                apiStatistics.setResponseHeaders(new HttpHeaders());
-                apiStatistics.setStatusCode(status);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
 
         apiStatistics.setResponseBody(ctx.getResponseBody());
         apiStatistics.setMethod(request.getMethod());
