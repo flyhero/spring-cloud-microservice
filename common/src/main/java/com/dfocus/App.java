@@ -25,5 +25,7 @@ public class App
         } catch (Exception e) {
             e.printStackTrace();
         }
+        boolean bl = false || true;
+        System.out.println(bl);
     }
 }

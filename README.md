@@ -17,7 +17,7 @@
 - RabbitMQ
 
 ### 启动顺序
-eureka-service --> gateway-service --> 其他
+eureka-service --> config-server -->  gateway-service --> 其他
 
 ## 项目结构
 
