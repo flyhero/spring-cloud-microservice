@@ -2,22 +2,16 @@ package com.dfocus.gateway.service;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.annotation.JSONField;
-import com.dfocus.common.util.HttpUtils;
 import com.netflix.client.http.HttpResponse;
 import com.netflix.zuul.context.RequestContext;
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import org.apache.http.Header;
 import org.apache.http.client.methods.CloseableHttpResponse;
-import org.springframework.cloud.netflix.ribbon.RibbonHttpResponse;
-import org.springframework.cloud.netflix.ribbon.apache.RibbonApacheHttpResponse;
 import org.springframework.cloud.netflix.zuul.filters.ProxyRequestHelper;
-import org.springframework.cloud.netflix.zuul.filters.Route;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -85,7 +79,7 @@ public class StatisticsService {
         apiStatistics.setRequestTime(startTimeMillis);
         apiStatistics.setResponseTime(endTimeMillis);
         apiStatistics.setExecTime((int) execTimeMillis);
-        apiStatistics.setIp(HttpUtils.getIPAddr(ctx.getRequest()));
+      //  apiStatistics.setIp(HttpUtils.getIPAddr(ctx.getRequest()));
       //  apiStatistics.setFrontendPath(route.get);
         apiStatistics.setBackendPath(request.getRequestURI());
         apiStatistics.setRequestHeaders((HttpHeaders) proxyRequestHelper.buildZuulRequestHeaders(request));

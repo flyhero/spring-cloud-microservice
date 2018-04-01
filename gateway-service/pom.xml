@@ -106,12 +106,11 @@
 			</resource>
 		</resources>
 
-		<plugins>
+<!--		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<!-- tag::plugin[] -->
 			<plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>docker-maven-plugin</artifactId>
@@ -129,7 +128,7 @@
 				</configuration>
 			</plugin>
 
-		</plugins>
+		</plugins>-->
 
 	</build>
 
