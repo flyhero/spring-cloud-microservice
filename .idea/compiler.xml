@@ -6,41 +6,31 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="common" />
-        <module name="config-client-service" />
-        <module name="config-server" />
+        <module name="api-gateway" />
         <module name="config-service" />
-        <module name="eureka-service" />
-        <module name="gateway-service" />
-        <module name="monitoring-service" />
-        <module name="order-service" />
-        <module name="qrcode-service" />
-        <module name="ribbon-service" />
-        <module name="ucenter-service" />
-        <module name="zipkin-client" />
-        <module name="zipkin-server" />
         <module name="zipkin-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="admin-service" target="1.8" />
-      <module name="common" target="1.8" />
+      <module name="api-gateway" target="1.8" />
+      <module name="common" target="1.5" />
       <module name="common-service" target="1.5" />
-      <module name="config-client-service" target="1.8" />
-      <module name="config-server" target="1.8" />
+      <module name="config-client-service" target="1.5" />
+      <module name="config-server" target="1.5" />
       <module name="config-service" target="1.8" />
       <module name="dashboard-service" target="1.8" />
-      <module name="eureka-service" target="1.8" />
-      <module name="gateway-service" target="1.8" />
-      <module name="monitoring-service" target="1.8" />
-      <module name="order-service" target="1.8" />
-      <module name="qrcode-service" target="1.8" />
+      <module name="eureka-service" target="1.5" />
+      <module name="gateway-service" target="1.5" />
+      <module name="monitoring-service" target="1.5" />
+      <module name="order-service" target="1.5" />
+      <module name="qrcode-service" target="1.5" />
       <module name="ratelimit" target="1.8" />
-      <module name="ribbon-service" target="1.8" />
-      <module name="spring-cloud-microservice" target="1.6" />
-      <module name="ucenter-service" target="1.8" />
-      <module name="zipkin-client" target="1.8" />
-      <module name="zipkin-server" target="1.8" />
+      <module name="ribbon-service" target="1.5" />
+      <module name="spring-cloud-microservice" target="1.8" />
+      <module name="ucenter-service" target="1.5" />
+      <module name="zipkin-client" target="1.5" />
+      <module name="zipkin-server" target="1.5" />
       <module name="zipkin-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
