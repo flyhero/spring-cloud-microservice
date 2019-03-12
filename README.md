@@ -1,11 +1,11 @@
 # spring-cloud-microservice
 
 ## 功能描述
-使用spring cloud eureka,zuul,ribbon搭建的微服务框架
+基于Spring Boot使用Spring Cloud 搭建的当前微服务最佳组合
 
 ## 环境搭建
 ### 开发工具
-- MySql: 数据库
+- MySQL: 数据库
 - Git: 版本管理
 - IntelliJ IDEA: 开发IDE
 - Navicat for MySQL: 数据库客户端
@@ -71,26 +71,7 @@ spring-cloud-microservice
 ## 部署说明
 
 ## 业务微服务依赖
-zipkin client 依赖
-```
-	<dependency>
-		<groupId>org.springframework.cloud</groupId>
-		<artifactId>spring-cloud-sleuth-zipkin-stream</artifactId>
-	</dependency>
-	<dependency>
-		<groupId>org.springframework.cloud</groupId>
-		<artifactId>spring-cloud-starter-stream-rabbit</artifactId>
-	</dependency>
 
-```
-config client 依赖
-```
-	<dependency>
-		<groupId>org.springframework.cloud</groupId>
-		<artifactId>spring-cloud-starter-config</artifactId>
-	</dependency>
-
-```
 # 相关界面
 - 服务发现与注册界面
 ![服务发现与注册界面](doc/eureka.png)
@@ -101,16 +82,7 @@ config client 依赖
 - 调用链追踪
 ![调用链追踪](doc/zipkin.png)
 
-## TODO
-- [x] 动态路由
-- [x] 流量限制
-- [x] IP限制
-- [x] 日志记录
-- [x] API调用记录分析ELK
-## 遇到的问题
-1.2017-10-12 15:20:00.862 ERROR org.thymeleaf.TemplateEngine Line:1085 - [THYMELEAF][http-nio-8082-exec-1] Exception processing template "index": Error resolving template "index", template might not exist or might not be accessible by any of the configured Template Resolvers
-  
-  2017-10-12 15:20:00.870 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] Line:181 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template "index", template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
-  org.thymeleaf.exceptions.TemplateInputException: Error resolving template "index", template might not exist or might not be accessible by any of the configured Template Resolvers
-  
-  在网上查了很多方案都不行，后来发现是由于mode为标准的H5 才行
+
+## 关注
+
+![Push-Code](doc/码上实战.png)
