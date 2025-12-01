@@ -1,0 +1,4 @@
+io.github.flyhero.common.config.WebConfig
+io.github.flyhero.common.config.ExceptionHandlerConfig
+io.github.flyhero.common.config.JacksonAutoConfiguration
+io.github.flyhero.common.mybatis.plus.MybatisPlusAutoConfiguration

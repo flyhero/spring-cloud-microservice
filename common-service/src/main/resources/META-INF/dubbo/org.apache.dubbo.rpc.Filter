@@ -1,0 +1,2 @@
+authConsumer=io.github.flyhero.common.dubbo.AuthConsumerFilter
+authProvider=io.github.flyhero.common.dubbo.AuthProviderFilter

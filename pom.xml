@@ -2,38 +2,243 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.flyhero.cloud</groupId>
+    <groupId>io.github.flyhero</groupId>
     <artifactId>spring-cloud-microservice</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.1.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
+    <packaging>pom</packaging>
 
 
     <modules>
-        <module>api-gateway</module>
+        <module>gateway-service</module>
+        <module>common-service</module>
+        <module>scm-common</module>
+        <module>mybatis-plus-generator</module>
+        <module>order-service</module>
+        <module>seckill-service</module>
+        <module>user-api</module>
+        <module>user-service</module>
+        <module>program-service</module>
+        <module>cache-spring-boot-starter</module>
     </modules>
-    <packaging>pom</packaging>
 
     <name>spring-cloud-microservice</name>
     <url>http://maven.apache.org</url>
 
     <properties>
+        <java.version>17</java.version>
+        <jdk.version>17</jdk.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.sourceEncoding>UTF-8</project.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <spring-boot.version>3.2.4</spring-boot.version>
+        <spring-cloud.version>2023.0.1</spring-cloud.version>
+        <spring-cloud-alibaba.version>2023.0.1.0</spring-cloud-alibaba.version>
+        <dubbo.version>3.3.0</dubbo.version>
+
+        <spring-boot-admin-starter-server.version>3.3.0</spring-boot-admin-starter-server.version>
+        <spring-boot-admin-starter-client.version>2.3.1</spring-boot-admin-starter-client.version>
+
+        <maven-compiler.version>3.8.1</maven-compiler.version>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+        <maven-resources.version>3.2.0</maven-resources.version>
+        <maven-source.version>3.2.1</maven-source.version>
+        <flatten-maven.version>1.4.1</flatten-maven.version>
+
+        <fastjson2.version>2.0.57</fastjson2.version>
+        <nacos.version>2.3.2</nacos.version>
+        <jasypt.version>3.0.5</jasypt.version>
+        <commons-lang.version>2.6</commons-lang.version>
+        <commons-collections.version>3.2.2</commons-collections.version>
+        <jjwt.version>0.9.1</jjwt.version>
+        <hutool.version>5.8.25</hutool.version>
+        <mybatis-plus.version>3.5.11</mybatis-plus.version>
+        <mybatis-plus-generator.version>3.5.11</mybatis-plus-generator.version>
+        <freemarker.version>2.3.29</freemarker.version>
+        <druid.version>1.1.10</druid.version>
+        <redisson.version>3.32.0</redisson.version>
+        <shardingsphere.version>5.3.2</shardingsphere.version>
+        <caffeine.version>2.9.3</caffeine.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-resolver-dns-native-macos</artifactId>
+                <version>4.1.107.Final</version>
+                <classifier>osx-aarch_64</classifier>
+                <scope>runtime</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2</artifactId>
+                <version>${fastjson2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-bom</artifactId>
+                <version>${dubbo.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.baomidou</groupId>-->
+<!--                <artifactId>mybatis-plus-spring-boot3-starter</artifactId>-->
+<!--                <version>${mybatis-plus.version}</version>-->
+<!--            </dependency>-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-bom</artifactId>
+                <version>${mybatis-plus.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+    <profiles>
+        <profile>
+            <id>Apple Silicon</id>
+            <activation>
+                <os>
+                    <family>mac</family>
+                    <arch>aarch64</arch>
+                </os>
+            </activation>
+            <!-- 解决apple silicon架构本地调试时出现版本错误的问题 -->
+            <dependencies>
+                <dependency>
+                    <groupId>io.netty</groupId>
+                    <artifactId>netty-resolver-dns-native-macos</artifactId>
+                    <scope>runtime</scope>
+                    <classifier>osx-aarch_64</classifier>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.sourceEncoding}</encoding>
+                    <parameters>true</parameters>
+                    <compilerArgs>
+                        <arg>-parameters</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+            <!--			<plugin>-->
+            <!--				<groupId>com.diffplug.spotless</groupId>-->
+            <!--				<artifactId>spotless-maven-plugin</artifactId>-->
+            <!--				<version>${spotless-maven-plugin.version}</version>-->
+            <!--				<configuration>-->
+            <!--					<java>-->
+            <!--						<eclipse>-->
+            <!--							<file>${project.basedir}/spotless/spotless.xml</file>-->
+            <!--						</eclipse>-->
+            <!--						<licenseHeader>-->
+            <!--							<file>${project.basedir}/spotless/license-header</file>-->
+            <!--						</licenseHeader>-->
+            <!--					</java>-->
+            <!--				</configuration>-->
+            <!--				&lt;!&ndash;绑定maven生命周期，在compile时会执行apply &ndash;&gt;-->
+            <!--				<executions>-->
+            <!--					<execution>-->
+            <!--						<goals>-->
+            <!--							<goal>apply</goal>-->
+            <!--						</goals>-->
+            <!--						<phase>compile</phase>-->
+            <!--					</execution>-->
+            <!--				</executions>-->
+            <!--			</plugin>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>${maven-resources.version}</version>
+                <configuration>
+                    <encoding>${project.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${maven-source.version}</version>
+                <configuration>
+                    <!--install、deploy时会上传源码jar包到仓库，默认是true-->
+                    <attach>true</attach>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-source</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <version>${flatten-maven.version}</version>
+                <configuration>
+                    <updatePomFile>true</updatePomFile>
+                </configuration>
+                <executions>
+                    <!-- enable flattening -->
+                    <execution>
+                        <id>flatten</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                    </execution>
+                    <!-- ensure proper cleanup -->
+                    <execution>
+                        <id>flatten.clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

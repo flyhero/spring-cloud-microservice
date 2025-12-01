@@ -1,0 +1,30 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: user-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        import-check:
+          enabled: false
+
+    config:
+      import: nacos:instead
+
+dubbo:
+  registry:
+#    address: nacos://${nacos.address:127.0.0.1}:8848?username=nacos&password=nacos
+    address: nacos://${nacos.address:127.0.0.1}:8848
+    register-mode: instance
+  protocol:
+    name: dubbo
+    port: 20882
+  application:
+    name: ${spring.application.name}-dubbo
+    logger: slf4j

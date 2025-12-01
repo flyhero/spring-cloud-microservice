@@ -45,7 +45,7 @@ spring-cloud-microservice
 ├── gateway-service -- API网关[端口:8082]
 ├── monitoring-service -- 监控[端口:8001]
 ├── qrcode-service -- 监控[端口:8990]
-├── order-service -- 订单服务模块
+├── orders-service -- 订单服务模块
 ├── ribbon-service -- 负载均衡[端口:8083]
 ├── ucenter-service -- 用户模块[端口:8084]
 └── zipkin-server -- 追踪[端口:9411]

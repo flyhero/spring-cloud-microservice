@@ -1,0 +1,90 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: program-service
+#  profiles:
+#    active: local
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://127.0.0.1:3306/order?useUnicode=true&characterEncoding=UTF-8&rewriteBatchedStatements=true&allowMultiQueries=true&serverTimezone=Asia/Shanghai&autoReconnect=true
+#    username: root
+#    password: 12345678
+
+#  datasource:
+#    driver-class-name: org.apache.shardingsphere.driver.ShardingSphereDriver
+#    url: jdbc:shardingsphere:classpath:shardingsphere-order-local.yaml
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        import-check:
+          enabled: false
+
+
+
+  # cluster集群模式
+  #  redis:
+  #    cluster:
+  #      nodes:
+  #        - redis-node1:7000
+  #        - redis-node2:7001
+  #        - redis-node3:7002
+  #      max-redirects: 3
+  #      password: your-cluster-password  # 如果有密码
+  #    timeout: 2000ms
+  #    lettuce:
+  #      pool:
+  #        max-active: 16
+  #        max-idle: 8
+  #        min-idle: 2
+  #        max-wait: 1000ms
+  #      cluster:
+  #        refresh:
+  #          adaptive: true
+  #          period: 30s
+
+  data:
+    redis:
+      host: localhost
+      timeout: 2000ms
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+dubbo:
+  registry:
+    address: nacos://${nacos.address:127.0.0.1}:8848
+    register-mode: instance
+  protocol:
+    name: dubbo
+    port: 20882
+  application:
+    name: ${spring.application.name}-dubbo
+    logger: slf4j
+
+
+mybatis-plus:
+  mapper-locations: classpath:xml/*.xml
+  global-config:
+    db-config:
+      logic-delete-field: is_deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    local-cache-scope: statement
+
+multilevel:
+  cache:
+    default-type: multi_level  # 可省略，默认多级缓存
+    caffeine:
+      expire-after-write: 5s
+    redis:
+      ttl: 10m

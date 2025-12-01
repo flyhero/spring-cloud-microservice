@@ -1,37 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <directory url="file://$PROJECT_DIR$/scm-common/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/order/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/user/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/cache-spring-boot-starter/src/main/resources/archetype-resources" includeSubdirectories="true" />
+    </excludeFromCompile>
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="api-gateway" />
+        <module name="orders-service" />
+        <module name="cache-spring-boot-starter" />
         <module name="config-service" />
+        <module name="common-service" />
+        <module name="user-api" />
+        <module name="gateway-service" />
+        <module name="scm-common" />
+        <module name="mybatis-plus-generator" />
         <module name="zipkin-service" />
+        <module name="seckill-service" />
+        <module name="order-service" />
+        <module name="program-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="admin-service" target="1.8" />
       <module name="api-gateway" target="1.8" />
       <module name="common" target="1.5" />
-      <module name="common-service" target="1.5" />
       <module name="config-client-service" target="1.5" />
       <module name="config-server" target="1.5" />
       <module name="config-service" target="1.8" />
       <module name="dashboard-service" target="1.8" />
       <module name="eureka-service" target="1.5" />
-      <module name="gateway-service" target="1.5" />
       <module name="monitoring-service" target="1.5" />
-      <module name="order-service" target="1.5" />
+      <module name="order" target="17" />
+      <module name="order (1)" target="17" />
       <module name="qrcode-service" target="1.5" />
       <module name="ratelimit" target="1.8" />
       <module name="ribbon-service" target="1.5" />
-      <module name="spring-cloud-microservice" target="1.8" />
       <module name="ucenter-service" target="1.5" />
+      <module name="user" target="17" />
       <module name="zipkin-client" target="1.5" />
       <module name="zipkin-server" target="1.5" />
       <module name="zipkin-service" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cache-spring-boot-starter" options="-parameters -parameters" />
+      <module name="common-service" options="-parameters -parameters" />
+      <module name="gateway-service" options="-parameters -parameters" />
+      <module name="mybatis-plus-generator" options="-parameters -parameters" />
+      <module name="order-service" options="-parameters -parameters" />
+      <module name="program-service" options="-parameters -parameters" />
+      <module name="scm-common" options="-parameters -parameters" />
+      <module name="seckill-service" options="-parameters -parameters" />
+      <module name="spring-cloud-microservice" options="-parameters -parameters" />
+      <module name="user-api" options="-parameters -parameters" />
+      <module name="user-service" options="-parameters -parameters" />
+    </option>
   </component>
 </project>

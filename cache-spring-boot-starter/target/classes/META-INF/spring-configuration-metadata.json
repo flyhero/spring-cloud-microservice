@@ -1,0 +1,46 @@
+{
+  "groups": [
+    {
+      "name": "multilevel.cache",
+      "type": "io.github.flyhero.cache.config.CacheProperties",
+      "sourceType": "io.github.flyhero.cache.config.CacheProperties"
+    },
+    {
+      "name": "multilevel.cache.caffeine",
+      "type": "io.github.flyhero.cache.config.CacheProperties$CaffeineProperties",
+      "sourceType": "io.github.flyhero.cache.config.CacheProperties"
+    },
+    {
+      "name": "multilevel.cache.redis",
+      "type": "io.github.flyhero.cache.config.CacheProperties$RedisProperties",
+      "sourceType": "io.github.flyhero.cache.config.CacheProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "multilevel.cache.caffeine.expire-after-write",
+      "type": "java.time.Duration",
+      "description": "写入后过期时间（默认5分钟）",
+      "sourceType": "io.github.flyhero.cache.config.CacheProperties$CaffeineProperties"
+    },
+    {
+      "name": "multilevel.cache.caffeine.maximum-size",
+      "type": "java.lang.Long",
+      "description": "最大缓存容量（默认1000）",
+      "sourceType": "io.github.flyhero.cache.config.CacheProperties$CaffeineProperties"
+    },
+    {
+      "name": "multilevel.cache.default-type",
+      "type": "io.github.flyhero.cache.config.CacheType",
+      "description": "缓存类型（默认多级缓存）",
+      "sourceType": "io.github.flyhero.cache.config.CacheProperties"
+    },
+    {
+      "name": "multilevel.cache.redis.ttl",
+      "type": "java.time.Duration",
+      "description": "缓存TTL（默认10分钟）",
+      "sourceType": "io.github.flyhero.cache.config.CacheProperties$RedisProperties"
+    }
+  ],
+  "hints": []
+}

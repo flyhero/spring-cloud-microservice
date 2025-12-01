@@ -1,0 +1,46 @@
+dataSources:
+  ds0:
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://127.0.0.1:3306/order?useUnicode=true&characterEncoding=UTF-8&rewriteBatchedStatements=true&allowMultiQueries=true&serverTimezone=Asia/Shanghai&autoReconnect=true
+    username: root
+    password: 12345678
+    hikari:
+      max-lifetime: 60000
+
+rules:
+  - !SHARDING
+    tables:
+      orders:
+        actualDataNodes: ds0.orders_${0..3}
+        databaseStrategy: # 分库策略，缺省表示使用默认分库策略，以下的分片策略只能选其一
+          none: # 不分片
+        tableStrategy:
+          standard:
+            shardingColumn: user_id
+            shardingAlgorithmName: table-inline
+#
+#        tableStrategy:
+#          complex:
+#            shardingColumns: order_number,user_id
+#            shardingAlgorithmName: tableOrderComplexGeneArithmetic
+#
+    bindingTables:
+      - orders
+    shardingAlgorithms:
+      table-inline:
+        type: INLINE
+        props:
+          algorithm-expression: orders_${user_id % 4}
+#    shardingAlgorithms:
+#      tableOrderComplexGeneArithmetic:
+#        type: CLASS_BASED
+#        props:
+#          sharding-count: 4
+#          strategy: complex
+#          algorithmClassName: io.github.flyhero.common.shardingsphere.TableOrderComplexGeneArithmetic
+#    keyGenerators:
+#      snowflake:
+#        type: SNOWFLAKE
+props:
+  sql-show: true

@@ -1,0 +1,50 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: order-service
+#  profiles:
+#    active: local
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://127.0.0.1:3306/order?useUnicode=true&characterEncoding=UTF-8&rewriteBatchedStatements=true&allowMultiQueries=true&serverTimezone=Asia/Shanghai&autoReconnect=true
+#    username: root
+#    password: 12345678
+
+  datasource:
+    driver-class-name: org.apache.shardingsphere.driver.ShardingSphereDriver
+    url: jdbc:shardingsphere:classpath:shardingsphere-order-local.yaml
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        import-check:
+          enabled: false
+
+dubbo:
+  registry:
+    address: nacos://${nacos.address:127.0.0.1}:8848
+    register-mode: instance
+  protocol:
+    name: dubbo
+    port: 20882
+  application:
+    name: ${spring.application.name}-dubbo
+    logger: slf4j
+
+
+mybatis-plus:
+  mapper-locations: classpath:xml/*.xml
+  global-config:
+    db-config:
+      logic-delete-field: is_deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    local-cache-scope: statement

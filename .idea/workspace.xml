@@ -1,97 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6362a4ad-8fbb-41d6-9b06-17a2a22548b2" name="Default" comment="feat: 删除1.0模块">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache-spring-boot-starter/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/java/io/github/flyhero/gateway/GatewayServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/java/io/github/flyhero/gateway/config/GatewayProperty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/java/io/github/flyhero/gateway/filter/JwtFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-service/src/test/java/io/github/flyhero/gateway/GatewayServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/program-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/program-service/src/test/java/io/github/flyhero/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scm-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/flyhero/cloud/gateway/ApiGatewayApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/test/java/com/flyhero/cloud/gateway/ApiGatewayApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-common/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-common/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-common/src/test/java/com/flyhero/cloud/library/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-microservice.iml" beforeDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <ignored path="$PROJECT_DIR$/eureka-service/target/" />
-    <ignored path="$PROJECT_DIR$/gateway-service/target/" />
-    <ignored path="$PROJECT_DIR$/ribbon-service/target/" />
-    <ignored path="$PROJECT_DIR$/ucenter-service/target/" />
-    <ignored path="$PROJECT_DIR$/order-service/target/" />
-    <ignored path="$PROJECT_DIR$/dashboard-service/target/" />
-    <ignored path="$PROJECT_DIR$/monitoring-service/target/" />
-    <ignored path="$PROJECT_DIR$/zipkin-service/target/" />
-    <ignored path="$PROJECT_DIR$/config-service/target/" />
-    <ignored path="$PROJECT_DIR$/admin-service/target/" />
-    <ignored path="$PROJECT_DIR$/common-service/target/" />
-    <ignored path="$PROJECT_DIR$/common/target/" />
-    <ignored path="$PROJECT_DIR$/config-client-service/target/" />
-    <ignored path="$PROJECT_DIR$/zipkin-server/target/" />
-    <ignored path="$PROJECT_DIR$/zipkin-client/target/" />
-    <ignored path="$PROJECT_DIR$/config-server/target/" />
-    <ignored path="$PROJECT_DIR$/qrcode-service/target/" />
-    <ignored path="$PROJECT_DIR$/ratelimit/target/" />
-    <ignored path="$PROJECT_DIR$/api-gateway/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1371759604">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.2" value="2" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.vcs.git.usages">
-        <counts>
-          <entry key="git.branch.checkout.local" value="1" />
-          <entry key="git.branch.checkout.remote" value="1" />
-          <entry key="git.branch.delete.remote" value="1" />
-          <entry key="git.branch.rename" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="Dockerfile" value="2" />
-          <entry key="docker-images-start" value="1" />
-          <entry key="gitignore" value="4" />
-          <entry key="java" value="14" />
-          <entry key="md" value="1" />
-          <entry key="properties" value="8" />
-          <entry key="sql" value="1" />
-          <entry key="xml" value="14" />
-          <entry key="yml" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Dockerfile" value="2" />
-          <entry key="Git file" value="4" />
-          <entry key="JAVA" value="14" />
-          <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Properties" value="8" />
-          <entry key="SQL" value="1" />
-          <entry key="XML" value="14" />
-          <entry key="YAML" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="gitignore" value="2" />
-          <entry key="md" value="37" />
-          <entry key="txt" value="14" />
-          <entry key="xml" value="45" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="Git file" value="2" />
-          <entry key="Markdown" value="37" />
-          <entry key="PLAIN_TEXT" value="14" />
-          <entry key="XML" value="45" />
-        </counts>
-      </usages-collector>
-    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -163,9 +118,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Enum" />
-        <option value="Enum" />
         <option value="HTML File" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -211,11 +166,36 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="springboot1.x-cloud" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1744774374" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1744774373" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
     </option>
   </component>
   <component name="IdeDocumentHistory">
@@ -284,15 +264,11 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="/usr/local/maven-repository" />
-        <option name="mavenHome" value="/usr/local/apache-maven-3.5.0" />
-        <option name="userSettingsFile" value="/usr/local/apache-maven-3.5.0/conf/settings.xml" />
+        <option name="customMavenHome" value="/opt/apache-maven-3.6.3" />
+        <option name="localRepository" value="/opt/apache-maven-3.6.3/repository" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
+        <option name="userSettingsFile" value="/opt/apache-maven-3.6.3/conf/settings.xml" />
       </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenProjectNavigator">
@@ -320,10 +296,17 @@
       <select />
     </treeState>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
+  <component name="ProjectId" id="2vnHcnakGERH0g8kMDhvnZn1DCC" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
@@ -451,7 +434,9 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <showMembers ProjectPane="true" />
@@ -478,59 +463,117 @@
       <pane id="PackagesPane" />
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelOrder2" value="2" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RequestMappingsPanelWidth2" value="75" />
-    <property name="SearchEverywhereHistoryKey" value="HttpResponseProxy&#9;PSI&#9;JAVA://org.apache.http.impl.execchain.HttpResponseProxy&#10;ribbon.client.name&#9;PSI&#9;JAVA://org.springframework.cloud.netflix.ribbon.SpringClientFactory#NAMESPACE&#10;setRibbonProperty&#9;PSI&#9;JAVA://org.springframework.cloud.netflix.ribbon.RibbonUtils#setRibbonProperty&#10;fastjson&#9;FILE&#9;file:///Users/qfwang/IdeaProjects/spring-cloud-microservice/.idea/libraries/Maven__com_alibaba_fastjson_1_2_38.xml&#10;Dalston.SR3&#9;null&#9;null" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.MybatisPlusGenerator.executor&quot;: &quot;Run&quot;,
+    &quot;Application.OrdersController.executor&quot;: &quot;Debug&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.order-service [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.user-api [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.user-api [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.user-api [package].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.GatewayServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.OrderServiceApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.ProgramServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/klsm-2023/IdeaProjects/spring-cloud-microservice/program-service/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.37011495&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Qoder&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.dfocus.gateway.config" />
-      <recent name="com.dfocus.gateway.filter" />
-      <recent name="com.dfocus.gateway.config.repository" />
-      <recent name="com.dfocus.gateway.config.properties" />
-      <recent name="com.dfocus.gateway.base" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/api-gateway" />
+      <recent name="$PROJECT_DIR$/program-service/src/main/resources" />
+      <recent name="$PROJECT_DIR$/seckill-service/src/main/java/io/github/flyhero/seckill/sharding" />
+      <recent name="$PROJECT_DIR$/seckill-service" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/gateway-service/src/main/resources" />
-      <recent name="$PROJECT_DIR$/ratelimit/src/main/java/com/dfocus/ratelimit/config/repository" />
-      <recent name="$PROJECT_DIR$/ratelimit/src/main/java/com/dfocus/ratelimit/config" />
+      <recent name="$PROJECT_DIR$/common-service/src/main/java" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/user/user-api/src/main/java/io/github/flyhero/user/api" />
+      <recent name="$PROJECT_DIR$/order" />
+      <recent name="$PROJECT_DIR$/user" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="io.github.flyhero.program.model" />
+      <recent name="io.github.flyhero.program" />
+      <recent name="io.github.flyhero.common.shardingsphere" />
+      <recent name="io.github.flyhero.common.config" />
+      <recent name="io.github.flyhero.common.exception" />
     </key>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
+    <option name="hiddenConfigurations">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <set>
+              <option value="OrderServiceApplication" />
+              <option value="SeckillServiceApplication" />
+              <option value="UserServiceApplication" />
+            </set>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="GatewayServiceApplication" value="STOPPED" />
+              <entry key="ProgramServiceApplication" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
     </option>
   </component>
-  <component name="RunManager" selected="Application.A">
+  <component name="RunManager" selected="Spring Boot.ProgramServiceApplication">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -549,13 +592,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.dfocus.App" />
-      <module name="common" />
+    <configuration name="MybatisPlusGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.github.flyhero.MybatisPlusGenerator" />
+      <module name="mybatis-plus-generator" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dfocus.*" />
+          <option name="PATTERN" value="io.github.flyhero.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -563,13 +606,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StatisticsService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.dfocus.gateway.service.StatisticsService" />
-      <module name="gateway-service" />
+    <configuration name="OrdersController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.github.flyhero.order.controller.OrdersController" />
+      <module name="order-service" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dfocus.gateway.service.*" />
+          <option name="PATTERN" value="io.github.flyhero.order.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -601,102 +644,55 @@
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="api-gateway" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.flyhero.cloud.gateway.ApiGatewayApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConfigClientServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="config-client-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dfocus.config.client.ConfigClientServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="config-server" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dfocus.config.ConfigServerApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EurekaServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="eureka-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dfocus.eureka.EurekaServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="gateway-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.github.flyhero.gateway.GatewayServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="order-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.github.flyhero.order.OrderServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProgramServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="program-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.github.flyhero.program.ProgramServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SeckillServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="seckill-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.github.flyhero.order.SeckillServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="user-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.github.flyhero.user.UserServiceApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dfocus.gateway.*" />
+          <option name="PATTERN" value="io.github.flyhero.user.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dfocus.gateway.GatewayServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MonitoringServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="monitoring-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dfocus.monitoring.MonitoringServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="order-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dfocus.order.OrderServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QrcodeServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="qrcode-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dfocus.qrcode.QrcodeServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RibbonServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="ribbon-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dfocus.ribbon.RibbonServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UcenterServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="ucenter-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dfocus.ucenter.UcenterServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ZipkinClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="zipkin-client" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dfocus.zipkinclient.ZipkinClientApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ZipkinServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="zipkin-server" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dfocus.zipkin.ZipkinServerApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <properties />
       <listeners />
@@ -704,42 +700,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Spring Boot.QrcodeServiceApplication" />
-      <item itemvalue="Spring Boot.RibbonServiceApplication" />
-      <item itemvalue="Spring Boot.MonitoringServiceApplication" />
-      <item itemvalue="Spring Boot.OrderServiceApplication" />
-      <item itemvalue="Spring Boot.UcenterServiceApplication" />
-      <item itemvalue="Spring Boot.ConfigClientServiceApplication" />
-      <item itemvalue="Spring Boot.ConfigServerApplication" />
-      <item itemvalue="Spring Boot.ZipkinClientApplication" />
-      <item itemvalue="Spring Boot.ZipkinServerApplication" />
-      <item itemvalue="Spring Boot.EurekaServiceApplication" />
-      <item itemvalue="Spring Boot.ApiGatewayApplication" />
-      <item itemvalue="Spring Boot.GatewayServiceApplication" />
-      <item itemvalue="Application.App" />
-      <item itemvalue="Application.StatisticsService" />
-      <item itemvalue="JUnit.StatisticsServiceTest.testLogApiInfo" />
+      <item itemvalue="Application.OrdersController" />
+      <item itemvalue="Application.MybatisPlusGenerator" />
       <item itemvalue="Application.A" />
+      <item itemvalue="JUnit.StatisticsServiceTest.testLogApiInfo" />
+      <item itemvalue="Spring Boot.ProgramServiceApplication" />
+      <item itemvalue="Spring Boot.SeckillServiceApplication" />
+      <item itemvalue="Spring Boot.GatewayServiceApplication" />
+      <item itemvalue="Spring Boot.OrderServiceApplication" />
+      <item itemvalue="Spring Boot.UserServiceApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MybatisPlusGenerator" />
+        <item itemvalue="Application.OrdersController" />
+        <item itemvalue="Spring Boot.UserServiceApplication" />
         <item itemvalue="Application.A" />
         <item itemvalue="JUnit.StatisticsServiceTest.testLogApiInfo" />
-        <item itemvalue="Application.StatisticsService" />
-        <item itemvalue="Application.App" />
-        <item itemvalue="Spring Boot.GatewayServiceApplication" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
+        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-IU-252.25557.131" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="StructureViewState">
+    <option name="selectedTab" value="Logical" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -803,6 +795,17 @@
       <workItem from="1522571770293" duration="2031000" />
       <workItem from="1551179797913" duration="3537000" />
       <workItem from="1551267132227" duration="311000" />
+      <workItem from="1744774001084" duration="6604000" />
+      <workItem from="1744785645460" duration="21543000" />
+      <workItem from="1745218501387" duration="44600000" />
+      <workItem from="1745919661044" duration="22984000" />
+      <workItem from="1746529222565" duration="1054000" />
+      <workItem from="1746602988487" duration="1071000" />
+      <workItem from="1752818488205" duration="10335000" />
+      <workItem from="1764123701735" duration="30391000" />
+      <workItem from="1764382010425" duration="11715000" />
+      <workItem from="1764406972562" duration="4731000" />
+      <workItem from="1764561303159" duration="5424000" />
     </task>
     <task id="LOCAL-00001" summary="feat: 删除1.0模块">
       <created>1551267563187</created>
@@ -899,36 +902,18 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: 删除1.0模块" />
@@ -940,11 +925,47 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>jar:///usr/local/maven-repository/org/springframework/cloud/spring-cloud-netflix-core/1.3.4.RELEASE/spring-cloud-netflix-core-1.3.4.RELEASE.jar!/org/springframework/cloud/netflix/zuul/filters/pre/PreDecorationFilter.class</url>
           <line>208</line>
-          <properties />
           <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/common-service/src/main/java/io/github/flyhero/common/shardingsphere/TableOrderComplexGeneArithmetic.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/order-service/src/main/java/io/github/flyhero/order/controller/OrdersController.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar:///opt/apache-maven-3.6.3/repository/org/springframework/spring-context/6.1.5/spring-context-6.1.5.jar!/org/springframework/cache/support/AbstractValueAdaptingCache.class</url>
+          <line>29</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar:///opt/apache-maven-3.6.3/repository/org/springframework/spring-context/6.1.5/spring-context-6.1.5.jar!/org/springframework/cache/support/AbstractValueAdaptingCache.class</url>
+          <line>33</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cache-spring-boot-starter/src/main/java/io/github/flyhero/cache/MultiLevelCache.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cache-spring-boot-starter/src/main/java/io/github/flyhero/cache/MultiLevelCache.java</url>
+          <line>66</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="67" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar:///usr/local/maven-repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar!/org/apache/http/impl/client/CloseableHttpClient.class" />
